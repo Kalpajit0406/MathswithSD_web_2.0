@@ -10,7 +10,7 @@ html,
 body {
   background: #f4f1ea;
   color: #141311;
-  overscroll-behavior-y: none;
+  overscroll-behavior-y: auto;
 }
 
 * {
