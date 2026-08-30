@@ -142,6 +142,46 @@ export function FeaturesSection() {
           </div>
         </div>
 
+        {/* Section 4: Map & Classroom Location */}
+        <div className="space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span className="font-display text-xs tracking-widest uppercase text-ink/60 font-semibold">
+                Classroom Location
+              </span>
+              <h2 className="mt-2 font-display text-2xl sm:text-4xl font-bold tracking-tight text-ink">
+                Visit Soumen Sir&apos;s Classroom
+              </h2>
+              <p className="mt-1 text-sm text-ink/70 font-body">
+                Soumen Sir&apos;s Math Coaching Center — Kolkata, West Bengal
+              </p>
+            </div>
+            <a
+              href="https://www.google.com/maps/place/Soumen+Sir's+Math+Coaching+Center/@22.5993056,88.4254474,21z/data=!4m6!3m5!1s0x3a0275cc0d772125:0x9b5302111e4b95e9!8m2!3d22.5993324!4d88.4253361!16s%2Fg%2F11spxq5nsk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-black/15 bg-white/80 px-4 py-2 text-xs font-display font-semibold text-ink transition-all hover:bg-ink hover:text-white shrink-0 self-start sm:self-auto"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span>Open in Google Maps &rarr;</span>
+            </a>
+          </div>
+
+          <div className="w-full h-80 sm:h-96 rounded-3xl overflow-hidden border border-black/10 shadow-lg relative bg-board/40">
+            <iframe
+              title="Soumen Sir's Math Coaching Center Location Map"
+              src="https://maps.google.com/maps?q=22.5993324,88.4253361&z=18&output=embed"
+              className="w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+
         {/* Footer */}
         <footer className="pt-12 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ink/70 font-body">
           <div className="space-y-1 text-center md:text-left">
