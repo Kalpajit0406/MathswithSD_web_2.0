@@ -143,8 +143,16 @@ export function FeaturesSection() {
         </div>
 
         {/* Footer */}
-        <footer className="pt-12 border-t border-black/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-ink/60 font-body">
-          <p>&copy; {new Date().getFullYear()} MathsWithSD — Soumen Sir&apos;s Mathematics Classroom.</p>
+        <footer className="pt-12 border-t border-black/10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-ink/70 font-body">
+          <div className="space-y-1 text-center md:text-left">
+            <p>&copy; {new Date().getFullYear()} MathsWithSD — Soumen Sir&apos;s Mathematics Classroom.</p>
+            <p className="text-[11px] text-ink/60">
+              Designed &amp; Developed by{" "}
+              <span className="font-semibold text-ink">Kalpajit Bepary</span> &amp;{" "}
+              <span className="font-semibold text-ink">Tushant Pramanik</span>
+            </p>
+          </div>
+
           <div className="flex items-center gap-6">
             <span className="font-display font-semibold tracking-wider text-ink">MATHSWITHSD</span>
           </div>
