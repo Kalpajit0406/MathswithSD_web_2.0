@@ -63,8 +63,9 @@ export function CinematicHero() {
 
   return (
     <section
+      id="hero-wrapper"
       ref={wrapperRef}
-      className="relative h-screen w-full overflow-hidden bg-board"
+      className="relative h-screen w-full overflow-hidden bg-transparent"
     >
       <CinematicCanvas
         progressRef={progressRef}

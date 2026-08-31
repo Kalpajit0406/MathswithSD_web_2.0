@@ -19,18 +19,20 @@ interface Props {
 }
 
 export function WhiteboardLayer({ curvesRef, controls, viewportAspect }: Props) {
-  const meshRef = useRef<THREE.Mesh>(null);
+  const groupRef = useRef<THREE.Group>(null);
+  const blurredMaterialRef = useRef<THREE.MeshBasicMaterial>(null);
+  const glassMaterialRef = useRef<THREE.MeshBasicMaterial>(null);
+
   const texture = useTexture(CINEMATIC_ASSETS.whiteboard.url);
+  const textureBlurred = useTexture(CINEMATIC_ASSETS.whiteboardBlurred.url);
 
   useMemo(() => {
     texture.colorSpace = THREE.SRGBColorSpace;
     texture.anisotropy = 8;
-  }, [texture]);
+    textureBlurred.colorSpace = THREE.SRGBColorSpace;
+    textureBlurred.anisotropy = 8;
+  }, [texture, textureBlurred]);
 
-  // Sized to fully cover the frame at the *farthest* camera distance
-  // (start of scroll) — since the camera only ever moves closer to the
-  // board, this guarantees full coverage for the entire scroll range
-  // purely through real perspective, with no compensating rescale needed.
   const baseScale = useMemo(() => {
     const frame = visibleSizeAtDistance(
       controls.cameraStartZ - BOARD_Z,
@@ -41,23 +43,63 @@ export function WhiteboardLayer({ curvesRef, controls, viewportAspect }: Props) 
   }, [controls.cameraStartZ, controls.cameraFov, viewportAspect]);
 
   useFrame(() => {
-    const mesh = meshRef.current;
+    const group = groupRef.current;
+    const blurredMat = blurredMaterialRef.current;
+    const glassMat = glassMaterialRef.current;
     const curves = curvesRef.current;
-    if (!mesh || !curves) return;
+    if (!group || !curves) return;
 
     const settleScale = lerp(1, controls.boardParallaxScale, curves.boardParallaxT);
     const scale = baseScale * settleScale;
-    mesh.scale.set(scale * CINEMATIC_ASSETS.whiteboard.aspect, scale, 1);
-    mesh.position.x = lerp(0, controls.boardParallaxX, curves.boardParallaxT);
-    mesh.position.y = lerp(0, -0.04, curves.boardParallaxT);
+    group.scale.set(scale * CINEMATIC_ASSETS.whiteboard.aspect, scale, 1);
+    group.position.x = lerp(0, controls.boardParallaxX, curves.boardParallaxT);
+    group.position.y = lerp(0, -0.04, curves.boardParallaxT);
+
+    // Dynamic smooth blur fade: 0 on opening frame, ramps to 1 as user scrolls
+    if (blurredMat) {
+      blurredMat.opacity = curves.boardBlurT;
+    }
+    // Frosted glass tint sheen
+    if (glassMat) {
+      glassMat.opacity = curves.boardBlurT * 0.18;
+    }
   });
 
   return (
-    <mesh ref={meshRef} position={[0, 0, BOARD_Z]}>
-      <planeGeometry args={[1, 1]} />
-      <meshBasicMaterial map={texture} toneMapped={false} />
-      {/* nested so "Integration" inherits the board's own parallax/scale — it stays glued to the board surface */}
+    <group ref={groupRef} position={[0, 0, BOARD_Z]}>
+      {/* 1. Sharp Base Board (100% visible on initial frame) */}
+      <mesh position={[0, 0, 0]}>
+        <planeGeometry args={[1, 1]} />
+        <meshBasicMaterial map={texture} toneMapped={false} />
+      </mesh>
+
+      {/* 2. Blurred Board Overlay (opacity 0 at start, smoothly fades in on scroll) */}
+      <mesh position={[0, 0, 0.001]}>
+        <planeGeometry args={[1, 1]} />
+        <meshBasicMaterial
+          ref={blurredMaterialRef}
+          map={textureBlurred}
+          transparent
+          opacity={0}
+          depthWrite={false}
+          toneMapped={false}
+        />
+      </mesh>
+
+      {/* 3. Glassmorphism Frosted Sheen Overlay */}
+      <mesh position={[0, 0, 0.002]}>
+        <planeGeometry args={[1, 1]} />
+        <meshBasicMaterial
+          ref={glassMaterialRef}
+          color="#f4f1ea"
+          transparent
+          opacity={0}
+          depthWrite={false}
+        />
+      </mesh>
+
+      {/* 4. Integration Chalk Text */}
       <IntegrationLayer curvesRef={curvesRef} controls={controls} />
-    </mesh>
+    </group>
   );
 }

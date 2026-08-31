@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-const isDev = process.env.NODE_ENV !== "production";
-
 export interface CinematicControls {
   cameraFov: number;
   cameraStartZ: number;
@@ -20,17 +18,17 @@ export interface CinematicControls {
 }
 
 export const DEFAULT_CONTROLS: CinematicControls = {
-  cameraFov: 32,
+  cameraFov: 29,
   cameraStartZ: 9,
-  cameraEndZ: 3.4,
-  soumenExitX: 3.4,
-  soumenRotateY: 0.35,
-  soumenRecedeScale: 0.85,
-  boardParallaxX: 0.15,
-  boardParallaxScale: 1.08,
-  integrationScale: 1,
-  integrationX: 0.16,
-  integrationY: -0.06,
+  cameraEndZ: 5.7,
+  soumenExitX: 4.5,
+  soumenRotateY: 0.07,
+  soumenRecedeScale: 0.98,
+  boardParallaxX: -0.66,
+  boardParallaxScale: 1.2,
+  integrationScale: 0.54,
+  integrationX: 0.18,
+  integrationY: 0.195,
   integrationRotation: -0.03,
 };
 
@@ -43,25 +41,20 @@ interface FieldDef {
 }
 
 const FIELDS: FieldDef[] = [
-  { key: "cameraFov", label: "Camera FOV", min: 18, max: 55, step: 1 },
-  { key: "cameraStartZ", label: "Camera start Z", min: 4, max: 16, step: 0.1 },
-  { key: "cameraEndZ", label: "Camera end Z", min: 1.5, max: 8, step: 0.1 },
-  { key: "soumenExitX", label: "Soumen exit X", min: 0, max: 8, step: 0.1 },
-  { key: "soumenRotateY", label: "Soumen rotate Y", min: 0, max: 1.2, step: 0.01 },
-  { key: "soumenRecedeScale", label: "Soumen recede scale", min: 0.5, max: 1, step: 0.01 },
-  { key: "boardParallaxX", label: "Board parallax X", min: -1, max: 1, step: 0.01 },
-  { key: "boardParallaxScale", label: "Board parallax scale", min: 1, max: 1.6, step: 0.01 },
-  { key: "integrationScale", label: "Integration scale", min: 0.5, max: 2, step: 0.01 },
-  { key: "integrationX", label: "Integration X", min: -0.5, max: 0.5, step: 0.005 },
-  { key: "integrationY", label: "Integration Y", min: -0.5, max: 0.5, step: 0.005 },
-  { key: "integrationRotation", label: "Integration rotation", min: -0.3, max: 0.3, step: 0.005 },
+  { key: "cameraFov", label: "Camera FOV", min: 15, max: 60, step: 1 },
+  { key: "cameraStartZ", label: "Camera Start Z", min: 3, max: 18, step: 0.1 },
+  { key: "cameraEndZ", label: "Camera End Z", min: 1, max: 10, step: 0.1 },
+  { key: "soumenExitX", label: "Soumen Exit X", min: 0, max: 10, step: 0.1 },
+  { key: "soumenRotateY", label: "Soumen Rotate Y", min: 0, max: 1.5, step: 0.01 },
+  { key: "soumenRecedeScale", label: "Soumen Recede Scale", min: 0.4, max: 1.2, step: 0.01 },
+  { key: "boardParallaxX", label: "Board Parallax X", min: -2, max: 2, step: 0.01 },
+  { key: "boardParallaxScale", label: "Board Parallax Scale", min: 0.8, max: 2, step: 0.01 },
+  { key: "integrationScale", label: "Integration Scale", min: 0.1, max: 2.5, step: 0.01 },
+  { key: "integrationX", label: "Integration X", min: -1, max: 1, step: 0.005 },
+  { key: "integrationY", label: "Integration Y", min: -1, max: 1, step: 0.005 },
+  { key: "integrationRotation", label: "Integration Rotation", min: -0.5, max: 0.5, step: 0.005 },
 ];
 
-/**
- * Lightweight, dependency-free debug controls (Leva does not yet support
- * React 19's removal of ReactDOM.render, so it crashes on mount — this
- * covers the same "live-tune the staging" need without that risk).
- */
 export function useCinematicControls(): [CinematicControls, (next: CinematicControls) => void] {
   const [controls, setControls] = useState<CinematicControls>(DEFAULT_CONTROLS);
   return [controls, setControls];
@@ -74,25 +67,43 @@ interface PanelProps {
 
 export function CinematicDebugPanel({ controls, onChange }: PanelProps) {
   const [open, setOpen] = useState(false);
-  if (!isDev) return null;
+  const [copied, setCopied] = useState(false);
+
+  const copyConfig = () => {
+    const code = `export const DEFAULT_CONTROLS: CinematicControls = ${JSON.stringify(controls, null, 2)};`;
+    navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const resetDefaults = () => {
+    onChange(DEFAULT_CONTROLS);
+  };
 
   return (
-    <div className="pointer-events-auto fixed bottom-4 right-4 z-50 w-72 rounded-lg border border-black/10 bg-white/95 font-mono text-[11px] shadow-lg backdrop-blur">
+    <div className="pointer-events-auto fixed bottom-4 right-4 z-50 w-80 rounded-2xl border border-black/15 bg-white/90 p-1 font-sans text-xs shadow-2xl backdrop-blur-xl transition-all">
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between px-3 py-2 text-left font-semibold"
+        className="flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-left font-display font-semibold text-ink hover:bg-black/5"
       >
-        Cinematic Hero — debug
-        <span>{open ? "−" : "+"}</span>
+        <span className="flex items-center gap-2">
+          <span>⚙️</span> Cinematic Adjustments Scale
+        </span>
+        <span className="rounded-full bg-black/5 px-2 py-0.5 font-mono text-[10px]">
+          {open ? "Close −" : "Open Controls +"}
+        </span>
       </button>
+
       {open && (
-        <div className="max-h-96 space-y-2 overflow-y-auto border-t border-black/10 p-3">
+        <div className="mt-1 max-h-[26rem] space-y-3 overflow-y-auto border-t border-black/10 p-3">
           {FIELDS.map((field) => (
-            <label key={field.key} className="block">
-              <div className="mb-0.5 flex justify-between">
+            <label key={field.key} className="block space-y-1">
+              <div className="flex items-center justify-between text-[11px] font-medium text-ink">
                 <span>{field.label}</span>
-                <span>{controls[field.key].toFixed(3)}</span>
+                <span className="font-mono text-[10px] text-ink/70 bg-black/5 px-1.5 py-0.5 rounded">
+                  {controls[field.key].toFixed(3)}
+                </span>
               </div>
               <input
                 type="range"
@@ -103,10 +114,27 @@ export function CinematicDebugPanel({ controls, onChange }: PanelProps) {
                 onChange={(e) =>
                   onChange({ ...controls, [field.key]: parseFloat(e.target.value) })
                 }
-                className="w-full"
+                className="h-1.5 w-full cursor-pointer appearance-none rounded-lg bg-black/15 accent-ink"
               />
             </label>
           ))}
+
+          <div className="pt-2 flex gap-2 border-t border-black/10">
+            <button
+              type="button"
+              onClick={copyConfig}
+              className="flex-1 rounded-lg bg-ink text-white py-1.5 text-[11px] font-semibold hover:bg-ink/90 transition-all"
+            >
+              {copied ? "Copied JS Code! ✓" : "Copy Config Code"}
+            </button>
+            <button
+              type="button"
+              onClick={resetDefaults}
+              className="rounded-lg border border-black/20 bg-white/80 px-3 py-1.5 text-[11px] font-medium text-ink hover:bg-black/5 transition-all"
+            >
+              Reset
+            </button>
+          </div>
         </div>
       )}
     </div>

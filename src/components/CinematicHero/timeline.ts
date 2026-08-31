@@ -38,8 +38,14 @@ export interface CinematicCurves {
   cameraPushT: number;
   /** subtle board settle/parallax as the camera approaches */
   boardParallaxT: number;
+  /** 0 = crisp sharp board, 1 = fully blurred board background */
+  boardBlurT: number;
   /** 0 = invisible, 1 = fully resolved chalk word on the board */
   integrationT: number;
+  /** 0 = initial position, 1 = translated downwards on exit (0.8 -> 1.0) */
+  integrationExitY: number;
+  /** 1 = fully visible, 0 = faded out during exit (0.8 -> 1.0) */
+  integrationOpacityT: number;
   /** overall scroll progress, unmodified */
   progress: number;
 }
@@ -53,7 +59,13 @@ export function computeCurves(rawProgress: number, motionScale = 1): CinematicCu
   const opacityT = 1 - easeInOutCubic(remap(progress, 0.45, 0.78));
   const pushT = easeInOutCubic(remap(progress, 0.25, 1.0));
   const parallaxT = easeOutCubic(remap(progress, 0.0, 1.0));
-  const integrationT = easeOutCubic(remap(progress, 0.78, 1.0));
+  const boardBlurT = easeInOutCubic(remap(progress, 0.05, 0.70));
+
+  // Integration text appears earlier (0.45 -> 0.60), stays visible (0.60 -> 0.80), then exits downwards/fades (0.80 -> 1.00)
+  const integrationInT = easeOutCubic(remap(progress, 0.45, 0.60));
+  const exitProgress = remap(progress, 0.80, 1.00);
+  const integrationExitY = easeInOutCubic(exitProgress);
+  const integrationOpacityT = (1 - easeInOutCubic(exitProgress)) * integrationInT;
 
   return {
     soumenMoveT: moveT * motionScale,
@@ -62,7 +74,10 @@ export function computeCurves(rawProgress: number, motionScale = 1): CinematicCu
     soumenOpacityT: motionScale < 1 ? lerp(1, opacityT, motionScale) : opacityT,
     cameraPushT: pushT * motionScale,
     boardParallaxT: parallaxT * motionScale,
-    integrationT,
+    boardBlurT,
+    integrationT: integrationInT,
+    integrationExitY,
+    integrationOpacityT,
     progress,
   };
 }

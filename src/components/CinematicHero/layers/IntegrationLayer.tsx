@@ -6,10 +6,8 @@ import * as THREE from "three";
 import { lerp, type CinematicCurves } from "../timeline";
 import type { CinematicControls } from "../DebugPanel";
 
-const CANVAS_W = 1024;
-const CANVAS_H = 384;
-const TEXT = "Integration";
-const INK = "#1c2a4a"; // matches the board's blue marker ink
+const CANVAS_W = 1280;
+const CANVAS_H = 440;
 
 function drawTextTexture(fontReady: boolean): THREE.CanvasTexture {
   const canvas = document.createElement("canvas");
@@ -18,28 +16,64 @@ function drawTextTexture(fontReady: boolean): THREE.CanvasTexture {
   const ctx = canvas.getContext("2d")!;
   ctx.clearRect(0, 0, CANVAS_W, CANVAS_H);
 
-  const fontFamily = fontReady
-    ? "var(--font-chalk), cursive"
-    : "cursive";
-  ctx.font = `700 200px ${fontReady ? '"Kalam"' : fontFamily}`;
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillStyle = INK;
-  ctx.save();
-  ctx.translate(CANVAS_W / 2, CANVAS_H / 2 - 10);
-  ctx.rotate(-0.02);
-  ctx.fillText(TEXT, 0, 0);
+  const primaryFont = fontReady
+    ? '"Caveat", "Kalam", cursive'
+    : '"Kalam", cursive';
+  const mathFont = fontReady ? '"Caveat", serif' : 'serif';
 
-  // hand-drawn underline, roughly beneath the word
-  const metrics = ctx.measureText(TEXT);
-  const halfWidth = metrics.width / 2;
-  ctx.strokeStyle = INK;
-  ctx.lineWidth = 10;
+  ctx.save();
+  ctx.translate(CANVAS_W / 2, CANVAS_H / 2 - 5);
+  ctx.rotate(-0.025); // natural handwritten slight tilt
+
+  const INK_PRIMARY = "#12223f";
+  const INK_SECONDARY = "#244572";
+
+  // 1. Background formula watermark
+  ctx.font = `600 48px ${mathFont}`;
+  ctx.fillStyle = "rgba(18, 34, 63, 0.12)";
+  ctx.textAlign = "center";
+  ctx.fillText("∫ f(x) dx = F(x) + C", 0, -115);
+
+  // 2. Integral Symbol ∫ on the left
+  ctx.font = `700 230px ${primaryFont}`;
+  ctx.fillStyle = INK_SECONDARY;
+  ctx.textAlign = "right";
+  ctx.textBaseline = "middle";
+  ctx.fillText("∫", -330, -5);
+
+  // Integral bounds 'a' and 'b'
+  ctx.font = `700 55px ${primaryFont}`;
+  ctx.fillText("b", -330, -95);
+  ctx.fillText("a", -345, 80);
+
+  // 3. Main Word "Integration" in center
+  ctx.font = `700 185px ${primaryFont}`;
+  ctx.fillStyle = INK_PRIMARY;
+  ctx.textAlign = "center";
+  ctx.fillText("Integration", 10, 0);
+
+  // 4. Differential "dx" on the right
+  ctx.font = `600 130px ${primaryFont}`;
+  ctx.fillStyle = INK_SECONDARY;
+  ctx.textAlign = "left";
+  ctx.fillText("dx", 370, 15);
+
+  // 5. Hand-drawn double underline strokes
+  ctx.strokeStyle = INK_PRIMARY;
+  ctx.lineWidth = 8;
   ctx.lineCap = "round";
   ctx.beginPath();
-  ctx.moveTo(-halfWidth * 0.9, 90);
-  ctx.quadraticCurveTo(0, 100, halfWidth * 0.92, 84);
+  ctx.moveTo(-360, 95);
+  ctx.quadraticCurveTo(10, 115, 450, 92);
   ctx.stroke();
+
+  ctx.strokeStyle = INK_SECONDARY;
+  ctx.lineWidth = 4;
+  ctx.beginPath();
+  ctx.moveTo(-330, 114);
+  ctx.quadraticCurveTo(10, 128, 430, 108);
+  ctx.stroke();
+
   ctx.restore();
 
   const texture = new THREE.CanvasTexture(canvas);
@@ -61,7 +95,10 @@ export function IntegrationLayer({ curvesRef, controls }: Props) {
   useEffect(() => {
     let cancelled = false;
     if (typeof document !== "undefined" && "fonts" in document) {
-      document.fonts.load('700 200px "Kalam"').then(() => {
+      Promise.all([
+        document.fonts.load('700 185px "Caveat"'),
+        document.fonts.load('700 185px "Kalam"'),
+      ]).then(() => {
         if (!cancelled) setFontReady(true);
       });
     }
@@ -79,9 +116,12 @@ export function IntegrationLayer({ curvesRef, controls }: Props) {
     const curves = curvesRef.current;
     if (!mesh || !material || !curves) return;
 
-    material.opacity = curves.integrationT;
-    const scale = lerp(0.9, 1, curves.integrationT) * controls.integrationScale * 0.34;
+    material.opacity = curves.integrationOpacityT;
+    const scale = lerp(0.9, 1, curves.integrationT) * controls.integrationScale * 0.36;
     mesh.scale.set(scale * aspect, scale, 1);
+
+    const exitOffsetY = -0.15 * curves.integrationExitY;
+    mesh.position.y = controls.integrationY + exitOffsetY;
   });
 
   return (

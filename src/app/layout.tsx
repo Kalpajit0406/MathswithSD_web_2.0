@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, Kalam } from "next/font/google";
+import { Space_Grotesk, Inter, Kalam, Caveat } from "next/font/google";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -20,6 +20,12 @@ const chalk = Kalam({
   weight: ["400", "700"],
 });
 
+const scriptFont = Caveat({
+  subsets: ["latin"],
+  variable: "--font-script",
+  weight: ["600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "MathsWithSD — Learn Mathematics with Soumen Sir",
   description:
@@ -32,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${chalk.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable} ${chalk.variable} ${scriptFont.variable}`} suppressHydrationWarning>
       <body className="font-body">{children}</body>
     </html>
   );

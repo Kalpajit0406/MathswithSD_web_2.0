@@ -44,7 +44,7 @@ const MODULES = [
 
 export function FeaturesSection() {
   return (
-    <div className="relative bg-[#f4f1ea] text-[#141311] z-20 py-20 px-6 sm:px-12 border-t border-black/5">
+    <div className="relative bg-[#f4f1ea]/80 backdrop-blur-md text-[#141311] z-20 py-20 px-6 sm:px-12 border-t border-black/5 shadow-2xl">
       <div className="max-w-6xl mx-auto space-y-24">
         {/* Section 1: Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -67,15 +67,15 @@ export function FeaturesSection() {
             {FEATURES.map((item, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-board/40 border border-black/5 shadow-sm hover:border-black/15 transition-all duration-200"
+                className="p-6 rounded-2xl bg-white/40 backdrop-blur-md border border-white/60 shadow-md hover:shadow-xl hover:bg-white/60 transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-xl bg-ink text-white flex items-center justify-center mb-4">
+                <div className="w-10 h-10 rounded-xl bg-ink text-white flex items-center justify-center mb-4 shadow-sm">
                   {item.icon}
                 </div>
                 <h3 className="font-display text-lg font-bold text-ink">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-sm text-ink/70 leading-relaxed font-body">
+                <p className="mt-1 text-sm text-ink/80 leading-relaxed font-body">
                   {item.description}
                 </p>
               </div>
@@ -98,17 +98,17 @@ export function FeaturesSection() {
             {MODULES.map((mod, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-xl border border-black/10 bg-white/50 backdrop-blur-sm hover:bg-white/80 transition-all duration-200 flex flex-col justify-between"
+                className="p-6 rounded-2xl border border-white/60 bg-white/40 backdrop-blur-md hover:bg-white/70 hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-ink/50">
+                  <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-ink/60">
                     {mod.tag}
                   </span>
                   <h4 className="mt-2 font-display text-lg font-bold text-ink">
                     {mod.name}
                   </h4>
                 </div>
-                <div className="mt-6 pt-4 border-t border-black/5 flex items-center justify-between text-xs text-ink/60 font-body">
+                <div className="mt-6 pt-4 border-t border-black/5 flex items-center justify-between text-xs text-ink/70 font-body">
                   <span>{mod.level}</span>
                   <span className="font-semibold text-ink">Explore &rarr;</span>
                 </div>

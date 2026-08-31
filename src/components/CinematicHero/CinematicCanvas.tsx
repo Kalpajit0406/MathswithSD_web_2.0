@@ -59,7 +59,7 @@ export function CinematicCanvas({ progressRef, motionScale }: CinematicCanvasPro
   const [controls, setControls] = useCinematicControls();
 
   return (
-    <div className="cinematic-canvas-wrapper absolute inset-0" aria-hidden="true">
+    <div className="cinematic-canvas-wrapper fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
       <Canvas
         dpr={[1, 2]}
         gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
