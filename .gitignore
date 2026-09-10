@@ -6,4 +6,7 @@ out
 *.tsbuildinfo
 next-env.d.ts
 .vscode
+desktop.ini
+*.ini
+
 

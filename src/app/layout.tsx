@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter, Kalam, Caveat } from "next/font/google";
 import "./globals.css";
+import { CinematicLoader } from "@/components/CinematicLoader/CinematicLoader";
 
 const display = Space_Grotesk({
   subsets: ["latin"],
@@ -39,7 +40,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${chalk.variable} ${scriptFont.variable}`} suppressHydrationWarning>
-      <body className="font-body">{children}</body>
+      <body className="font-body">
+        <CinematicLoader />
+        {children}
+      </body>
     </html>
   );
 }
