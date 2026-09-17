@@ -5,6 +5,7 @@ import { Canvas, advance, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { WhiteboardLayer } from "./layers/WhiteboardLayer";
 import { SoumenLayer } from "./layers/SoumenLayer";
+import { IntegrationLayer } from "./layers/IntegrationLayer";
 import { computeCurves, lerp, type CinematicCurves } from "./timeline";
 import { useCinematicControls, CinematicDebugPanel, type CinematicControls } from "./DebugPanel";
 
@@ -45,6 +46,7 @@ function Scene({ progressRef, motionScale, controls }: SceneProps) {
   return (
     <>
       <WhiteboardLayer curvesRef={curvesRef} controls={controls} viewportAspect={aspect} />
+      <IntegrationLayer curvesRef={curvesRef} controls={controls} />
       <SoumenLayer curvesRef={curvesRef} controls={controls} viewportAspect={aspect} />
     </>
   );
@@ -59,7 +61,7 @@ export function CinematicCanvas({ progressRef, motionScale }: CinematicCanvasPro
   const [controls, setControls] = useCinematicControls();
 
   return (
-    <div className="cinematic-canvas-wrapper fixed inset-0 z-0 pointer-events-none" aria-hidden="true">
+    <div className="cinematic-canvas-wrapper absolute inset-0 z-0 pointer-events-none" aria-hidden="true">
       <Canvas
         dpr={[1, 2]}
         gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
