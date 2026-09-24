@@ -30,7 +30,32 @@ const scriptFont = Caveat({
 export const metadata: Metadata = {
   title: "MathsWithSD — Learn Mathematics with Soumen Sir",
   description:
-    "MathsWithSD is Soumen Sir's mathematics classroom — real teaching, real problem-solving, brought online.",
+    "MathsWithSD is Soumen Sir's mathematics classroom — real teaching, real problem-solving, brought online for Board & Entrance exams.",
+  keywords: [
+    "MathsWithSD",
+    "Soumen Sir",
+    "Mathematics Coaching",
+    "Class 11 Maths",
+    "Class 12 Maths",
+    "JEE Main Maths",
+    "WBJEE Maths",
+    "Calculus Coaching Kolkata",
+  ],
+  authors: [{ name: "Soumen Sir" }],
+  openGraph: {
+    title: "MathsWithSD — Soumen Sir's Mathematics Coaching",
+    description:
+      "Experience how abstract calculus, algebra, and geometry transform into intuitive, visual logic.",
+    siteName: "MathsWithSD",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MathsWithSD — Soumen Sir's Mathematics Coaching",
+    description:
+      "Experience how abstract calculus, algebra, and geometry transform into intuitive, visual logic.",
+  },
 };
 
 export default function RootLayout({
