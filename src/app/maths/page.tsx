@@ -7,6 +7,7 @@ import { CoursesOverviewSection } from "@/components/Sections/CoursesOverviewSec
 import { InteractiveModulesSection } from "@/components/Sections/InteractiveModulesSection";
 import { ClassroomSection } from "@/components/Sections/ClassroomSection";
 import { LocationSection } from "@/components/Sections/LocationSection";
+import { EnquirySection } from "@/components/Sections/EnquirySection";
 import { ContactSection } from "@/components/Sections/ContactSection";
 
 export default function MathsPage() {
@@ -39,7 +40,10 @@ export default function MathsPage() {
       {/* 07 — LOCATION: Where is it? */}
       <LocationSection />
 
-      {/* 08 — CONTACT, ENQUIRY & FINAL CTA: The journey is complete */}
+      {/* 08 — ENQUIRY & ADMISSION: Direct registration form */}
+      <EnquirySection />
+
+      {/* 09 — CONTACT, ENQUIRY & FINAL CTA: The journey is complete */}
       <ContactSection />
     </main>
   );

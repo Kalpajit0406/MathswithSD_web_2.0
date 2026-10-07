@@ -5,15 +5,23 @@ export default function ComputerSciencePage() {
     <SubjectPlaceholderPage
       subjectName="Computer Science"
       icon="💻"
-      tagline="Data Structures, Algorithmic Logic & Programming"
-      description="The Scholars Hub Computer Science Department is coming soon. Master programming fundamentals, algorithmic problem solving, object-oriented concepts, and software logic."
-      badgeColor="bg-sky-400"
+      tagline="Algorithms, Data Structures & Computational Thinking"
+      description="The Scholars Hub Computer Science Department will offer systematic algorithmic training, programming foundations in Python, Java, and C++, and computational problem-solving for aspiring software engineers."
       highlights={[
-        "Data Structures & Algorithms",
-        "Object-Oriented Programming (Java/Python)",
-        "Database Management Systems",
-        "Board & Olympiad Coding Prep",
+        "Data Structures & Algorithmic Complexity",
+        "Python, Java & C++ Programming Tracks",
+        "Competitive Coding & Informatics Olympiad",
+        "Full-Stack Web & Software Engineering Intro",
       ]}
+      pastel={{
+        pageBg: "#f0f9ff",       // pale sky blue
+        cardBg: "#e0f2fe",
+        borderColor: "#7dd3fc",
+        titleColor: "#0369a1",
+        textColor: "#082f49",
+        badgeBg: "bg-sky-200 text-sky-900",
+        accentGlow: "rgba(56, 189, 248, 0.4)",
+      }}
     />
   );
 }

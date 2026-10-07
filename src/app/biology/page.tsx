@@ -5,15 +5,23 @@ export default function BiologyPage() {
     <SubjectPlaceholderPage
       subjectName="Biology"
       icon="🧬"
-      tagline="Botany, Zoology, Genetics & Human Physiology"
-      description="The Scholars Hub Biology Department is preparing for rollout. Designed specifically for medical entrance aspirants and board excellence with visual diagrammatic learning."
-      badgeColor="bg-emerald-400"
+      tagline="Human Physiology, Genetics, Botany & NEET Excellence"
+      description="The Scholars Hub Biology Department will soon provide comprehensive life science education, high-yield diagrams, human physiology deep dives, and specialized NEET UG training."
       highlights={[
-        "Human Anatomy & Physiology",
-        "Genetics & Molecular Biology",
-        "Plant Physiology & Ecology",
-        "NEET Focused Mock Series",
+        "Human Physiology & Endocrine Systems",
+        "Genetics, Molecular Biology & Evolution",
+        "Plant Morphology & Plant Physiology",
+        "High-Yield Diagrammatic Memory Guides",
       ]}
+      pastel={{
+        pageBg: "#fff5f5",       // pale pink/peach
+        cardBg: "#fff1f2",
+        borderColor: "#fda4af",
+        titleColor: "#be123c",
+        textColor: "#4c0519",
+        badgeBg: "bg-rose-200 text-rose-900",
+        accentGlow: "rgba(251, 113, 133, 0.4)",
+      }}
     />
   );
 }

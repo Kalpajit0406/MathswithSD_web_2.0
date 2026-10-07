@@ -5,15 +5,23 @@ export default function ChemistryPage() {
     <SubjectPlaceholderPage
       subjectName="Chemistry"
       icon="🧪"
-      tagline="Organic Reaction Logic, Inorganic Concepts & Physical Numericals"
-      description="The Scholars Hub Chemistry Department is under preparation. It will host step-by-step organic mechanism maps, physical chemistry solver guides, and targeted Board & Entrance prep."
-      badgeColor="bg-teal-400"
+      tagline="Organic Mechanisms, Inorganic Trends & Physical Chemistry"
+      description="The Scholars Hub Chemistry Department is under active preparation. Master reaction mechanisms, atomic structures, and comprehensive numerical solving for competitive examinations."
       highlights={[
-        "Organic Reaction Mechanisms",
-        "Physical Chemistry Problem Solving",
-        "Inorganic Periodic Trends & Bonding",
-        "JEE Main & NEET Question Banks",
+        "Organic Reaction Mechanisms & Stereochemistry",
+        "Physical Chemistry Thermodynamics & Kinetics",
+        "Coordination Compounds & NCERT Trends",
+        "Laboratory Synthesis Concept Walkthroughs",
       ]}
+      pastel={{
+        pageBg: "#f0fdf4",       // pale mint
+        cardBg: "#ecfdf5",
+        borderColor: "#6ee7b7",
+        titleColor: "#047857",
+        textColor: "#022c22",
+        badgeBg: "bg-emerald-200 text-emerald-900",
+        accentGlow: "rgba(52, 211, 153, 0.4)",
+      }}
     />
   );
 }

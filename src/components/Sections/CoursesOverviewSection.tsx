@@ -61,7 +61,7 @@ export function CoursesOverviewSection() {
               <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
                 <span>Offered In-Person &amp; App</span>
                 <a 
-                  href="#contact-section"
+                  href="#enquiry-section"
                   className="font-display font-bold text-amber-400 hover:text-amber-300 transition-colors"
                 >
                   Enquire &rarr;

@@ -188,8 +188,9 @@ export function FeaturesSection() {
             <p>&copy; {new Date().getFullYear()} MathsWithSD — Soumen Sir&apos;s Mathematics Classroom.</p>
             <p className="text-[11px] text-ink/60">
               Designed &amp; Developed by{" "}
-              <span className="font-semibold text-ink">Kalpajit Bepary</span> &amp;{" "}
-              <span className="font-semibold text-ink">Tushant Pramanik</span>
+              <span className="font-semibold text-ink">Kalpajit Bepary</span>,{" "}
+              <span className="font-semibold text-ink">Tushant Pramanik</span> &amp;{" "}
+              <span className="font-semibold text-ink">Aparna Maity</span>
             </p>
           </div>
 

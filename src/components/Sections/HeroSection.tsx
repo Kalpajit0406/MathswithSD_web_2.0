@@ -4,9 +4,9 @@ import React from "react";
 import { TeacherCharacter } from "../TeacherCharacter";
 
 export function HeroSection() {
-  const handleScrollToModules = (e: React.MouseEvent) => {
+  const handleScrollToEnquiry = (e: React.MouseEvent) => {
     e.preventDefault();
-    const el = document.getElementById("interactive-modules");
+    const el = document.getElementById("enquiry-section");
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
@@ -55,11 +55,11 @@ export function HeroSection() {
           {/* Action CTAs */}
           <div className="pt-4 flex flex-wrap items-center gap-4">
             <a
-              href="#interactive-modules"
-              onClick={handleScrollToModules}
+              href="#enquiry-section"
+              onClick={handleScrollToEnquiry}
               className="px-7 py-3.5 rounded-full bg-slate-950 text-white font-display font-bold text-sm hover:bg-slate-800 transition-all shadow-xl hover:shadow-2xl flex items-center gap-2"
             >
-              <span>Explore Courses &amp; Modules</span>
+              <span>Explore Courses &amp; Enrol</span>
               <svg className="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>

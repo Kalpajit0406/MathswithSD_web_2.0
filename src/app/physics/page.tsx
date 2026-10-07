@@ -6,14 +6,22 @@ export default function PhysicsPage() {
       subjectName="Physics"
       icon="⚛"
       tagline="Mechanics, Electromagnetism, Quantum & Modern Physics"
-      description="The Scholars Hub Physics Department is currently under development. This section will feature conceptual physics lessons, problem sets for JEE/NEET, and interactive physical simulations."
-      badgeColor="bg-indigo-400"
+      description="The Scholars Hub Physics Department is currently undergoing curriculum development. This section will feature interactive physical simulations, problem sets for JEE and NEET, and conceptual foundation lectures."
       highlights={[
-        "Mechanics & Thermodynamics",
+        "Classical Mechanics & Rotational Motion",
         "Electromagnetism & Wave Optics",
         "Modern Physics & Atomic Structure",
-        "Interactive Lab Simulations",
+        "Interactive Physical Experiments",
       ]}
+      pastel={{
+        pageBg: "#faf5ff",       // pale lavender
+        cardBg: "#f3e8ff",
+        borderColor: "#d8b4fe",
+        titleColor: "#6b21a8",
+        textColor: "#3b0764",
+        badgeBg: "bg-purple-200 text-purple-900",
+        accentGlow: "rgba(192, 132, 252, 0.4)",
+      }}
     />
   );
 }
