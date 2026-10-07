@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import { usePathname } from "next/navigation";
 import { CinematicLoaderCanvas } from "./CinematicLoaderCanvas";
 import { LoaderHUD } from "./LoaderHUD";
 import { loaderAudio } from "./loaderAudio";
@@ -14,6 +15,7 @@ export function CinematicLoader({
   onStartTransition,
   onComplete,
 }: CinematicLoaderProps) {
+  const pathname = usePathname();
   const [elapsedTimeMs, setElapsedTimeMs] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -55,7 +57,7 @@ export function CinematicLoader({
     loaderAudio.startAmbient();
   }, []);
 
-  if (isDestroyed) return null;
+  if (pathname !== "/maths" || isDestroyed) return null;
 
   return (
     <div

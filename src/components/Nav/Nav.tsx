@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 export function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,24 +46,37 @@ export function Nav() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
-        {/* Brand Logo */}
-        <a
-          href="#hero-section"
-          onClick={(e) => handleNavClick(e, "#hero-section")}
-          className="flex items-center gap-2.5 group"
-        >
-          <div className="w-8 h-8 rounded-lg bg-amber-400 text-slate-950 flex items-center justify-center font-display font-black text-base shadow-md group-hover:bg-amber-300 transition-colors">
-            ∑
-          </div>
-          <div className="flex flex-col">
-            <span className="font-display font-extrabold text-base tracking-tight text-white group-hover:text-amber-300 transition-colors">
-              MATHSWITH<span className="text-amber-400">SD</span>
-            </span>
-            <span className="text-[10px] font-body text-slate-400 -mt-1 tracking-wider uppercase">
-              Soumen Sir Coaching
-            </span>
-          </div>
-        </a>
+        {/* Brand Logo & Parent Institution Link */}
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 text-xs font-display font-medium text-slate-300 hover:text-amber-400 bg-slate-900/90 hover:bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700/80 transition-all shadow-sm group"
+            title="Return to Scholars Hub Main Institution Landing Page"
+          >
+            <svg className="w-3.5 h-3.5 text-amber-400 group-hover:-translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span className="hidden sm:inline">Scholars Hub</span>
+          </Link>
+
+          <a
+            href="#hero-section"
+            onClick={(e) => handleNavClick(e, "#hero-section")}
+            className="flex items-center gap-2.5 group"
+          >
+            <div className="w-8 h-8 rounded-lg bg-amber-400 text-slate-950 flex items-center justify-center font-display font-black text-base shadow-md group-hover:bg-amber-300 transition-colors">
+              ∑
+            </div>
+            <div className="flex flex-col">
+              <span className="font-display font-extrabold text-base tracking-tight text-white group-hover:text-amber-300 transition-colors">
+                MATHSWITH<span className="text-amber-400">SD</span>
+              </span>
+              <span className="text-[10px] font-body text-slate-400 -mt-1 tracking-wider uppercase">
+                Soumen Sir Coaching
+              </span>
+            </div>
+          </a>
+        </div>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden lg:flex items-center gap-6">
