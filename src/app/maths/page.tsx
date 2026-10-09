@@ -9,6 +9,7 @@ import { ClassroomSection } from "@/components/Sections/ClassroomSection";
 import { LocationSection } from "@/components/Sections/LocationSection";
 import { EnquirySection } from "@/components/Sections/EnquirySection";
 import { ContactSection } from "@/components/Sections/ContactSection";
+import { AnimatedSection } from "@/components/ProfileSystem/AnimatedSection";
 
 export default function MathsPage() {
   return (
@@ -17,19 +18,29 @@ export default function MathsPage() {
       <Nav />
 
       {/* 3D WHITEBOARD CINEMATIC INTRO (Red T-Shirt Soumen & Integration Scroll Zoom) */}
-      <CinematicHero />
+      <AnimatedSection presetType="hero">
+        <CinematicHero />
+      </AnimatedSection>
 
       {/* 01 — HERO OVERVIEW: Who is the teacher? */}
-      <HeroSection />
+      <AnimatedSection presetType="entrance">
+        <HeroSection />
+      </AnimatedSection>
 
       {/* 02 — ABOUT: What does he teach? */}
-      <AboutSection />
+      <AnimatedSection presetType="scroll">
+        <AboutSection />
+      </AnimatedSection>
 
       {/* 03 — APPROACH: How does he teach? */}
-      <ApproachSection />
+      <AnimatedSection presetType="scroll">
+        <ApproachSection />
+      </AnimatedSection>
 
       {/* 04 — COURSES: What can students learn? */}
-      <CoursesOverviewSection />
+      <AnimatedSection presetType="cardHover">
+        <CoursesOverviewSection />
+      </AnimatedSection>
 
       {/* 05 — DEEP DIVE INTERACTIVE MODULES & OPEN-LIFT */}
       <InteractiveModulesSection />

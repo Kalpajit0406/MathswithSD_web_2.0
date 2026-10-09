@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
+import { ProfileSwitcher } from "@/components/ProfileSystem/ProfileSwitcher";
+
 export function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -92,7 +94,7 @@ export function Nav() {
           ))}
         </nav>
 
-        {/* Action Button & Mobile Toggle */}
+        {/* Action Button & Mobile Toggle & Profile Switcher */}
         <div className="flex items-center gap-3">
           <a
             href="https://play.google.com/store/search?q=mathswithsd&c=apps&hl=en_IN"
@@ -105,6 +107,9 @@ export function Nav() {
             </svg>
             <span>Get App</span>
           </a>
+
+          {/* Discreet Top-Right Profile Switcher */}
+          <ProfileSwitcher />
 
           {/* Mobile Menu Button */}
           <button

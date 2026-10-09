@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
+import { ProfileSwitcher } from "@/components/ProfileSystem/ProfileSwitcher";
+
 export function ScholarsHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -68,17 +70,22 @@ export function ScholarsHeader() {
           </a>
         </nav>
 
-        {/* Direct Action Link to Mathematics */}
-        <div className="hidden sm:flex items-center gap-3">
-          <Link
-            href="/maths"
-            className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full bg-slate-900 text-white font-display font-bold text-xs hover:bg-slate-800 transition-all shadow-md hover:scale-[1.02]"
-          >
-            <span>Mathematics Dept</span>
-            <svg className="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </Link>
+        {/* Direct Action Link to Mathematics & Profile Switcher */}
+        <div className="flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-3">
+            <Link
+              href="/maths"
+              className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full bg-slate-900 text-white font-display font-bold text-xs hover:bg-slate-800 transition-all shadow-md hover:scale-[1.02]"
+            >
+              <span>Mathematics Dept</span>
+              <svg className="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+          </div>
+
+          {/* Discreet Top-Right Profile Switcher */}
+          <ProfileSwitcher />
         </div>
 
         {/* Mobile menu button */}

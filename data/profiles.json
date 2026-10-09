@@ -1,0 +1,310 @@
+[
+  {
+    "id": "profile-1",
+    "name": "Profile 1 — Original Website",
+    "description": "The baseline design as it exists in production with original animations and component styling.",
+    "createdAt": "2026-10-01T00:00:00.000Z",
+    "updatedAt": "2026-10-01T00:00:00.000Z",
+    "modifiedBy": "System Baseline",
+    "isOriginal": true,
+    "pages": {
+      "landing": {
+        "entrancePreset": "original",
+        "heroPreset": "original",
+        "scrollPreset": "original",
+        "cardHoverPreset": "original",
+        "interactionPreset": "original",
+        "duration": 1,
+        "intensity": 1,
+        "stagger": 0.1,
+        "reducedMotion": false
+      },
+      "mathematics": {
+        "entrancePreset": "original",
+        "heroPreset": "original",
+        "scrollPreset": "original",
+        "cardHoverPreset": "original",
+        "interactionPreset": "original",
+        "duration": 1,
+        "intensity": 1,
+        "stagger": 0.1,
+        "reducedMotion": false
+      },
+      "physics": {
+        "entrancePreset": "original",
+        "heroPreset": "original",
+        "scrollPreset": "original",
+        "cardHoverPreset": "original",
+        "interactionPreset": "original",
+        "duration": 1,
+        "intensity": 1,
+        "stagger": 0.1,
+        "reducedMotion": false
+      },
+      "chemistry": {
+        "entrancePreset": "original",
+        "heroPreset": "original",
+        "scrollPreset": "original",
+        "cardHoverPreset": "original",
+        "interactionPreset": "original",
+        "duration": 1,
+        "intensity": 1,
+        "stagger": 0.1,
+        "reducedMotion": false
+      },
+      "biology": {
+        "entrancePreset": "original",
+        "heroPreset": "original",
+        "scrollPreset": "original",
+        "cardHoverPreset": "original",
+        "interactionPreset": "original",
+        "duration": 1,
+        "intensity": 1,
+        "stagger": 0.1,
+        "reducedMotion": false
+      },
+      "computer-science": {
+        "entrancePreset": "original",
+        "heroPreset": "original",
+        "scrollPreset": "original",
+        "cardHoverPreset": "original",
+        "interactionPreset": "original",
+        "duration": 1,
+        "intensity": 1,
+        "stagger": 0.1,
+        "reducedMotion": false
+      }
+    }
+  },
+  {
+    "id": "profile-2",
+    "name": "Profile 2 — Cinematic Animations",
+    "description": "High-impact entrance reveals, glowing hover cards, and smooth scroll transitions across all pages.",
+    "createdAt": "2026-10-05T00:00:00.000Z",
+    "updatedAt": "2026-10-08T00:00:00.000Z",
+    "modifiedBy": "Design Team",
+    "isOriginal": false,
+    "pages": {
+      "landing": {
+        "entrancePreset": "cinematic-fade",
+        "heroPreset": "3d-float",
+        "scrollPreset": "parallax-slide",
+        "cardHoverPreset": "lift-glow",
+        "interactionPreset": "dynamic",
+        "duration": 1.2,
+        "intensity": 1.5,
+        "stagger": 0.15,
+        "reducedMotion": false
+      },
+      "mathematics": {
+        "entrancePreset": "stagger-reveal",
+        "heroPreset": "glowing-aura",
+        "scrollPreset": "staggered-cards",
+        "cardHoverPreset": "3d-tilt",
+        "interactionPreset": "dynamic",
+        "duration": 1.1,
+        "intensity": 1.4,
+        "stagger": 0.12,
+        "reducedMotion": false
+      },
+      "physics": {
+        "entrancePreset": "zoom-bounce",
+        "heroPreset": "3d-float",
+        "scrollPreset": "parallax-slide",
+        "cardHoverPreset": "border-pulse",
+        "interactionPreset": "dynamic",
+        "duration": 1,
+        "intensity": 1.3,
+        "stagger": 0.1,
+        "reducedMotion": false
+      },
+      "chemistry": {
+        "entrancePreset": "slide-up",
+        "heroPreset": "glowing-aura",
+        "scrollPreset": "fade-in-up",
+        "cardHoverPreset": "lift-glow",
+        "interactionPreset": "dynamic",
+        "duration": 1,
+        "intensity": 1.2,
+        "stagger": 0.1,
+        "reducedMotion": false
+      },
+      "biology": {
+        "entrancePreset": "cinematic-fade",
+        "heroPreset": "subtle-pulse",
+        "scrollPreset": "parallax-slide",
+        "cardHoverPreset": "subtle",
+        "interactionPreset": "subtle",
+        "duration": 1,
+        "intensity": 1.1,
+        "stagger": 0.1,
+        "reducedMotion": false
+      },
+      "computer-science": {
+        "entrancePreset": "stagger-reveal",
+        "heroPreset": "3d-float",
+        "scrollPreset": "staggered-cards",
+        "cardHoverPreset": "lift-glow",
+        "interactionPreset": "dynamic",
+        "duration": 1.2,
+        "intensity": 1.5,
+        "stagger": 0.15,
+        "reducedMotion": false
+      }
+    }
+  },
+  {
+    "id": "profile-3",
+    "name": "Profile 3 — Minimal Animations",
+    "description": "Clean, low-latency layout with subtle hover states and reduced movement for high performance.",
+    "createdAt": "2026-10-06T00:00:00.000Z",
+    "updatedAt": "2026-10-08T00:00:00.000Z",
+    "modifiedBy": "Frontend Lead",
+    "isOriginal": false,
+    "pages": {
+      "landing": {
+        "entrancePreset": "slide-up",
+        "heroPreset": "minimal",
+        "scrollPreset": "fade-in-up",
+        "cardHoverPreset": "subtle",
+        "interactionPreset": "subtle",
+        "duration": 0.7,
+        "intensity": 0.6,
+        "stagger": 0.05,
+        "reducedMotion": false
+      },
+      "mathematics": {
+        "entrancePreset": "slide-up",
+        "heroPreset": "minimal",
+        "scrollPreset": "fade-in-up",
+        "cardHoverPreset": "subtle",
+        "interactionPreset": "subtle",
+        "duration": 0.7,
+        "intensity": 0.6,
+        "stagger": 0.05,
+        "reducedMotion": false
+      },
+      "physics": {
+        "entrancePreset": "slide-up",
+        "heroPreset": "minimal",
+        "scrollPreset": "fade-in-up",
+        "cardHoverPreset": "subtle",
+        "interactionPreset": "subtle",
+        "duration": 0.7,
+        "intensity": 0.6,
+        "stagger": 0.05,
+        "reducedMotion": false
+      },
+      "chemistry": {
+        "entrancePreset": "slide-up",
+        "heroPreset": "minimal",
+        "scrollPreset": "fade-in-up",
+        "cardHoverPreset": "subtle",
+        "interactionPreset": "subtle",
+        "duration": 0.7,
+        "intensity": 0.6,
+        "stagger": 0.05,
+        "reducedMotion": false
+      },
+      "biology": {
+        "entrancePreset": "slide-up",
+        "heroPreset": "minimal",
+        "scrollPreset": "fade-in-up",
+        "cardHoverPreset": "subtle",
+        "interactionPreset": "subtle",
+        "duration": 0.7,
+        "intensity": 0.6,
+        "stagger": 0.05,
+        "reducedMotion": false
+      },
+      "computer-science": {
+        "entrancePreset": "slide-up",
+        "heroPreset": "minimal",
+        "scrollPreset": "fade-in-up",
+        "cardHoverPreset": "subtle",
+        "interactionPreset": "subtle",
+        "duration": 0.7,
+        "intensity": 0.6,
+        "stagger": 0.05,
+        "reducedMotion": false
+      }
+    }
+  },
+  {
+    "id": "profile-4",
+    "name": "Profile 4 — Experimental Design",
+    "description": "Bold interactive motion experimentation featuring playful stagger, spring zooms, and pulsing card accents.",
+    "createdAt": "2026-10-07T00:00:00.000Z",
+    "updatedAt": "2026-10-09T00:00:00.000Z",
+    "modifiedBy": "UX Lab",
+    "isOriginal": false,
+    "pages": {
+      "landing": {
+        "entrancePreset": "zoom-bounce",
+        "heroPreset": "glowing-aura",
+        "scrollPreset": "staggered-cards",
+        "cardHoverPreset": "3d-tilt",
+        "interactionPreset": "dynamic",
+        "duration": 1.4,
+        "intensity": 1.8,
+        "stagger": 0.2,
+        "reducedMotion": false
+      },
+      "mathematics": {
+        "entrancePreset": "zoom-bounce",
+        "heroPreset": "glowing-aura",
+        "scrollPreset": "staggered-cards",
+        "cardHoverPreset": "border-pulse",
+        "interactionPreset": "dynamic",
+        "duration": 1.4,
+        "intensity": 1.8,
+        "stagger": 0.2,
+        "reducedMotion": false
+      },
+      "physics": {
+        "entrancePreset": "zoom-bounce",
+        "heroPreset": "3d-float",
+        "scrollPreset": "parallax-slide",
+        "cardHoverPreset": "lift-glow",
+        "interactionPreset": "dynamic",
+        "duration": 1.3,
+        "intensity": 1.7,
+        "stagger": 0.18,
+        "reducedMotion": false
+      },
+      "chemistry": {
+        "entrancePreset": "stagger-reveal",
+        "heroPreset": "glowing-aura",
+        "scrollPreset": "parallax-slide",
+        "cardHoverPreset": "3d-tilt",
+        "interactionPreset": "dynamic",
+        "duration": 1.3,
+        "intensity": 1.6,
+        "stagger": 0.15,
+        "reducedMotion": false
+      },
+      "biology": {
+        "entrancePreset": "cinematic-fade",
+        "heroPreset": "subtle-pulse",
+        "scrollPreset": "staggered-cards",
+        "cardHoverPreset": "lift-glow",
+        "interactionPreset": "dynamic",
+        "duration": 1.2,
+        "intensity": 1.5,
+        "stagger": 0.15,
+        "reducedMotion": false
+      },
+      "computer-science": {
+        "entrancePreset": "zoom-bounce",
+        "heroPreset": "glowing-aura",
+        "scrollPreset": "staggered-cards",
+        "cardHoverPreset": "border-pulse",
+        "interactionPreset": "dynamic",
+        "duration": 1.5,
+        "intensity": 2,
+        "stagger": 0.25,
+        "reducedMotion": false
+      }
+    }
+  }
+]

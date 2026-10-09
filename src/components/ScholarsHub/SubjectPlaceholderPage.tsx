@@ -2,6 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
+import { ProfileSwitcher } from "@/components/ProfileSystem/ProfileSwitcher";
+import { AnimatedSection } from "@/components/ProfileSystem/AnimatedSection";
 
 export interface SubjectPlaceholderProps {
   subjectName: string;
@@ -71,19 +73,23 @@ export function SubjectPlaceholderPage({
             </svg>
             <span>Back to Home</span>
           </Link>
+
+          {/* Universal Profile Switcher */}
+          <ProfileSwitcher />
         </div>
       </header>
 
       {/* Main Content Showcase */}
       <div className="flex-1 flex items-center justify-center pt-32 pb-20 px-4 sm:px-6 relative z-10">
-        <div
-          style={{
-            backgroundColor: pastel.cardBg,
-            borderColor: pastel.borderColor,
-            boxShadow: `0 25px 50px -12px ${pastel.accentGlow}, 0 4px 16px rgba(15, 23, 42, 0.06)`,
-          }}
-          className="max-w-2xl w-full rounded-3xl border p-8 sm:p-12 text-center space-y-8 backdrop-blur-sm"
-        >
+        <AnimatedSection presetType="hero" className="w-full max-w-2xl">
+          <div
+            style={{
+              backgroundColor: pastel.cardBg,
+              borderColor: pastel.borderColor,
+              boxShadow: `0 25px 50px -12px ${pastel.accentGlow}, 0 4px 16px rgba(15, 23, 42, 0.06)`,
+            }}
+            className="w-full rounded-3xl border p-8 sm:p-12 text-center space-y-8 backdrop-blur-sm"
+          >
           {/* Badge & Subject Icon */}
           <div className="space-y-4">
             <div
@@ -196,6 +202,7 @@ export function SubjectPlaceholderPage({
           </div>
 
         </div>
+        </AnimatedSection>
       </div>
 
       {/* Footer */}
