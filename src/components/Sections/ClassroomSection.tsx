@@ -8,19 +8,19 @@ export function ClassroomSection() {
   return (
     <section 
       id="classroom-section"
-      className="relative py-24 px-4 sm:px-8 lg:px-12 bg-white text-slate-900 border-t border-slate-200 overflow-hidden"
+      className="relative py-24 px-4 sm:px-8 lg:px-12 bg-white text-[#1e2022] border-t border-[#ede7dc] overflow-hidden"
     >
       <div className="max-w-6xl mx-auto space-y-16">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-block px-3 py-1 rounded-full bg-slate-900/5 font-display text-xs font-bold text-slate-900 uppercase tracking-widest">
+          <div className="inline-block px-3 py-1 rounded-full bg-[#991b1b]/10 font-display text-xs font-bold text-[#991b1b] uppercase tracking-widest">
             06 — INSTITUTION &amp; CLASSROOM ENVIRONMENT
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1e2022]">
             Where the Learning Happens
           </h2>
-          <p className="text-base text-slate-700 font-body leading-relaxed">
+          <p className="text-base text-[#555b67] font-body leading-relaxed">
             Experience an environment engineered for deep mathematical focus, clear whiteboard visualization, and personal guidance.
           </p>
         </div>
@@ -28,17 +28,17 @@ export function ClassroomSection() {
         {/* Feature Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
-          <div className="p-7 rounded-3xl bg-slate-900 text-white border border-slate-800 flex flex-col justify-between shadow-xl">
+          <div className="p-7 rounded-3xl bg-[#fdfbf7] border border-[#ede7dc] flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-amber-400 text-slate-950 font-bold font-display flex items-center justify-center text-xl mb-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#991b1b] text-white font-bold font-display flex items-center justify-center text-xl mb-4 shadow-sm">
                 ✏️
               </div>
-              <h3 className="font-display font-bold text-xl text-white">Whiteboard Logic</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
+              <h3 className="font-display font-bold text-xl text-[#1e2022]">Whiteboard Logic</h3>
+              <p className="mt-2 text-xs sm:text-sm text-[#555b67] font-body leading-relaxed">
                 Step-by-step whiteboard derivations enable students to trace every logical step from start to finish.
               </p>
             </div>
-            <div className="mt-6 relative h-40 rounded-2xl overflow-hidden border border-white/10">
+            <div className="mt-6 relative h-40 rounded-2xl overflow-hidden border border-[#ede7dc]">
               <Image
                 src="/assets/cinematic/whiteboard.png"
                 alt="Soumen Sir's Classroom Whiteboard"
@@ -48,13 +48,13 @@ export function ClassroomSection() {
             </div>
           </div>
 
-          <div className="p-7 rounded-3xl bg-slate-950 text-white border border-slate-800 flex flex-col justify-between shadow-xl">
+          <div className="p-7 rounded-3xl bg-[#fdfbf7] border border-[#ede7dc] flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-sky-400 text-slate-950 font-bold font-display flex items-center justify-center text-xl mb-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#2d3139] text-amber-300 font-bold font-display flex items-center justify-center text-xl mb-4 shadow-sm">
                 👥
               </div>
-              <h3 className="font-display font-bold text-xl text-white">Personal Attention</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
+              <h3 className="font-display font-bold text-xl text-[#1e2022]">Personal Attention</h3>
+              <p className="mt-2 text-xs sm:text-sm text-[#555b67] font-body leading-relaxed">
                 Controlled batch size ensures Soumen Sir personally reviews every student&apos;s problem-solving steps.
               </p>
             </div>
@@ -63,22 +63,22 @@ export function ClassroomSection() {
             </div>
           </div>
 
-          <div className="p-7 rounded-3xl bg-slate-900 text-white border border-slate-800 flex flex-col justify-between shadow-xl">
+          <div className="p-7 rounded-3xl bg-[#fdfbf7] border border-[#ede7dc] flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-emerald-400 text-slate-950 font-bold font-display flex items-center justify-center text-xl mb-4">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-bold font-display flex items-center justify-center text-xl mb-4 shadow-sm">
                 📱
               </div>
-              <h3 className="font-display font-bold text-xl text-white">Official Android App</h3>
-              <p className="mt-2 text-xs sm:text-sm text-slate-300 font-body leading-relaxed">
+              <h3 className="font-display font-bold text-xl text-[#1e2022]">Official Android App</h3>
+              <p className="mt-2 text-xs sm:text-sm text-[#555b67] font-body leading-relaxed">
                 Access lesson videos, revision sheets, and direct assignment submissions anytime via the MathsWithSD mobile app.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="mt-6 pt-4 border-t border-[#ede7dc]">
               <a
                 href="https://play.google.com/store/search?q=mathswithsd&c=apps&hl=en_IN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 rounded-full bg-white text-slate-950 font-display font-bold text-xs hover:bg-slate-100 transition-all flex items-center justify-center gap-2 shadow-md"
+                className="w-full py-3 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-xs active:scale-95"
               >
                 <span>Get App on Google Play</span>
                 <span>&rarr;</span>

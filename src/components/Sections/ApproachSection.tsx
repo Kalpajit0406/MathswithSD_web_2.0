@@ -25,19 +25,19 @@ export function ApproachSection() {
   return (
     <section 
       id="approach-section"
-      className="relative py-24 px-4 sm:px-8 lg:px-12 bg-[#f8f6f0] text-slate-950 border-t border-slate-900/10 overflow-hidden"
+      className="relative py-24 px-4 sm:px-8 lg:px-12 bg-[#fdfbf7] text-[#1e2022] border-t border-[#ede7dc] overflow-hidden"
     >
       <div className="max-w-6xl mx-auto space-y-16">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-block px-3 py-1 rounded-full bg-slate-900/10 font-display text-xs font-bold text-slate-900 uppercase tracking-widest">
+          <div className="inline-block px-3 py-1 rounded-full bg-[#991b1b]/10 font-display text-xs font-bold text-[#991b1b] uppercase tracking-widest">
             03 — TEACHING METHODOLOGY
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1e2022]">
             How Mathematics Is Taught at MathsWithSD
           </h2>
-          <p className="text-base text-slate-700 font-body leading-relaxed">
+          <p className="text-base text-[#555b67] font-body leading-relaxed">
             Three core pillars designed to take students from foundational confusion to complete conceptual confidence.
           </p>
         </div>
@@ -50,14 +50,14 @@ export function ApproachSection() {
             {PILLARS.map((p) => (
               <div 
                 key={p.num}
-                className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all flex items-start gap-4"
+                className="p-6 rounded-2xl bg-white border border-[#ede7dc] shadow-xs hover:shadow-md transition-all flex items-start gap-4"
               >
-                <div className="w-12 h-12 rounded-xl bg-slate-950 text-amber-400 font-display font-extrabold text-lg flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-[#991b1b] text-white font-display font-extrabold text-lg flex items-center justify-center shrink-0">
                   {p.num}
                 </div>
                 <div>
-                  <h3 className="font-display font-bold text-lg text-slate-950">{p.title}</h3>
-                  <p className="mt-1 text-xs sm:text-sm text-slate-600 font-body leading-relaxed">{p.description}</p>
+                  <h3 className="font-display font-bold text-lg text-[#1e2022]">{p.title}</h3>
+                  <p className="mt-1 text-xs sm:text-sm text-[#555b67] font-body leading-relaxed">{p.description}</p>
                 </div>
               </div>
             ))}

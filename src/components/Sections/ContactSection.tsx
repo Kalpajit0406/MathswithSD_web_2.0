@@ -31,11 +31,11 @@ export function ContactSection() {
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <a
-                  href="#enquiry-section"
-                  className="inline-flex items-center gap-3 rounded-full bg-amber-400 text-slate-950 px-7 py-3.5 font-display font-bold text-sm hover:bg-amber-300 transition-all shadow-xl"
+                  href="#enquiry"
+                  className="inline-flex items-center gap-3 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white px-7 py-3.5 font-display font-bold text-sm transition-all shadow-md shadow-red-950/20 active:scale-95"
                 >
                   <span>Enrol / Submit Enquiry</span>
-                  <svg className="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7-7m7 7H3" />
                   </svg>
                 </a>
