@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { SubjectPlaceholderPage } from "@/components/ScholarsHub/SubjectPlaceholderPage";
+
+export const metadata: Metadata = {
+  title: "Chemistry Department — Scholars Hub Kolkata",
+  description:
+    "Master Organic Mechanisms, Inorganic NCERT trends, and Physical Chemistry thermodynamics at Scholars Hub.",
+  openGraph: {
+    title: "Chemistry Department — Scholars Hub",
+    description: "Deep conceptual foundations and problem solving for Board exams, WBJEE, JEE Main, and NEET.",
+    siteName: "Scholars Hub",
+  },
+};
 
 export default function ChemistryPage() {
   return (

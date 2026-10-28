@@ -50,12 +50,12 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-xl bg-slate-900 border border-slate-700 rounded-3xl shadow-2xl text-white p-6 sm:p-8 overflow-hidden max-h-[88vh] overflow-y-auto cursor-default space-y-6"
+        className="relative w-full max-w-xl bg-[#1e2022] border border-stone-700 rounded-3xl shadow-2xl text-white p-6 sm:p-8 overflow-hidden max-h-[88vh] overflow-y-auto cursor-default space-y-6"
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-slate-300 hover:bg-white/20 hover:text-white transition-all"
+          className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-stone-300 hover:bg-white/20 hover:text-white transition-all min-h-[44px] min-w-[44px] flex items-center justify-center"
           title="Close Modal"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
         </button>
 
         {/* Modal Header */}
-        <div className="border-b border-white/10 pb-4 pr-8">
+        <div className="border-b border-white/10 pb-4 pr-10">
           <span className="text-[11px] font-display font-bold uppercase tracking-widest text-amber-400">
             {module.tag} • {module.level}
           </span>
@@ -72,7 +72,7 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
         </div>
 
         {/* Core Formula Box */}
-        <div className="bg-slate-950 border border-amber-400/30 rounded-2xl p-4">
+        <div className="bg-black/60 border border-[#991b1b]/40 rounded-2xl p-4">
           <div className="text-[10px] font-display font-bold text-amber-400 uppercase tracking-widest mb-1">
             KEY CONCEPT FORMULA
           </div>
@@ -82,15 +82,15 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
         </div>
 
         {/* Soumen Sir Guidance Box */}
-        <div className="flex items-center gap-4 bg-slate-950/60 border border-slate-800 rounded-2xl p-4">
+        <div className="flex items-center gap-4 bg-stone-900 border border-stone-800 rounded-2xl p-4">
           <div className="shrink-0">
             <TeacherCharacter pose="thumbsup" height={80} />
           </div>
           <div>
-            <div className="text-xs font-display font-bold text-sky-400 uppercase tracking-wider mb-1">
+            <div className="text-xs font-display font-bold text-amber-400 uppercase tracking-wider mb-1">
               Soumen Sir&apos;s Tip
             </div>
-            <p className="text-xs text-slate-300 leading-relaxed font-body">
+            <p className="text-xs text-stone-300 leading-relaxed font-body">
               &quot;{module.sampleQuestion.hint}&quot;
             </p>
           </div>
@@ -98,10 +98,10 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
 
         {/* Interactive Practice Question */}
         <div className="space-y-3">
-          <h4 className="text-xs font-display font-bold text-slate-400 uppercase tracking-wider">
+          <h4 className="text-xs font-display font-bold text-stone-400 uppercase tracking-wider">
             Interactive Practice Question
           </h4>
-          <p className="text-sm font-body text-white bg-slate-950 p-4 rounded-xl border border-slate-800">
+          <p className="text-sm font-body text-white bg-black/60 p-4 rounded-xl border border-stone-800">
             {module.sampleQuestion.question}
           </p>
 
@@ -115,12 +115,12 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
                     setSelectedOption(idx);
                     setShowExplanation(true);
                   }}
-                  className={`p-3 text-left rounded-xl border font-mono text-xs transition-all flex items-center justify-between ${
+                  className={`p-3 text-left rounded-xl border font-mono text-xs transition-all flex items-center justify-between min-h-[44px] ${
                     isSelected
                       ? isCorrect
                         ? "bg-emerald-950/80 border-emerald-500 text-emerald-300 font-bold"
-                        : "bg-rose-950/80 border-rose-500 text-rose-300"
-                      : "bg-slate-800/80 border-slate-700 hover:border-sky-400 text-slate-200"
+                        : "bg-rose-950/80 border-[#991b1b] text-rose-300"
+                      : "bg-stone-800/80 border-stone-700 hover:border-amber-400 text-stone-200"
                   }`}
                 >
                   <span>{opt}</span>
@@ -136,7 +136,7 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
 
           {showExplanation && (
             <div className={`p-4 rounded-2xl border text-xs font-body leading-relaxed animate-fadeIn ${
-              isCorrect ? "bg-emerald-950/50 border-emerald-500/50 text-emerald-200" : "bg-amber-950/50 border-amber-500/50 text-amber-200"
+              isCorrect ? "bg-emerald-950/50 border-emerald-500/50 text-emerald-200" : "bg-stone-900 border-amber-500/50 text-amber-200"
             }`}>
               <span className="font-bold font-display uppercase tracking-wider block mb-1">
                 {isCorrect ? "🎉 Great Job!" : "💡 Solution Explanation:"}
@@ -147,11 +147,11 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
         </div>
 
         {/* Footer Actions */}
-        <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+        <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-stone-400">
           <span>MathsWithSD Module Guidance</span>
           <button
             onClick={onClose}
-            className="px-5 py-2 rounded-full bg-amber-400 text-slate-950 font-display font-bold hover:bg-amber-300 transition-all shadow-md"
+            className="px-5 py-2.5 rounded-full bg-[#991b1b] text-white font-display font-bold hover:bg-[#be123c] transition-all shadow-md min-h-[44px]"
           >
             Done
           </button>

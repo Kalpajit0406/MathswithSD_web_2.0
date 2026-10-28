@@ -31,48 +31,48 @@ export function OpenLiftPlatform({
         
         {/* Integrated Speech Guidance Bubble */}
         <div className="relative mb-2.5 animate-speech-entrance">
-          <div className="bg-slate-900/95 text-slate-100 p-3.5 rounded-2xl border border-sky-500/30 shadow-xl backdrop-blur-md relative">
+          <div className="bg-[#1e2022] text-white p-3.5 rounded-2xl border border-[#991b1b]/40 shadow-xl backdrop-blur-md relative">
             <div className="flex items-center justify-between border-b border-white/10 pb-1 mb-1.5 text-[11px]">
               <span className="font-display font-bold text-amber-400 uppercase tracking-wider text-[10px] flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 Soumen Sir — MathsWithSD Guide
               </span>
-              <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">
+              <span className="text-[9px] font-mono text-stone-400 uppercase tracking-widest">
                 CLASSROOM NAV
               </span>
             </div>
 
-            <p className="text-xs font-body leading-snug text-slate-200">
+            <p className="text-xs font-body leading-snug text-stone-200">
               &quot;{displaySpeech}&quot;
             </p>
 
             {/* Speech Bubble Tail */}
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-slate-900 border-r border-b border-sky-500/30 rotate-45" />
+            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3.5 h-3.5 bg-[#1e2022] border-r border-b border-[#991b1b]/40 rotate-45" />
           </div>
         </div>
 
         {/* Architectural Open Lift Cage */}
-        <div className="relative bg-gradient-to-b from-slate-950/90 via-slate-900/95 to-slate-950/95 border border-slate-700/80 rounded-3xl p-3 shadow-2xl backdrop-blur-md overflow-hidden">
+        <div className="relative bg-gradient-to-b from-[#1e2022] via-stone-900 to-[#1e2022] border border-stone-700/80 rounded-3xl p-3 shadow-2xl backdrop-blur-md overflow-hidden">
           
           {/* Top Cage Railing & Pulley Hooks */}
-          <div className="flex justify-between items-center px-3 py-1 border-b border-white/10 text-[10px] font-mono text-slate-400 tracking-widest uppercase mb-2">
+          <div className="flex justify-between items-center px-3 py-1 border-b border-white/10 text-[10px] font-mono text-stone-400 tracking-widest uppercase mb-2">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-amber-400" />
               <span>LIFT PLATFORM</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-sky-400 font-bold">SYNCHRONIZED</span>
+              <span className="text-amber-400 font-bold">SYNCHRONIZED</span>
             </div>
           </div>
 
           {/* Platform Floor & Teacher Character Stage */}
-          <div className="relative h-60 sm:h-64 w-full flex items-end justify-center overflow-hidden rounded-2xl bg-gradient-to-b from-slate-900/60 via-slate-900/90 to-slate-950 border border-slate-800">
+          <div className="relative h-60 sm:h-64 w-full flex items-end justify-center overflow-hidden rounded-2xl bg-gradient-to-b from-stone-900 via-stone-950 to-black border border-stone-800">
             
-            {/* Background Grid Pattern */}
+            {/* Background Chalkboard Grid Pattern */}
             <div 
               className="absolute inset-0 opacity-15"
               style={{ 
-                backgroundImage: 'radial-gradient(#38bdf8 1px, transparent 1px)',
+                backgroundImage: 'radial-gradient(#d97706 1px, transparent 1px)',
                 backgroundSize: '20px 20px' 
               }} 
             />
@@ -83,15 +83,15 @@ export function OpenLiftPlatform({
             </div>
 
             {/* Side Steel Guide Rails */}
-            <div className="absolute inset-y-0 left-2 w-1 bg-gradient-to-b from-amber-500/40 via-slate-600 to-amber-500/40 rounded-full" />
-            <div className="absolute inset-y-0 right-2 w-1 bg-gradient-to-b from-amber-500/40 via-slate-600 to-amber-500/40 rounded-full" />
+            <div className="absolute inset-y-0 left-2 w-1 bg-gradient-to-b from-amber-500/40 via-stone-600 to-amber-500/40 rounded-full" />
+            <div className="absolute inset-y-0 right-2 w-1 bg-gradient-to-b from-amber-500/40 via-stone-600 to-amber-500/40 rounded-full" />
 
             {/* Platform Floor Illuminated Base */}
-            <div className="absolute bottom-0 inset-x-0 h-3.5 bg-gradient-to-r from-slate-900 via-sky-500/30 to-slate-900 border-t border-sky-400/40" />
+            <div className="absolute bottom-0 inset-x-0 h-3.5 bg-gradient-to-r from-stone-900 via-[#991b1b]/40 to-stone-900 border-t border-[#991b1b]/40" />
           </div>
 
           {/* Minimal Elegant Base Trim */}
-          <div className="mt-2 pt-1.5 border-t border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-400 px-1.5">
+          <div className="mt-2 pt-1.5 border-t border-stone-800 flex items-center justify-between text-[10px] font-mono text-stone-400 px-1.5">
             <span>SOUMEN SIR&apos;S LIFT</span>
             <span className="text-amber-400 font-semibold">{activeModuleName || "EXPLORE TOPICS"}</span>
           </div>

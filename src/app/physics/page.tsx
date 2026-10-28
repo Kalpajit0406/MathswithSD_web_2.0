@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { SubjectPlaceholderPage } from "@/components/ScholarsHub/SubjectPlaceholderPage";
+
+export const metadata: Metadata = {
+  title: "Physics Department — Scholars Hub Kolkata",
+  description:
+    "Explore the Scholars Hub Physics curriculum: Classical Mechanics, Electromagnetism, Optics, and Modern Physics for JEE & NEET.",
+  openGraph: {
+    title: "Physics Department — Scholars Hub",
+    description: "Conceptual rigor and interactive physical simulations for WBJEE, JEE Main, JEE Advanced, and NEET.",
+    siteName: "Scholars Hub",
+  },
+};
 
 export default function PhysicsPage() {
   return (

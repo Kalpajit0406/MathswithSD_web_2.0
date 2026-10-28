@@ -147,19 +147,20 @@ export function InteractiveModulesSection() {
   return (
     <section 
       id="interactive-modules"
-      className="relative pt-24 pb-36 px-4 sm:px-8 lg:px-12 bg-[#f8f6f0] text-slate-950 border-t border-slate-900/10 overflow-hidden min-h-[1200px]"
+      className="relative pt-24 pb-36 px-4 sm:px-8 lg:px-12 bg-[#fdfbf7] text-[#1e2022] border-t border-[#ede7dc] overflow-hidden min-h-[1200px]"
     >
       <div className="max-w-7xl mx-auto space-y-16">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-block px-3 py-1 rounded-full bg-slate-900/10 font-display text-xs font-bold text-slate-900 uppercase tracking-widest">
-            05 — INTERACTIVE MODULES &amp; OPEN-LIFT NAV
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-50 border border-rose-100 font-display text-xs font-bold text-[#991b1b] uppercase tracking-widest shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#991b1b]" />
+            05 — Interactive Curriculum &amp; Open-Lift Platform
           </div>
-          <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950">
+          <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1e2022]">
             Explore Mathematics Curriculum
           </h2>
-          <p className="text-base sm:text-lg text-slate-700 font-body leading-relaxed">
+          <p className="text-base sm:text-lg text-[#555b67] font-body leading-relaxed">
             Click or hover any module card to align Soumen Sir&apos;s open lift platform. Explore key formulas and interactive practice previews.
           </p>
         </div>
@@ -179,24 +180,24 @@ export function InteractiveModulesSection() {
                   onClick={() => setActiveIndex(idx)}
                   className={`group relative p-6 sm:p-7 rounded-3xl border-2 transition-all duration-300 cursor-pointer ${
                     isActive
-                      ? "bg-slate-950 text-white border-amber-400 shadow-2xl scale-[1.01]"
-                      : "bg-white border-slate-200 hover:border-slate-300 text-slate-900 shadow-sm hover:shadow-md"
+                      ? "bg-[#1e2022] text-white border-[#991b1b] shadow-xl scale-[1.01]"
+                      : "bg-white border-[#ede7dc] hover:border-[#dfd6c5] text-[#1e2022] shadow-xs hover:shadow-md"
                   }`}
                 >
                   {/* Active Pillar Highlight */}
                   {isActive && (
-                    <div className="absolute top-0 bottom-0 left-0 w-2 bg-gradient-to-b from-amber-400 via-sky-400 to-emerald-400 rounded-l-3xl" />
+                    <div className="absolute top-0 bottom-0 left-0 w-2 bg-gradient-to-b from-[#991b1b] via-[#d97706] to-[#991b1b] rounded-l-3xl" />
                   )}
 
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="space-y-2 max-w-xl">
                       <div className="flex items-center gap-2">
                         <span className={`text-[10px] font-display font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
-                          isActive ? "bg-amber-400 text-slate-950" : "bg-slate-100 text-slate-700"
+                          isActive ? "bg-[#991b1b] text-white" : "bg-[#f7f3ec] text-[#2d3139]"
                         }`}>
                           {mod.tag}
                         </span>
-                        <span className={`text-xs font-mono font-semibold ${isActive ? "text-sky-300" : "text-slate-500"}`}>
+                        <span className={`text-xs font-mono font-semibold ${isActive ? "text-[#f59e0b]" : "text-[#555b67]"}`}>
                           • {mod.level}
                         </span>
                       </div>
@@ -206,15 +207,15 @@ export function InteractiveModulesSection() {
                       </h3>
 
                       <p className={`text-xs sm:text-sm font-body leading-relaxed ${
-                        isActive ? "text-slate-300" : "text-slate-600"
+                        isActive ? "text-stone-300" : "text-[#555b67]"
                       }`}>
                         {mod.description}
                       </p>
 
                       <div className={`mt-3 p-2.5 rounded-xl font-mono text-xs sm:text-sm font-semibold inline-block border ${
                         isActive 
-                          ? "bg-slate-900 border-amber-400/40 text-amber-300" 
-                          : "bg-slate-50 border-slate-200 text-slate-800"
+                          ? "bg-stone-900 border-[#991b1b]/40 text-amber-300" 
+                          : "bg-[#fdfbf7] border-[#ede7dc] text-[#1e2022]"
                       }`}>
                         Formula: {mod.formula}
                       </div>
@@ -227,21 +228,21 @@ export function InteractiveModulesSection() {
                           setActiveIndex(idx);
                           setModalModule(mod);
                         }}
-                        className={`px-4 py-2.5 rounded-full font-display font-bold text-xs sm:text-sm transition-all shadow-md flex items-center gap-2 ${
+                        className={`px-4 py-2.5 rounded-full font-display font-bold text-xs sm:text-sm transition-all shadow-md flex items-center gap-2 min-h-[44px] ${
                           isActive
-                            ? "bg-sky-400 text-slate-950 hover:bg-sky-300 scale-105"
-                            : "bg-slate-950 text-white hover:bg-slate-800"
+                            ? "bg-[#991b1b] text-white hover:bg-[#be123c] scale-105"
+                            : "bg-[#1e2022] text-white hover:bg-[#2d3139]"
                         }`}
                       >
                         <span>Explore Module</span>
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-4 h-4 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                       </button>
 
                       {isActive && (
-                        <span className="text-[11px] font-display font-semibold text-amber-400 animate-pulse hidden sm:inline">
-                          👉 Lift Aligned
+                        <span className="text-[11px] font-display font-semibold text-[#f59e0b] animate-pulse hidden sm:inline">
+                          👉 Lift Synchronized
                         </span>
                       )}
                     </div>

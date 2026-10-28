@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { SubjectPlaceholderPage } from "@/components/ScholarsHub/SubjectPlaceholderPage";
+
+export const metadata: Metadata = {
+  title: "Biology Department — Scholars Hub Kolkata",
+  description:
+    "Comprehensive life science education: Human Physiology, Genetics, Botany, and specialized NEET UG training at Scholars Hub.",
+  openGraph: {
+    title: "Biology Department — Scholars Hub",
+    description: "High-yield diagrammatic guides and conceptual depth for CBSE/ISC Boards and NEET UG entrance.",
+    siteName: "Scholars Hub",
+  },
+};
 
 export default function BiologyPage() {
   return (

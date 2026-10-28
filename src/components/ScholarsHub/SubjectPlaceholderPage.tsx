@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ProfileSwitcher } from "@/components/ProfileSystem/ProfileSwitcher";
 import { AnimatedSection } from "@/components/ProfileSystem/AnimatedSection";
@@ -30,6 +30,47 @@ export function SubjectPlaceholderPage({
   highlights,
   pastel,
 }: SubjectPlaceholderProps) {
+  const [studentName, setStudentName] = useState("");
+  const [parentPhone, setParentPhone] = useState("");
+  const [studentClass, setStudentClass] = useState<"11" | "12" | "Repeater">("11");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          studentName: studentName.trim() || `${subjectName} Aspirant`,
+          parentPhone: parentPhone.trim(),
+          studentClass: studentClass,
+          goal: "Board + Entrance",
+          message: `Early-Bird Launch Waitlist for ${subjectName} Department (Class ${studentClass})`,
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Submission failed. Please check your number.");
+      }
+
+      setIsSubmitted(true);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setErrorMessage(err.message);
+      } else {
+        setErrorMessage("An unexpected error occurred. Please try again.");
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <main
       style={{ backgroundColor: pastel.pageBg }}
@@ -188,26 +229,72 @@ export function SubjectPlaceholderPage({
             <p className="text-xs text-[#555b67] font-body">
               Be the first to receive syllabus blueprints, batch schedules, and fee concession details when admissions open.
             </p>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert(`Thank you! You have been added to the ${subjectName} launch list. Our academic counselor will reach out shortly.`);
-              }}
-              className="flex flex-col sm:flex-row gap-2 pt-1"
-            >
-              <input
-                type="text"
-                required
-                placeholder="Phone / WhatsApp Number"
-                className="flex-1 px-3.5 py-2.5 rounded-xl border border-[#ede7dc] bg-[#fdfbf7] text-xs text-[#1e2022] placeholder-[#555b67]/60 focus:outline-none focus:ring-1 focus:ring-[#991b1b] min-h-[44px]"
-              />
-              <button
-                type="submit"
-                className="px-5 py-2.5 rounded-xl bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all shadow-xs active:scale-95 min-h-[44px]"
-              >
-                Notify Me
-              </button>
-            </form>
+
+            {isSubmitted ? (
+              <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-1.5 animate-fadeIn">
+                <div className="flex items-center gap-2 font-display font-bold text-sm text-emerald-800">
+                  <svg className="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Pre-Registration Confirmed!</span>
+                </div>
+                <p className="text-xs text-emerald-700 font-body">
+                  Thank you! You are on the priority waitlist for {subjectName}. Soumen Sir&apos;s team will reach out with batch timings and curriculum material before public enrollment opens.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleWaitlistSubmit} className="space-y-2.5 pt-1">
+                {errorMessage && (
+                  <div className="p-2.5 rounded-lg bg-rose-50 border border-rose-200 text-xs text-[#991b1b] font-medium">
+                    {errorMessage}
+                  </div>
+                )}
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <input
+                    type="text"
+                    value={studentName}
+                    onChange={(e) => setStudentName(e.target.value)}
+                    placeholder="Student Name"
+                    className="px-3.5 py-2.5 rounded-xl border border-[#ede7dc] bg-[#fdfbf7] text-xs text-[#1e2022] placeholder-[#555b67]/60 focus:outline-none focus:ring-1 focus:ring-[#991b1b] min-h-[44px]"
+                  />
+                  <select
+                    value={studentClass}
+                    onChange={(e) => setStudentClass(e.target.value as "11" | "12" | "Repeater")}
+                    className="px-3.5 py-2.5 rounded-xl border border-[#ede7dc] bg-[#fdfbf7] text-xs text-[#1e2022] focus:outline-none focus:ring-1 focus:ring-[#991b1b] min-h-[44px]"
+                  >
+                    <option value="11">Class 11 Aspirant</option>
+                    <option value="12">Class 12 Aspirant</option>
+                    <option value="Repeater">Dropper / Repeater</option>
+                  </select>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-2">
+                  <input
+                    type="tel"
+                    required
+                    value={parentPhone}
+                    onChange={(e) => setParentPhone(e.target.value)}
+                    placeholder="10-digit Mobile / WhatsApp Number"
+                    className="flex-1 px-3.5 py-2.5 rounded-xl border border-[#ede7dc] bg-[#fdfbf7] text-xs text-[#1e2022] placeholder-[#555b67]/60 focus:outline-none focus:ring-1 focus:ring-[#991b1b] min-h-[44px]"
+                  />
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="px-6 py-2.5 rounded-xl bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all shadow-xs active:scale-95 disabled:opacity-70 min-h-[44px] flex items-center justify-center gap-2"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <span className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <span>Reserving...</span>
+                      </>
+                    ) : (
+                      <span>Join Priority Waitlist</span>
+                    )}
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
 
           {/* Navigation Action Buttons */}

@@ -1,4 +1,16 @@
+import type { Metadata } from "next";
 import { SubjectPlaceholderPage } from "@/components/ScholarsHub/SubjectPlaceholderPage";
+
+export const metadata: Metadata = {
+  title: "Computer Science Department — Scholars Hub Kolkata",
+  description:
+    "Systematic algorithmic training, data structures, and programming foundations in Python, Java, and C++ at Scholars Hub.",
+  openGraph: {
+    title: "Computer Science Department — Scholars Hub",
+    description: "Computational thinking, informatics olympiad preparation, and programming mastery for school & entrance.",
+    siteName: "Scholars Hub",
+  },
+};
 
 export default function ComputerSciencePage() {
   return (

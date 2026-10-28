@@ -100,7 +100,7 @@ export function FacultyLineup() {
                     isDimmed={isDimmed}
                     onMouseEnter={() => setHoveredId(faculty.id)}
                     onMouseLeave={() => setHoveredId(null)}
-                    onClick={() => router.push(faculty.route)}
+                    onClick={() => handleFigureClick(faculty)}
                   />
 
                   {/* Floating Info Block */}
