@@ -208,16 +208,27 @@ export function CinematicTriggerIntro() {
             <h1 className="font-display font-black text-4xl sm:text-6xl text-white tracking-tight uppercase drop-shadow-2xl">
               SCHOLARS <span className="text-amber-400">HUB</span>
             </h1>
-            <div className="pt-2">
+            <div className="pt-2 flex items-center justify-center gap-3">
               <button
                 type="button"
                 onClick={triggerPlayback}
                 className="px-6 py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-slate-950 font-display font-bold text-xs tracking-wider uppercase transition-all shadow-xl hover:scale-105 flex items-center gap-2"
               >
-                <span>Scroll or Click to Play Intro</span>
+                <span>Play Intro</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                 </svg>
+              </button>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsCompleted(true);
+                  document.body.style.overflow = "auto";
+                }}
+                className="px-4 py-3 rounded-full bg-white/20 hover:bg-white/30 text-white font-display font-semibold text-xs tracking-wider uppercase transition-all backdrop-blur-sm"
+              >
+                Skip Intro ✕
               </button>
             </div>
           </div>

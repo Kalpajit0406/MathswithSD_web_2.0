@@ -267,6 +267,18 @@ export function CinematicScrollIntro() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </p>
+              <button
+                type="button"
+                onClick={() => {
+                  if (containerRef.current) {
+                    const target = containerRef.current.offsetTop + containerRef.current.offsetHeight;
+                    window.scrollTo({ top: target, behavior: "smooth" });
+                  }
+                }}
+                className="pointer-events-auto px-4 py-2 rounded-full bg-white/20 hover:bg-white/30 text-white font-display font-medium text-xs tracking-wider uppercase transition-all backdrop-blur-sm"
+              >
+                Skip Scroll Intro ↓
+              </button>
             </div>
           </div>
         )}

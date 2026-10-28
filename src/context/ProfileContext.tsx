@@ -30,6 +30,7 @@ interface ProfileContextType {
   ) => Promise<DesignProfile | null>;
   updateProfile: (profile: DesignProfile) => Promise<boolean>;
   deleteProfile: (id: string) => Promise<boolean>;
+  setProfileLivePreview: (profile: DesignProfile) => void;
   isEditorOpen: boolean;
   setIsEditorOpen: (open: boolean) => void;
   isCreateModalOpen: boolean;
@@ -241,6 +242,12 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const setProfileLivePreview = (liveProfile: DesignProfile) => {
+    setProfiles((prev) =>
+      prev.map((p) => (p.id === liveProfile.id ? liveProfile : p))
+    );
+  };
+
   const deleteProfile = async (id: string): Promise<boolean> => {
     const target = profiles.find((p) => p.id === id);
     if (target?.isOriginal) {
@@ -300,6 +307,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
         createProfile,
         updateProfile,
         deleteProfile,
+        setProfileLivePreview,
         isEditorOpen,
         setIsEditorOpen,
         isCreateModalOpen,

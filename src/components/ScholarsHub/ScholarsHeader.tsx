@@ -22,21 +22,21 @@ export function ScholarsHeader() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/90 backdrop-blur-md border-b border-slate-200/90 py-3 shadow-md"
-          : "bg-white/70 backdrop-blur-sm py-4 border-b border-slate-200/50"
+          ? "bg-[#fdfbf7]/95 backdrop-blur-md border-b border-[#ede7dc] py-3 shadow-md"
+          : "bg-[#fdfbf7]/80 backdrop-blur-sm py-4 border-b border-[#ede7dc]/60"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-amber-400 to-amber-300 text-slate-950 flex items-center justify-center font-display font-black text-xl shadow-md shadow-amber-500/20 group-hover:scale-105 transition-all duration-300">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#991b1b] via-[#be123c] to-[#e11d48] text-white flex items-center justify-center font-display font-black text-xl shadow-md shadow-red-900/20 group-hover:scale-105 transition-all duration-300">
             🎓
           </div>
           <div className="flex flex-col">
-            <span className="font-display font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors">
-              SCHOLARS <span className="text-amber-500">HUB</span>
+            <span className="font-display font-extrabold text-xl tracking-tight text-[#1e2022] group-hover:text-[#991b1b] transition-colors">
+              SCHOLARS <span className="text-[#991b1b]">HUB</span>
             </span>
-            <span className="text-[10px] font-body text-slate-500 tracking-widest uppercase font-bold">
+            <span className="text-[10px] font-body text-[#555b67] tracking-widest uppercase font-bold">
               Premier Educational Institution
             </span>
           </div>
@@ -46,25 +46,25 @@ export function ScholarsHeader() {
         <nav className="hidden md:flex items-center gap-8">
           <a
             href="#hero"
-            className="text-xs font-display font-bold uppercase tracking-wider text-slate-700 hover:text-amber-600 transition-colors"
+            className="text-xs font-display font-bold uppercase tracking-wider text-[#2d3139] hover:text-[#991b1b] transition-colors"
           >
             Home
           </a>
           <a
             href="#departments"
-            className="text-xs font-display font-bold uppercase tracking-wider text-slate-700 hover:text-amber-600 transition-colors"
+            className="text-xs font-display font-bold uppercase tracking-wider text-[#2d3139] hover:text-[#991b1b] transition-colors"
           >
             Departments
           </a>
           <a
             href="#about"
-            className="text-xs font-display font-bold uppercase tracking-wider text-slate-700 hover:text-amber-600 transition-colors"
+            className="text-xs font-display font-bold uppercase tracking-wider text-[#2d3139] hover:text-[#991b1b] transition-colors"
           >
             About Hub
           </a>
           <a
             href="#contact"
-            className="text-xs font-display font-bold uppercase tracking-wider text-slate-700 hover:text-amber-600 transition-colors"
+            className="text-xs font-display font-bold uppercase tracking-wider text-[#2d3139] hover:text-[#991b1b] transition-colors"
           >
             Contact
           </a>
@@ -75,10 +75,10 @@ export function ScholarsHeader() {
           <div className="hidden sm:flex items-center gap-3">
             <Link
               href="/maths"
-              className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full bg-slate-900 text-white font-display font-bold text-xs hover:bg-slate-800 transition-all shadow-md hover:scale-[1.02]"
+              className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all shadow-md hover:scale-[1.02] active:scale-95"
             >
               <span>Mathematics Dept</span>
-              <svg className="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
@@ -86,53 +86,53 @@ export function ScholarsHeader() {
 
           {/* Discreet Top-Right Profile Switcher */}
           <ProfileSwitcher />
-        </div>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900"
-          aria-label="Toggle Menu"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            {isMobileMenuOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl bg-white border border-[#ede7dc] text-[#2d3139] hover:text-[#1e2022] shadow-sm"
+            aria-label="Toggle Menu"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMobileMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white/95 border-b border-slate-200 px-6 py-4 space-y-3 shadow-lg">
+        <div className="md:hidden bg-[#fdfbf7]/98 border-b border-[#ede7dc] px-6 py-4 space-y-3 shadow-xl animate-fade-in-card">
           <a
             href="#hero"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm font-display font-medium text-slate-700 hover:text-amber-600"
+            className="block py-2.5 text-sm font-display font-medium text-[#2d3139] hover:text-[#991b1b] min-h-[44px] flex items-center"
           >
             Home
           </a>
           <a
             href="#departments"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm font-display font-medium text-slate-700 hover:text-amber-600"
+            className="block py-2.5 text-sm font-display font-medium text-[#2d3139] hover:text-[#991b1b] min-h-[44px] flex items-center"
           >
             Departments
           </a>
           <a
             href="#about"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block text-sm font-display font-medium text-slate-700 hover:text-amber-600"
+            className="block py-2.5 text-sm font-display font-medium text-[#2d3139] hover:text-[#991b1b] min-h-[44px] flex items-center"
           >
             About Hub
           </a>
-          <div className="pt-2 border-t border-slate-200">
+          <div className="pt-3 border-t border-[#ede7dc]">
             <Link
               href="/maths"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-400 text-slate-950 font-display font-bold text-xs"
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs min-h-[44px] shadow-sm"
             >
               <span>Explore Mathematics Department</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

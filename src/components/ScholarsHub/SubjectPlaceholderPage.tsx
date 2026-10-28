@@ -43,30 +43,30 @@ export function SubjectPlaceholderPage({
       />
 
       {/* Top Header */}
-      <header className="fixed top-0 inset-x-0 z-50 py-4 px-6 bg-white/85 backdrop-blur-md border-b border-slate-200/80 flex items-center justify-between shadow-xs">
+      <header className="fixed top-0 inset-x-0 z-50 py-3.5 px-6 bg-[#fdfbf7]/90 backdrop-blur-md border-b border-[#ede7dc] flex items-center justify-between shadow-xs">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-amber-400 text-slate-950 flex items-center justify-center font-display font-black text-sm shadow-xs">
+          <div className="w-8 h-8 rounded-lg bg-[#991b1b] text-white flex items-center justify-center font-display font-black text-sm shadow-xs">
             🎓
           </div>
-          <span className="font-display font-bold text-base tracking-tight text-slate-900 group-hover:text-amber-600 transition-colors">
-            SCHOLARS <span className="text-amber-500">HUB</span>
+          <span className="font-display font-bold text-base tracking-tight text-[#1e2022] group-hover:text-[#991b1b] transition-colors">
+            SCHOLARS <span className="text-[#991b1b]">HUB</span>
           </span>
         </Link>
 
         <div className="flex items-center gap-3">
           <Link
             href="/maths"
-            className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-white font-display font-bold text-xs hover:bg-slate-800 transition-all shadow-xs"
+            className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all shadow-xs active:scale-95"
           >
             <span>Mathematics Section (Live)</span>
-            <svg className="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-3.5 h-3.5 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
 
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-display font-semibold text-xs hover:text-slate-950 hover:bg-slate-200 transition-all"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#ede7dc] text-[#2d3139] font-display font-semibold text-xs hover:text-[#1e2022] hover:bg-[#f7f3ec] transition-all min-h-[38px]"
           >
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -175,29 +175,61 @@ export function SubjectPlaceholderPage({
             </div>
           </div>
 
-          {/* Navigation Action Buttons */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/"
-              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-slate-900 text-white font-display font-bold text-xs hover:bg-slate-800 transition-all shadow-md flex items-center justify-center gap-2"
+          {/* Early-Bird Batch Pre-Registration & Notification */}
+          <div className="p-6 rounded-2xl bg-white border border-[#ede7dc] text-left space-y-3 shadow-xs">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-display font-bold uppercase tracking-wider text-[#1e2022]">
+                Join the {subjectName} Launch Waitlist
+              </span>
+              <span className="text-[10px] font-semibold text-[#991b1b] bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">
+                Early-Bird Batch
+              </span>
+            </div>
+            <p className="text-xs text-[#555b67] font-body">
+              Be the first to receive syllabus blueprints, batch schedules, and fee concession details when admissions open.
+            </p>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert(`Thank you! You have been added to the ${subjectName} launch list. Our academic counselor will reach out shortly.`);
+              }}
+              className="flex flex-col sm:flex-row gap-2 pt-1"
             >
-              <svg className="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              <input
+                type="text"
+                required
+                placeholder="Phone / WhatsApp Number"
+                className="flex-1 px-3.5 py-2.5 rounded-xl border border-[#ede7dc] bg-[#fdfbf7] text-xs text-[#1e2022] placeholder-[#555b67]/60 focus:outline-none focus:ring-1 focus:ring-[#991b1b] min-h-[44px]"
+              />
+              <button
+                type="submit"
+                className="px-5 py-2.5 rounded-xl bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all shadow-xs active:scale-95 min-h-[44px]"
+              >
+                Notify Me
+              </button>
+            </form>
+          </div>
+
+          {/* Navigation Action Buttons */}
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Link
+              href="/maths"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all shadow-md shadow-red-950/20 flex items-center justify-center gap-2 active:scale-95 min-h-[44px]"
+            >
+              <span>Visit Live Mathematics Classroom</span>
+              <svg className="w-4 h-4 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-              <span>Back to Scholars Hub</span>
             </Link>
 
             <Link
-              href="/maths"
-              style={{
-                borderColor: pastel.borderColor,
-              }}
-              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white text-slate-800 border font-display font-bold text-xs hover:bg-slate-50 transition-all shadow-xs flex items-center justify-center gap-2"
+              href="/"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white text-[#1e2022] border border-[#ede7dc] font-display font-bold text-xs hover:bg-[#f7f3ec] transition-all shadow-xs flex items-center justify-center gap-2 min-h-[44px]"
             >
-              <span>Visit Live Mathematics Section</span>
-              <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              <svg className="w-4 h-4 text-[#555b67]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
+              <span>Back to Scholars Hub</span>
             </Link>
           </div>
 

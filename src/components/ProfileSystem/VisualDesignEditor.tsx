@@ -15,7 +15,7 @@ const PAGES: { id: PageId; label: string; href: string }[] = [
 ];
 
 export function VisualDesignEditor() {
-  const {
+    const {
     profiles,
     activeProfileId,
     activeProfile,
@@ -23,6 +23,7 @@ export function VisualDesignEditor() {
     setActiveProfileId,
     updateProfile,
     deleteProfile,
+    setProfileLivePreview,
     isEditorOpen,
     setIsEditorOpen,
     setIsCreateModalOpen,
@@ -74,6 +75,8 @@ export function VisualDesignEditor() {
     };
 
     setEditedProfile(updated);
+    // Instant realtime preview reflection in live DOM!
+    setProfileLivePreview(updated);
   };
 
   const handleSave = async () => {

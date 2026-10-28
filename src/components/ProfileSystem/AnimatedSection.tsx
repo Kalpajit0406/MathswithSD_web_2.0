@@ -33,21 +33,20 @@ export function AnimatedSection({
     if (presetType === "entrance") {
       switch (activeConfig.entrancePreset) {
         case "cinematic-fade":
-          dynamicClasses = "transition-all ease-out animate-fade-in-scale";
-          inlineStyles.transitionDuration = `${duration}s`;
+          dynamicClasses = "animate-fade-in-scale";
+          inlineStyles.animationDuration = `${duration}s`;
           break;
         case "slide-up":
-          dynamicClasses = "transition-transform ease-out";
-          inlineStyles.transitionDuration = `${duration}s`;
-          inlineStyles.transform = `translateY(${Math.round(15 * intensity)}px)`;
+          dynamicClasses = "animate-slide-up-entrance";
+          inlineStyles.animationDuration = `${duration}s`;
           break;
         case "zoom-bounce":
-          dynamicClasses = "transition-all cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-          inlineStyles.transitionDuration = `${duration * 1.1}s`;
+          dynamicClasses = "animate-zoom-bounce";
+          inlineStyles.animationDuration = `${duration * 1.1}s`;
           break;
         case "stagger-reveal":
-          dynamicClasses = "transition-opacity ease-in-out";
-          inlineStyles.transitionDuration = `${duration}s`;
+          dynamicClasses = "animate-fade-in-scale";
+          inlineStyles.animationDuration = `${duration * 1.2}s`;
           break;
         case "original":
         default:
@@ -56,15 +55,16 @@ export function AnimatedSection({
     } else if (presetType === "hero") {
       switch (activeConfig.heroPreset) {
         case "3d-float":
-          dynamicClasses = "animate-pulse hover:translate-y-[-4px] transition-transform duration-500";
+          dynamicClasses = "animate-float-gentle hover:-translate-y-1 transition-transform duration-300";
           break;
         case "glowing-aura":
-          dynamicClasses = "relative overflow-hidden shadow-2xl ring-1 ring-amber-400/40";
-          inlineStyles.boxShadow = `0 0 ${Math.round(30 * intensity)}px rgba(251, 191, 36, 0.25)`;
+          dynamicClasses = "relative overflow-hidden";
+          inlineStyles.boxShadow = `0 0 ${Math.round(28 * intensity)}px rgba(153, 27, 27, 0.25)`;
+          inlineStyles.borderColor = "rgba(153, 27, 27, 0.4)";
           break;
         case "subtle-pulse":
-          dynamicClasses = "animate-pulse";
-          inlineStyles.animationDuration = `${3 / duration}s`;
+          dynamicClasses = "animate-subtle-pulse-glow";
+          inlineStyles.animationDuration = `${Math.max(1.5, 3.5 / duration)}s`;
           break;
         case "minimal":
           dynamicClasses = "transition-none";
@@ -77,18 +77,18 @@ export function AnimatedSection({
       switch (activeConfig.cardHoverPreset) {
         case "lift-glow":
           dynamicClasses =
-            "hover:-translate-y-2 hover:shadow-2xl hover:shadow-amber-500/20 hover:border-amber-400/80 transition-all duration-300";
+            "hover:-translate-y-2 hover:shadow-xl hover:shadow-red-950/15 hover:border-[#991b1b]/50 transition-all duration-300";
           break;
         case "3d-tilt":
           dynamicClasses =
-            "hover:scale-[1.03] hover:-rotate-1 transition-all duration-300 shadow-xl";
+            "hover:scale-[1.02] hover:-rotate-0.5 transition-all duration-300 shadow-md";
           break;
         case "border-pulse":
           dynamicClasses =
-            "hover:ring-2 hover:ring-amber-400 hover:ring-offset-2 transition-all duration-300";
+            "hover:ring-2 hover:ring-[#991b1b]/60 hover:ring-offset-2 transition-all duration-300";
           break;
         case "subtle":
-          dynamicClasses = "hover:opacity-90 transition-opacity duration-200";
+          dynamicClasses = "hover:opacity-95 hover:bg-white transition-all duration-200";
           break;
         case "original":
         default:
