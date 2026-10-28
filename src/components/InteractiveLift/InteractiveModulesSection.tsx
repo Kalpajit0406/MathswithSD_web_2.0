@@ -233,8 +233,8 @@ export function InteractiveModulesSection() {
                       </button>
 
                       {isActive && (
-                        <span className="text-[11px] font-display font-semibold text-amber-400 animate-pulse hidden sm:inline">
-                          👉 Lift Aligned
+                        <span className="text-[11px] font-display font-semibold text-amber-400 hidden sm:inline">
+                          Active Topic
                         </span>
                       )}
                     </div>

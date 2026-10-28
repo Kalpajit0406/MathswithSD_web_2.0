@@ -268,7 +268,7 @@ export function HangingLiftCharacter({
                     }`}
                     title={p.name}
                   >
-                    {pKey === "pointing" ? "👉 Point" : pKey === "thumbsup" ? "👍 Great" : pKey === "thinking" ? "💡 Think" : pKey === "laptop" ? "💻 Code" : pKey === "confident" ? "💪 Ready" : "📊 Stats"}
+                    {pKey === "pointing" ? "Point" : pKey === "thumbsup" ? "Approve" : pKey === "thinking" ? "Analyze" : pKey === "laptop" ? "Code" : pKey === "confident" ? "Ready" : "Stats"}
                   </button>
                 );
               })}

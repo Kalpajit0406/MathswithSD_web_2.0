@@ -33,20 +33,20 @@ export function HeroSection() {
         {/* Left Content Column */}
         <div className="lg:col-span-7 space-y-6 text-left">
           
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#ede7dc] text-[#1e2022] font-display text-xs font-bold tracking-wide shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#ede7dc] text-[#1e2022] font-display text-xs font-semibold tracking-wide shadow-xs">
             <span className="w-2 h-2 rounded-full bg-[#991b1b]" />
-            <span>MathsWithSD • Personal Coaching &amp; Mentorship</span>
+            <span>Mathematics Department • Classroom Batches in Kolkata</span>
           </div>
 
           <h1 className="font-display text-4xl sm:text-6xl font-extrabold text-[#1e2022] tracking-tight leading-[1.1]">
-            Real Teaching. <br />
+            Rigorous Mathematics. <br />
             <span className="text-[#991b1b]">
-              Real Mathematics.
+              Proven Results.
             </span>
           </h1>
 
           <p className="text-base sm:text-xl text-[#555b67] font-body leading-relaxed max-w-2xl">
-            Learn mathematics with <strong>Soumen Sir</strong>. Experience how abstract calculus, algebra, and coordinate geometry transform into intuitive, visual logic for Board Examinations and Entrance Tests.
+            Under the direct mentorship of <strong>Soumen Sir</strong>, learn the discipline of structured mathematical reasoning. Master line-by-line derivations, geometric visualization, and targeted problem sets designed for Class 11 &amp; 12 Boards (WBCHSE, CBSE, ISC) and engineering entrances (WBJEE, JEE Main &amp; Advanced).
           </p>
 
           {/* Action CTAs */}
@@ -54,9 +54,9 @@ export function HeroSection() {
             <a
               href="#enquiry-section"
               onClick={handleScrollToEnquiry}
-              className="px-7 py-3.5 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-sm transition-all shadow-md shadow-red-950/20 active:scale-95 flex items-center gap-2"
+              className="px-7 py-3.5 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-sm transition-all shadow-md shadow-red-950/20 active:scale-95 flex items-center gap-2 min-h-[48px]"
             >
-              <span>Explore Courses &amp; Enrol</span>
+              <span>View Batches &amp; Admission</span>
               <svg className="w-4 h-4 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
@@ -65,9 +65,9 @@ export function HeroSection() {
             <a
               href="#about-section"
               onClick={handleScrollToAbout}
-              className="px-6 py-3.5 rounded-full bg-white text-[#1e2022] border border-[#ede7dc] font-display font-semibold text-sm hover:bg-[#f7f3ec] transition-all shadow-xs active:scale-95"
+              className="px-6 py-3.5 rounded-full bg-white text-[#1e2022] border border-[#ede7dc] font-display font-semibold text-sm hover:bg-[#f7f3ec] transition-all shadow-xs active:scale-95 min-h-[48px]"
             >
-              <span>Meet Soumen Sir</span>
+              <span>Teaching Methodology</span>
             </a>
           </div>
 
@@ -78,12 +78,12 @@ export function HeroSection() {
               <div className="text-xs text-[#555b67] font-body mt-0.5">Teaching Experience</div>
             </div>
             <div>
-              <div className="text-2xl font-bold font-display text-[#991b1b]">Board + Entrance</div>
-              <div className="text-xs text-[#555b67] font-body mt-0.5">Integrated Prep</div>
+              <div className="text-2xl font-bold font-display text-[#991b1b]">Board &amp; JEE</div>
+              <div className="text-xs text-[#555b67] font-body mt-0.5">Parallel Syllabi</div>
             </div>
             <div>
               <div className="text-2xl font-bold font-display text-[#1e2022]">Small Batches</div>
-              <div className="text-xs text-[#555b67] font-body mt-0.5">Individual Attention</div>
+              <div className="text-xs text-[#555b67] font-body mt-0.5">Personal Review</div>
             </div>
           </div>
 

@@ -88,7 +88,7 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
           </div>
           <div>
             <div className="text-xs font-display font-bold text-amber-400 uppercase tracking-wider mb-1">
-              Soumen Sir&apos;s Tip
+              Soumen Sir&apos;s Conceptual Note
             </div>
             <p className="text-xs text-stone-300 leading-relaxed font-body">
               &quot;{module.sampleQuestion.hint}&quot;
@@ -99,7 +99,7 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
         {/* Interactive Practice Question */}
         <div className="space-y-3">
           <h4 className="text-xs font-display font-bold text-stone-400 uppercase tracking-wider">
-            Interactive Practice Question
+            Practice Question &amp; Proof
           </h4>
           <p className="text-sm font-body text-white bg-black/60 p-4 rounded-xl border border-stone-800">
             {module.sampleQuestion.question}
@@ -126,7 +126,7 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
                   <span>{opt}</span>
                   {isSelected && (
                     <span className="text-[10px] font-bold font-display px-2 py-0.5 rounded-md bg-white/10">
-                      {isCorrect ? "✓ Correct" : "✕ Try Again"}
+                      {isCorrect ? "Correct" : "Incorrect"}
                     </span>
                   )}
                 </button>
@@ -139,7 +139,7 @@ export function ModuleDetailModal({ module, onClose }: ModuleDetailModalProps) {
               isCorrect ? "bg-emerald-950/50 border-emerald-500/50 text-emerald-200" : "bg-stone-900 border-amber-500/50 text-amber-200"
             }`}>
               <span className="font-bold font-display uppercase tracking-wider block mb-1">
-                {isCorrect ? "🎉 Great Job!" : "💡 Solution Explanation:"}
+                {isCorrect ? "Correct Derivation" : "Methodological Solution:"}
               </span>
               {module.sampleQuestion.explanation}
             </div>

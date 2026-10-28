@@ -30,12 +30,14 @@ export function ClassroomSection() {
           
           <div className="p-7 rounded-3xl bg-[#fdfbf7] border border-[#ede7dc] flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#991b1b] text-white font-bold font-display flex items-center justify-center text-xl mb-4 shadow-sm">
-                ✏️
+              <div className="w-12 h-12 rounded-2xl bg-[#991b1b] text-white flex items-center justify-center mb-4 shadow-sm">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
               </div>
-              <h3 className="font-display font-bold text-xl text-[#1e2022]">Whiteboard Logic</h3>
+              <h3 className="font-display font-bold text-xl text-[#1e2022]">Blackboard Derivations</h3>
               <p className="mt-2 text-xs sm:text-sm text-[#555b67] font-body leading-relaxed">
-                Step-by-step whiteboard derivations enable students to trace every logical step from start to finish.
+                Every proof and calculus derivation is worked out live on the board. Students learn the structural intermediate steps required for full marks in board evaluations.
               </p>
             </div>
             <div className="mt-6 relative h-40 rounded-2xl overflow-hidden border border-[#ede7dc]">
@@ -50,12 +52,14 @@ export function ClassroomSection() {
 
           <div className="p-7 rounded-3xl bg-[#fdfbf7] border border-[#ede7dc] flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-[#2d3139] text-amber-300 font-bold font-display flex items-center justify-center text-xl mb-4 shadow-sm">
-                👥
+              <div className="w-12 h-12 rounded-2xl bg-[#2d3139] text-white flex items-center justify-center mb-4 shadow-sm">
+                <svg className="w-6 h-6 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
               </div>
-              <h3 className="font-display font-bold text-xl text-[#1e2022]">Personal Attention</h3>
+              <h3 className="font-display font-bold text-xl text-[#1e2022]">Small Batch Mentorship</h3>
               <p className="mt-2 text-xs sm:text-sm text-[#555b67] font-body leading-relaxed">
-                Controlled batch size ensures Soumen Sir personally reviews every student&apos;s problem-solving steps.
+                Strictly limited batch capacity ensures Soumen Sir personally inspects every student&apos;s working steps, correcting misconceptions before they become habits.
               </p>
             </div>
             <div className="mt-6 flex justify-center">
@@ -65,12 +69,14 @@ export function ClassroomSection() {
 
           <div className="p-7 rounded-3xl bg-[#fdfbf7] border border-[#ede7dc] flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
             <div>
-              <div className="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-bold font-display flex items-center justify-center text-xl mb-4 shadow-sm">
-                📱
+              <div className="w-12 h-12 rounded-2xl bg-[#991b1b] text-white flex items-center justify-center mb-4 shadow-sm">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
               </div>
-              <h3 className="font-display font-bold text-xl text-[#1e2022]">Official Android App</h3>
+              <h3 className="font-display font-bold text-xl text-[#1e2022]">Digital Learning Portal</h3>
               <p className="mt-2 text-xs sm:text-sm text-[#555b67] font-body leading-relaxed">
-                Access lesson videos, revision sheets, and direct assignment submissions anytime via the MathsWithSD mobile app.
+                Supplementary access to recorded derivation recaps, chapter-wise test archives, and homework submission via the official MathsWithSD mobile application.
               </p>
             </div>
             <div className="mt-6 pt-4 border-t border-[#ede7dc]">
@@ -78,9 +84,9 @@ export function ClassroomSection() {
                 href="https://play.google.com/store/search?q=mathswithsd&c=apps&hl=en_IN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-xs active:scale-95"
+                className="w-full py-3 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all flex items-center justify-center gap-2 shadow-xs active:scale-95 min-h-[44px]"
               >
-                <span>Get App on Google Play</span>
+                <span>Download App on Google Play</span>
                 <span>&rarr;</span>
               </a>
             </div>

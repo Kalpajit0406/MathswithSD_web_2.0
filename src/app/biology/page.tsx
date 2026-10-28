@@ -16,7 +16,11 @@ export default function BiologyPage() {
   return (
     <SubjectPlaceholderPage
       subjectName="Biology"
-      icon="🧬"
+      icon={
+        <svg className="w-10 h-10 text-rose-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4c4 4 6 8 8 16M20 4c-4 4-6 8-8 16M6 6l12 2M5 10l14 2M6 14l12 2M7 18l10 2" />
+        </svg>
+      }
       tagline="Human Physiology, Genetics, Botany & NEET Excellence"
       description="The Scholars Hub Biology Department will soon provide comprehensive life science education, high-yield diagrams, human physiology deep dives, and specialized NEET UG training."
       highlights={[

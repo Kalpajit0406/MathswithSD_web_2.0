@@ -5,22 +5,22 @@ import React from "react";
 export function CoursesOverviewSection() {
   const COURSES = [
     {
-      title: "Class 11 Board & Foundation",
-      target: "Class 11 Students",
-      desc: "Comprehensive syllabus coverage of Trigonometry, Sets, Functions, Algebra, and Introduction to Calculus.",
-      tag: "Foundation",
+      title: "Class 11: Higher Secondary Foundation",
+      target: "WBCHSE, CBSE & ISC Candidates",
+      desc: "Complete foundational syllabus: Trigonometric Functions, Real Relations & Functions, Coordinate Geometry, Complex Numbers, Sequences, and Introduction to Differential Calculus.",
+      tag: "Class 11",
     },
     {
-      title: "Class 12 Board Mastery",
-      target: "Class 12 Students",
-      desc: "Deep focus on Integral Calculus, Differential Equations, Vectors, 3D Geometry, and Probability for Board Exam Excellence.",
-      tag: "Board Mastery",
+      title: "Class 12: Board Examination Mastery",
+      target: "Class 12 Board Aspirants",
+      desc: "Exhaustive coverage of Differential & Integral Calculus, Differential Equations, 3D Coordinate Geometry, Vector Algebra, and Probability with rigorous step-marking practice.",
+      tag: "Class 12",
     },
     {
-      title: "JEE & Entrance Coaching",
-      target: "Entrance Aspirants",
-      desc: "Advanced problem-solving techniques, speed shortcuts, and high-yield question banks for JEE Mains & WBJEE.",
-      tag: "Competitive",
+      title: "WBJEE & JEE Advanced Intensive",
+      target: "Engineering Entrance Aspirants",
+      desc: "Advanced analytical problem banks, multi-concept calculus applications, coordinate locus problems, and speed-accuracy optimization for WBJEE & JEE Main.",
+      tag: "Entrance Track",
     },
   ];
 
@@ -33,13 +33,13 @@ export function CoursesOverviewSection() {
         
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-block px-3 py-1 rounded-full bg-[#991b1b]/10 text-[#991b1b] font-display text-xs font-bold uppercase tracking-widest">
-            04 — COURSES &amp; CURRICULUM
+            04 — ACADEMIC CURRICULUM
           </div>
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1e2022]">
-            Targeted Mathematics Programs
+            Structured Mathematics Programs
           </h2>
           <p className="text-base text-[#555b67] font-body leading-relaxed">
-            Structured batches designed specifically for board performance and entrance exam confidence.
+            Chapter-wise syllabus sequences tailored to Higher Secondary Board scoring guidelines and competitive entrance requirements.
           </p>
         </div>
 

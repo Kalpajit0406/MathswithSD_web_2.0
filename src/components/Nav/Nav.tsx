@@ -22,7 +22,7 @@ export function Nav() {
     { label: "About", href: "#about-section" },
     { label: "Approach", href: "#approach-section" },
     { label: "Courses", href: "#courses-section" },
-    { label: "Interactive Lift", href: "#interactive-modules" },
+    { label: "Curriculum Navigator", href: "#interactive-modules" },
     { label: "Classroom", href: "#classroom-section" },
     { label: "Location", href: "#location-section" },
     { label: "Contact", href: "#contact-section" },

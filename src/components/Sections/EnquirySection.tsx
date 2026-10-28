@@ -127,29 +127,22 @@ export function EnquirySection() {
   return (
     <section
       id="enquiry-section"
-      className="relative py-24 px-4 sm:px-8 lg:px-12 bg-slate-900 text-white border-t border-slate-800 overflow-hidden"
+      className="relative py-24 px-4 sm:px-8 lg:px-12 bg-[#1e2022] text-white border-t border-stone-800 overflow-hidden"
     >
-      {/* Background Ambient Glows */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
-
       <div className="max-w-6xl mx-auto space-y-12 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 font-display text-xs font-bold uppercase tracking-widest">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-amber-300 font-display text-xs font-bold uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-amber-400" />
             08 — ADMISSION &amp; ENQUIRY
           </div>
 
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-            Take the First Step Toward{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-sky-400">
-              Maths Mastery
-            </span>
+            Batch Admissions &amp; <span className="text-[#f59e0b]">Academic Enquiry</span>
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-300 font-body leading-relaxed max-w-2xl mx-auto">
-            Book a seat in Soumen Sir&apos;s batch or schedule an academic consultation. Batches are kept small for personal attention.
+          <p className="text-base sm:text-lg text-stone-300 font-body leading-relaxed max-w-2xl mx-auto">
+            Reserve a seat in Soumen Sir&apos;s upcoming classroom batch or schedule a preliminary academic consultation. Batch sizes are strictly regulated for individual attention.
           </p>
         </div>
 
@@ -157,14 +150,14 @@ export function EnquirySection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left Column: Key Highlights & Teacher Character */}
-          <div className="lg:col-span-5 rounded-3xl bg-slate-950 border border-slate-800/80 p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+          <div className="lg:col-span-5 rounded-3xl bg-black/60 border border-stone-700 p-8 flex flex-col justify-between shadow-2xl relative overflow-hidden">
             <div className="space-y-6">
               <div className="space-y-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-sky-400">
-                  Why Study With Soumen Sir?
+                <span className="text-xs font-mono uppercase tracking-wider text-amber-400 font-semibold">
+                  Classroom Standards
                 </span>
                 <h3 className="font-display text-2xl font-bold text-white">
-                  Direct Mentorship, Zero Gimmicks.
+                  Focused Pedagogy, Proven Track Record.
                 </h3>
               </div>
 
@@ -220,8 +213,10 @@ export function EnquirySection() {
             {/* Success View */}
             {isSuccess ? (
               <div className="text-center py-10 px-4 space-y-6 animate-fade-in-card">
-                <div className="w-16 h-16 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 rounded-full flex items-center justify-center mx-auto text-2xl shadow-lg">
-                  ✓
+                <div className="w-16 h-16 bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 rounded-full flex items-center justify-center mx-auto shadow-lg">
+                  <svg className="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
 
                 <div className="space-y-2">
@@ -473,8 +468,11 @@ export function EnquirySection() {
                     )}
                   </button>
 
-                  <p className="mt-3 text-center text-[11px] text-slate-500 font-body">
-                    🔒 Your contact details are kept strictly confidential for Soumen Sir&apos;s direct communications.
+                  <p className="mt-3 text-center text-[11px] text-stone-400 font-body flex items-center justify-center gap-1.5">
+                    <svg className="w-3.5 h-3.5 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    <span>Contact details are handled confidentially for Soumen Sir&apos;s direct batch communications.</span>
                   </p>
                 </div>
 

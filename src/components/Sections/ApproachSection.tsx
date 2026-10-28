@@ -65,13 +65,13 @@ export function ApproachSection() {
 
           {/* Right Column: Teacher Character Explaining */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative p-6 rounded-3xl bg-slate-950 text-white shadow-2xl border border-slate-800 text-center max-w-sm w-full">
-              <div className="text-xs font-display font-bold text-sky-400 uppercase tracking-widest mb-2">
-                EXPLAINING CONCEPTS
+            <div className="relative p-6 rounded-3xl bg-[#1e2022] text-white shadow-xl border border-stone-700 text-center max-w-sm w-full">
+              <div className="text-xs font-display font-bold text-amber-400 uppercase tracking-widest mb-2">
+                Blackboard Mentorship
               </div>
               <TeacherCharacter pose="thinking" height={320} />
-              <div className="mt-3 p-3 rounded-xl bg-slate-900 border border-white/10 text-xs text-slate-300 font-body">
-                &quot;When you understand the &apos;why&apos; behind a formula, solving questions becomes second nature.&quot;
+              <div className="mt-3 p-3.5 rounded-xl bg-black/60 border border-white/10 text-xs text-stone-300 font-body leading-relaxed">
+                &quot;When a student understands the foundational reason behind a formula, complex examination problems become straightforward to dissect.&quot;
               </div>
             </div>
           </div>

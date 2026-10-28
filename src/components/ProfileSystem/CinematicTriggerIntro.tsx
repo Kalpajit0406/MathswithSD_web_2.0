@@ -226,9 +226,12 @@ export function CinematicTriggerIntro() {
                   setIsCompleted(true);
                   document.body.style.overflow = "auto";
                 }}
-                className="px-4 py-3 rounded-full bg-white/20 hover:bg-white/30 text-white font-display font-semibold text-xs tracking-wider uppercase transition-all backdrop-blur-sm"
+                className="px-4 py-3 rounded-full bg-white/20 hover:bg-white/30 text-white font-display font-semibold text-xs tracking-wider uppercase transition-all backdrop-blur-sm inline-flex items-center gap-1.5"
               >
-                Skip Intro ✕
+                <span>Skip Intro</span>
+                <svg className="w-3.5 h-3.5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               </button>
             </div>
           </div>

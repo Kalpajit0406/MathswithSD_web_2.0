@@ -139,7 +139,7 @@ export function ModulePracticeModal({ module, onClose }: ModulePracticeModalProp
                   <span>{opt}</span>
                   {isSelected && (
                     <span className="text-xs font-bold font-display px-2 py-0.5 rounded-md bg-white/10">
-                      {isCorrect ? "✓ Correct" : "✕ Try Again"}
+                      {isCorrect ? "Correct" : "Incorrect"}
                     </span>
                   )}
                 </button>
@@ -153,7 +153,7 @@ export function ModulePracticeModal({ module, onClose }: ModulePracticeModalProp
               isCorrect ? "bg-emerald-950/50 border-emerald-500/50 text-emerald-200" : "bg-amber-950/50 border-amber-500/50 text-amber-200"
             }`}>
               <span className="font-bold font-display uppercase tracking-wider block mb-1">
-                {isCorrect ? "🎉 Great Job!" : "💡 Solution Hint:"}
+                {isCorrect ? "Correct Derivation:" : "Methodological Solution:"}
               </span>
               {module.sampleQuestion.explanation}
             </div>

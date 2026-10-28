@@ -108,7 +108,7 @@ export async function appendToGoogleSheet(data: EnquiryData, clientIp?: string):
   }
 
   // If no credentials configured yet, log development notice
-  console.warn("⚠️ Google Sheets credentials not configured in .env.local (GOOGLE_SHEET_ID / GOOGLE_SERVICE_ACCOUNT_EMAIL or GOOGLE_SHEETS_WEBHOOK_URL). Submission logged to console only.");
+  console.warn("[Google Sheets Notice] Google Sheets credentials not configured in .env.local (GOOGLE_SHEET_ID / GOOGLE_SERVICE_ACCOUNT_EMAIL or GOOGLE_SHEETS_WEBHOOK_URL). Submission logged to console only.");
   console.log("Mock Sheet Row:", rowValues);
   return { success: true };
 }

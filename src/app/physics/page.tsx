@@ -16,7 +16,14 @@ export default function PhysicsPage() {
   return (
     <SubjectPlaceholderPage
       subjectName="Physics"
-      icon="⚛"
+      icon={
+        <svg className="w-10 h-10 text-purple-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(30 12 12)" strokeWidth={1.5} />
+          <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-30 12 12)" strokeWidth={1.5} />
+          <ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(90 12 12)" strokeWidth={1.5} />
+          <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+        </svg>
+      }
       tagline="Mechanics, Electromagnetism, Quantum & Modern Physics"
       description="The Scholars Hub Physics Department is currently undergoing curriculum development. This section will feature interactive physical simulations, problem sets for JEE and NEET, and conceptual foundation lectures."
       highlights={[

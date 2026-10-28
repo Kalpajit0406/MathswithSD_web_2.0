@@ -91,8 +91,11 @@ export function ProfileSwitcher() {
           {/* Header */}
           <div className="flex items-center justify-between pb-2 border-b border-slate-800 px-1">
             <div className="flex items-center gap-2">
+              <svg className="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+              </svg>
               <span className="text-amber-400 font-extrabold text-xs tracking-wider uppercase font-display">
-                🎨 Design Profiles
+                Design Profiles
               </span>
               <span className="bg-slate-800 text-slate-400 text-[10px] font-mono px-1.5 py-0.5 rounded">
                 v2.0

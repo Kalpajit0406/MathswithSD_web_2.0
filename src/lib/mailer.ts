@@ -10,10 +10,10 @@ export async function sendEnquiryEmail(data: EnquiryData): Promise<{ success: bo
   const notifyTo = process.env.NOTIFICATION_EMAIL_TO || user;
 
   if (!host || !user || !pass || !notifyTo) {
-    console.warn("⚠️ SMTP credentials not fully configured in .env.local (SMTP_HOST, SMTP_USER, SMTP_PASS, NOTIFICATION_EMAIL_TO). Email logged to console.");
+    console.warn("[SMTP Notice] SMTP credentials not fully configured in .env.local (SMTP_HOST, SMTP_USER, SMTP_PASS, NOTIFICATION_EMAIL_TO). Email logged to console.");
     console.log("Mock Email Notification Payload:", {
       to: notifyTo || "soumensir@mathswithsd.com",
-      subject: `🎓 New Admission Enquiry: ${data.studentName} (Class ${data.studentClass})`,
+      subject: `New Admission Enquiry: ${data.studentName} (Class ${data.studentClass})`,
       student: data,
     });
     return { success: true };
@@ -111,8 +111,8 @@ export async function sendEnquiryEmail(data: EnquiryData): Promise<{ success: bo
     </div>
 
     <div class="actions">
-      <a href="tel:+91${data.parentPhone}" class="btn btn-call" style="margin-right: 10px;">📞 Call Parent (+91 ${data.parentPhone})</a>
-      <a href="${whatsappUrl}" class="btn btn-wa">💬 Open WhatsApp</a>
+      <a href="tel:+91${data.parentPhone}" class="btn btn-call" style="margin-right: 10px;">Call Parent (+91 ${data.parentPhone})</a>
+      <a href="${whatsappUrl}" class="btn btn-wa">Open WhatsApp</a>
     </div>
 
     <div class="footer">
@@ -128,7 +128,7 @@ export async function sendEnquiryEmail(data: EnquiryData): Promise<{ success: bo
       from: `"MathsWithSD Admissions" <${user}>`,
       to: notifyTo,
       replyTo: data.email || user,
-      subject: `🎓 New Admission Enquiry: ${data.studentName} (Class ${data.studentClass} - ${data.goal})`,
+      subject: `New Admission Enquiry: ${data.studentName} (Class ${data.studentClass} - ${data.goal})`,
       text: `New Admission Enquiry for MathsWithSD:\n\nStudent: ${data.studentName}\nPhone: +91 ${data.parentPhone}\nEmail: ${data.email || "N/A"}\nClass: Class ${data.studentClass}\nGoal: ${data.goal}\nMessage: ${data.message || "None"}\nTime: ${now}`,
       html: htmlContent,
     });

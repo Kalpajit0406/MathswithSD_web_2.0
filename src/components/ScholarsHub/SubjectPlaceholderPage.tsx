@@ -7,7 +7,7 @@ import { AnimatedSection } from "@/components/ProfileSystem/AnimatedSection";
 
 export interface SubjectPlaceholderProps {
   subjectName: string;
-  icon: string;
+  icon: React.ReactNode;
   tagline: string;
   description: string;
   highlights: string[];
@@ -80,14 +80,17 @@ export function SubjectPlaceholderPage({
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e125_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e125_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
       <div
         style={{ backgroundColor: pastel.accentGlow }}
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full blur-[110px] pointer-events-none opacity-60"
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[480px] h-[480px] rounded-full blur-[90px] pointer-events-none opacity-40"
       />
 
       {/* Top Header */}
       <header className="fixed top-0 inset-x-0 z-50 py-3.5 px-6 bg-[#fdfbf7]/90 backdrop-blur-md border-b border-[#ede7dc] flex items-center justify-between shadow-xs">
         <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-[#991b1b] text-white flex items-center justify-center font-display font-black text-sm shadow-xs">
-            🎓
+          <div className="w-8 h-8 rounded-lg bg-[#991b1b] text-white flex items-center justify-center shadow-xs">
+            <svg className="w-4 h-4 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+            </svg>
           </div>
           <span className="font-display font-bold text-base tracking-tight text-[#1e2022] group-hover:text-[#991b1b] transition-colors">
             SCHOLARS <span className="text-[#991b1b]">HUB</span>
@@ -135,7 +138,7 @@ export function SubjectPlaceholderPage({
           <div className="space-y-4">
             <div
               style={{ borderColor: pastel.borderColor }}
-              className="w-20 h-20 mx-auto rounded-3xl bg-white border flex items-center justify-center font-display font-black text-4xl shadow-inner text-slate-900"
+              className="w-20 h-20 mx-auto rounded-3xl bg-white border flex items-center justify-center font-display font-bold text-3xl shadow-xs text-slate-800"
             >
               {icon}
             </div>

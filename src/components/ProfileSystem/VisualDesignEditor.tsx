@@ -112,8 +112,10 @@ export function VisualDesignEditor() {
         {/* Editor Top Bar */}
         <div className="px-6 py-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-slate-950 flex items-center justify-center font-display font-black text-lg shadow-md">
-              🎛️
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-orange-500 text-slate-950 flex items-center justify-center font-display font-black text-sm shadow-md">
+              <svg className="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
             </div>
             <div>
               <div className="flex items-center gap-2">
@@ -137,12 +139,20 @@ export function VisualDesignEditor() {
               </span>
             )}
             {saveStatus === "saved" && (
-              <span className="text-xs text-emerald-400 font-mono flex items-center gap-1">
-                ✓ Saved to Server
+              <span className="text-xs text-emerald-400 font-mono flex items-center gap-1.5">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Saved to Server</span>
               </span>
             )}
             {saveError && (
-              <span className="text-xs text-rose-400 font-mono">⚠️ {saveError}</span>
+              <span className="text-xs text-rose-400 font-mono flex items-center gap-1">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>{saveError}</span>
+              </span>
             )}
 
             <button
@@ -150,7 +160,9 @@ export function VisualDesignEditor() {
               className="p-1.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
               aria-label="Close Design Editor"
             >
-              ✕
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           </div>
         </div>
@@ -250,7 +262,7 @@ export function VisualDesignEditor() {
               {/* Entrance Animations */}
               <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-2">
                 <label className="block font-display font-bold text-amber-300">
-                  ✨ Page Entrance Animation
+                  Page Entrance Animation
                 </label>
                 <select
                   value={currentPageConfig.entrancePreset}
@@ -271,7 +283,7 @@ export function VisualDesignEditor() {
               {/* Hero Section Animation */}
               <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-2">
                 <label className="block font-display font-bold text-amber-300">
-                  🚀 Hero Section Style
+                  Hero Section Style
                 </label>
                 <select
                   value={currentPageConfig.heroPreset}
@@ -292,7 +304,7 @@ export function VisualDesignEditor() {
               {/* Scroll Triggered Animations */}
               <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-2">
                 <label className="block font-display font-bold text-amber-300">
-                  📜 Scroll Reveal Pattern
+                  Scroll Reveal Pattern
                 </label>
                 <select
                   value={currentPageConfig.scrollPreset}
@@ -313,7 +325,7 @@ export function VisualDesignEditor() {
               {/* Subject Card Animations */}
               <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-2">
                 <label className="block font-display font-bold text-amber-300">
-                  🎴 Card & Item Hover Style
+                  Card &amp; Item Hover Style
                 </label>
                 <select
                   value={currentPageConfig.cardHoverPreset}
@@ -339,7 +351,7 @@ export function VisualDesignEditor() {
               <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-2">
                 <div className="flex items-center justify-between">
                   <label className="font-display font-bold text-amber-300">
-                    ⏱️ Animation Duration Multiplier
+                    Animation Duration Multiplier
                   </label>
                   <span className="font-mono text-amber-400 font-bold">
                     {currentPageConfig.duration}x
@@ -365,7 +377,7 @@ export function VisualDesignEditor() {
               <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-2">
                 <div className="flex items-center justify-between">
                   <label className="font-display font-bold text-amber-300">
-                    💥 Motion Intensity Factor
+                    Motion Intensity Factor
                   </label>
                   <span className="font-mono text-amber-400 font-bold">
                     {currentPageConfig.intensity}x
@@ -391,7 +403,7 @@ export function VisualDesignEditor() {
               <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 space-y-2">
                 <div className="flex items-center justify-between">
                   <label className="font-display font-bold text-amber-300">
-                    🌊 Stagger Delay (Seconds between elements)
+                    Stagger Delay (Seconds between elements)
                   </label>
                   <span className="font-mono text-amber-400 font-bold">
                     {currentPageConfig.stagger}s
@@ -412,7 +424,7 @@ export function VisualDesignEditor() {
               <div className="p-4 rounded-2xl bg-slate-800/60 border border-slate-700/80 flex items-center justify-between">
                 <div>
                   <label className="block font-display font-bold text-amber-300">
-                    ♿ Respect Reduced Motion Preference
+                    Respect Reduced Motion Preference
                   </label>
                   <p className="text-[10px] text-slate-400">
                     Force disable dynamic animations for users with motion sensitivity.
@@ -485,9 +497,12 @@ export function VisualDesignEditor() {
                   <button
                     type="button"
                     onClick={handleDelete}
-                    className="px-4 py-2 rounded-xl bg-rose-500/20 text-rose-300 hover:bg-rose-500/30 border border-rose-500/40 font-display font-semibold transition-colors"
+                    className="px-4 py-2 rounded-xl bg-rose-500/20 text-rose-300 hover:bg-rose-500/30 border border-rose-500/40 font-display font-semibold transition-colors flex items-center gap-1.5"
                   >
-                    🗑️ Delete Profile
+                    <svg className="w-3.5 h-3.5 text-rose-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                    </svg>
+                    <span>Delete Profile</span>
                   </button>
 
                   <button
@@ -510,8 +525,11 @@ export function VisualDesignEditor() {
         <div className="px-6 py-4 bg-slate-950 border-t border-slate-800 flex items-center justify-between">
           <div className="text-xs text-slate-400 font-mono">
             {editedProfile.isOriginal ? (
-              <span className="text-emerald-400">
-                🔒 Profile 1 (Original) is locked to preserve baseline.
+              <span className="text-emerald-400 flex items-center gap-1.5">
+                <svg className="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                <span>Profile 1 (Original) is locked to preserve baseline.</span>
               </span>
             ) : (
               <span>Changes apply live to browser preview. Click Save to persist.</span>

@@ -18,15 +18,15 @@ export function OpenLiftPlatform({
   offsetY = 0,
 }: OpenLiftPlatformProps) {
   const displaySpeech = speechText || (activeModuleName
-    ? `Guiding you through ${activeModuleName}. Click to explore step-by-step concepts!`
-    : "Welcome to MathsWithSD! Let's build mathematical mastery together.");
+    ? `Reviewing ${activeModuleName}. Examine core definitions, theorem proofs, and standard examination questions.`
+    : "Welcome to MathsWithSD. Select a curriculum module to review chapter derivations and problem solving.");
 
   return (
     <div
       className="relative flex flex-col items-center transition-transform duration-700 cubic-bezier(0.16, 1, 0.3, 1) z-30"
       style={{ transform: `translateY(${offsetY}px)` }}
     >
-      {/* Main Open Elevator Platform Structure */}
+      {/* Main Classroom Study Platform Structure */}
       <div className="relative w-80 sm:w-84 animate-lift-subtle-float">
         
         {/* Integrated Speech Guidance Bubble */}
@@ -35,10 +35,10 @@ export function OpenLiftPlatform({
             <div className="flex items-center justify-between border-b border-white/10 pb-1 mb-1.5 text-[11px]">
               <span className="font-display font-bold text-amber-400 uppercase tracking-wider text-[10px] flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                Soumen Sir — MathsWithSD Guide
+                Soumen Sir — MathsWithSD
               </span>
               <span className="text-[9px] font-mono text-stone-400 uppercase tracking-widest">
-                CLASSROOM NAV
+                FACULTY STUDY
               </span>
             </div>
 
@@ -51,17 +51,17 @@ export function OpenLiftPlatform({
           </div>
         </div>
 
-        {/* Architectural Open Lift Cage */}
+        {/* Architectural Study Frame */}
         <div className="relative bg-gradient-to-b from-[#1e2022] via-stone-900 to-[#1e2022] border border-stone-700/80 rounded-3xl p-3 shadow-2xl backdrop-blur-md overflow-hidden">
           
-          {/* Top Cage Railing & Pulley Hooks */}
+          {/* Top Railing */}
           <div className="flex justify-between items-center px-3 py-1 border-b border-white/10 text-[10px] font-mono text-stone-400 tracking-widest uppercase mb-2">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-amber-400" />
-              <span>LIFT PLATFORM</span>
+              <span>CLASSROOM STUDY</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-amber-400 font-bold">SYNCHRONIZED</span>
+              <span className="text-amber-400 font-bold">ACTIVE TOPIC</span>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ export function OpenLiftPlatform({
               }} 
             />
 
-            {/* Teacher Standing inside Lift */}
+            {/* Teacher Standing inside Study */}
             <div className="relative z-10 pb-1">
               <TeacherCharacter pose={pose} height={230} priority />
             </div>
@@ -92,8 +92,8 @@ export function OpenLiftPlatform({
 
           {/* Minimal Elegant Base Trim */}
           <div className="mt-2 pt-1.5 border-t border-stone-800 flex items-center justify-between text-[10px] font-mono text-stone-400 px-1.5">
-            <span>SOUMEN SIR&apos;S LIFT</span>
-            <span className="text-amber-400 font-semibold">{activeModuleName || "EXPLORE TOPICS"}</span>
+            <span>SOUMEN SIR&apos;S STUDY</span>
+            <span className="text-amber-400 font-semibold">{activeModuleName || "CURRICULUM"}</span>
           </div>
 
         </div>

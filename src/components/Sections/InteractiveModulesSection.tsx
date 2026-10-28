@@ -155,13 +155,13 @@ export function InteractiveModulesSection() {
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-50 border border-rose-100 font-display text-xs font-bold text-[#991b1b] uppercase tracking-widest shadow-xs">
             <span className="w-1.5 h-1.5 rounded-full bg-[#991b1b]" />
-            05 — Interactive Curriculum &amp; Open-Lift Platform
+            05 — Interactive Curriculum &amp; Derivations
           </div>
           <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-[#1e2022]">
-            Explore Mathematics Curriculum
+            Interactive Curriculum Breakdown
           </h2>
           <p className="text-base sm:text-lg text-[#555b67] font-body leading-relaxed">
-            Click or hover any module card to align Soumen Sir&apos;s open lift platform. Explore key formulas and interactive practice previews.
+            Select any chapter module to review foundational identities, whiteboard derivations, and interactive board-level question previews.
           </p>
         </div>
 
@@ -234,15 +234,16 @@ export function InteractiveModulesSection() {
                             : "bg-[#1e2022] text-white hover:bg-[#2d3139]"
                         }`}
                       >
-                        <span>Explore Module</span>
+                        <span>Examine Module</span>
                         <svg className="w-4 h-4 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                       </button>
 
                       {isActive && (
-                        <span className="text-[11px] font-display font-semibold text-[#f59e0b] animate-pulse hidden sm:inline">
-                          👉 Lift Synchronized
+                        <span className="text-[11px] font-display font-semibold text-[#f59e0b] hidden sm:inline-flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse" />
+                          <span>Active Topic</span>
                         </span>
                       )}
                     </div>

@@ -17,16 +17,16 @@ export function ContactSection() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             
             <div className="lg:col-span-8 space-y-6 text-left">
-              <div className="inline-block px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 font-display text-xs font-bold uppercase tracking-widest">
-                09 — READY TO LEARN?
+              <div className="inline-block px-3 py-1 rounded-full bg-white/10 text-amber-300 font-display text-xs font-bold uppercase tracking-widest">
+                09 — ACADEMIC ENROLLMENT
               </div>
 
               <h2 className="font-display text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-                Start Building Mathematics Mastery Today.
+                Reserve Your Place for the Upcoming Academic Term.
               </h2>
 
               <p className="text-base sm:text-lg text-slate-300 font-body leading-relaxed max-w-xl">
-                Whether you&apos;re preparing for Class 11, Class 12 Board Examinations, or entrance tests, Soumen Sir is ready to guide you.
+                Direct classroom admissions are open for Class 11 &amp; 12 Higher Secondary Boards (WBCHSE / CBSE / ISC) and WBJEE / JEE Main preparation in Kolkata.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
