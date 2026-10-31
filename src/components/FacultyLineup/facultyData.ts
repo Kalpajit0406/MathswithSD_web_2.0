@@ -30,17 +30,17 @@ export interface SubjectFaculty {
 export const FACULTY_MEMBERS: SubjectFaculty[] = [
   {
     id: "physics",
-    name: "Physics",
+    name: "Physics (Rajesh Sir)",
     label: "Physics",
     route: "/physics",
-    isLive: false,
-    statusText: "Faculty Expansion",
-    specialty: "Mechanics, Electromagnetism & Conceptual Simulations",
+    isLive: true,
+    statusText: "Live Department",
+    specialty: "Physics Made Simple with Rajesh Sir — Class 9-12 & JEE/NEET",
     bullets: [
-      "Mechanics, Quantum & Electromagnetism",
-      "Interactive Physical Simulations",
-      "JEE & NEET Numerical Problem Solving",
-      "Conceptual Core Foundations",
+      "Conceptual Clarity & Visual Physical Intuition",
+      "Interactive Physical Simulations & Derivations",
+      "Class 9-12 Foundation & JEE/NEET Numerical Mastery",
+      "Dedicated Doubt-Clearing & Small Batches",
     ],
     palette: {
       pastelBg: "#f3e8ff",       // pale lavender

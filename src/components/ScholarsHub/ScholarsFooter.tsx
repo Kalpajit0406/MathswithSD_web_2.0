@@ -42,9 +42,9 @@ export function ScholarsFooter() {
               </Link>
             </li>
             <li>
-              <Link href="/physics" className="text-stone-400 hover:text-white transition-colors flex items-center gap-2">
-                <span>Physics Department</span>
-                <span className="text-[10px] text-stone-400">Waitlist</span>
+              <Link href="/physics" className="text-white hover:text-amber-300 font-bold flex items-center gap-2 transition-colors">
+                <span>Physics (Rajesh Sir)</span>
+                <span className="px-2 py-0.5 rounded-full bg-blue-600 text-[10px] text-white font-bold">Live</span>
               </Link>
             </li>
             <li>

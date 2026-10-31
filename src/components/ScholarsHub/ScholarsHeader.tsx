@@ -74,15 +74,24 @@ export function ScholarsHeader() {
           </a>
         </nav>
 
-        {/* Direct Action Link to Mathematics & Profile Switcher */}
+        {/* Direct Action Link to Mathematics, Physics & Profile Switcher */}
         <div className="flex items-center gap-3">
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden sm:flex items-center gap-2">
             <Link
               href="/maths"
-              className="inline-flex items-center gap-2 px-4.5 py-2 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all shadow-md hover:scale-[1.02] active:scale-95"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#991b1b] hover:bg-[#be123c] text-white font-display font-bold text-xs transition-all shadow-md hover:scale-[1.02] active:scale-95"
             >
               <span>Mathematics Dept</span>
               <svg className="w-3.5 h-3.5 text-amber-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+            <Link
+              href="/physics"
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#0b1f3a] hover:bg-[#163664] text-white font-display font-bold text-xs transition-all shadow-md hover:scale-[1.02] active:scale-95 border border-amber-400/30"
+            >
+              <span className="text-amber-300">Physics Dept</span>
+              <svg className="w-3.5 h-3.5 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
@@ -132,7 +141,7 @@ export function ScholarsHeader() {
           >
             About Hub
           </a>
-          <div className="pt-3 border-t border-[#ede7dc]">
+          <div className="pt-3 border-t border-[#ede7dc] space-y-2">
             <Link
               href="/maths"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -140,6 +149,16 @@ export function ScholarsHeader() {
             >
               <span>Explore Mathematics Department</span>
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Link>
+            <Link
+              href="/physics"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#0b1f3a] hover:bg-[#163664] text-white font-display font-bold text-xs min-h-[44px] shadow-sm border border-amber-400/30"
+            >
+              <span className="text-amber-300">Explore Physics Department (Rajesh Sir)</span>
+              <svg className="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
