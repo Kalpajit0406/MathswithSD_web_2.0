@@ -111,6 +111,45 @@
          ============================================================ -->
     <section class="hero-section" id="hero">
       <div class="hero-bg-grid" aria-hidden="true"></div>
+      
+      <!-- Subtle & Sober Physics Ambient Canvas (Projectile, Pendulum, Wave, Optics) -->
+      <div class="physics-ambient-canvas" aria-hidden="true">
+        <svg class="physics-svg-bg" viewBox="0 0 1440 700" preserveAspectRatio="none">
+          <!-- 1. Projectile Motion Trajectory & Animated Ball -->
+          <g class="ambient-projectile-group">
+            <path id="projectileTrajectory" class="projectile-trajectory" d="M 40,620 Q 320,180 620,620" />
+            <circle class="projectile-ball" r="5.5" />
+            <line x1="320" y1="385" x2="320" y2="400" stroke="rgba(255,183,3,0.18)" stroke-width="1" stroke-dasharray="2 2"/>
+            <text x="325" y="375" class="faint-formula-text">H_max = u²sin²θ/2g</text>
+            <text x="60" y="590" class="faint-formula-text">v₀, θ = 45°</text>
+            <text x="560" y="590" class="faint-formula-text">R = u²sin(2θ)/g</text>
+          </g>
+
+          <!-- 2. Pendulum Harmonic Oscillation -->
+          <g class="ambient-pendulum-group" transform="translate(1320, 45)">
+            <line x1="0" y1="0" x2="0" y2="175" class="pendulum-string" />
+            <circle cx="0" cy="175" r="8.5" class="pendulum-bob" />
+            <path d="M -50,165 A 175 175 0 0 0 50,165" class="pendulum-arc" />
+            <text x="-45" y="205" class="faint-formula-text">T = 2π√(L/g)</text>
+          </g>
+
+          <!-- 3. Harmonic Wave -->
+          <g class="ambient-wave-group">
+            <path class="harmonic-wave" d="M 0,340 C 200,300 300,380 500,340 C 700,300 800,380 1000,340 C 1200,300 1300,380 1440,340" />
+            <text x="1080" y="325" class="faint-formula-text">v = f·λ</text>
+          </g>
+
+          <!-- 4. Refraction / Snell's Law -->
+          <g class="ambient-optics-group" transform="translate(140, 160)">
+            <line x1="-80" y1="0" x2="100" y2="0" class="optics-boundary" />
+            <line x1="0" y1="-50" x2="0" y2="60" class="optics-normal" />
+            <line x1="-50" y1="-45" x2="0" y2="0" class="optics-ray-in" />
+            <line x1="0" y1="0" x2="30" y2="50" class="optics-ray-out" />
+            <circle class="photon-pulse" r="2.5" />
+            <text x="-75" y="-50" class="faint-formula-text">n₁ sin θ₁ = n₂ sin θ₂</text>
+          </g>
+        </svg>
+      </div>
       <div class="section-container hero-container">
         
         <!-- Left Side: Copy and CTAs -->
@@ -367,135 +406,82 @@
 
 
     <!-- ============================================================
-         COURSES SECTION (NO FEES SHOWN)
+         COURSES / CURRICULUM SECTION (COMPACT HOVER EXPLORER)
          ============================================================ -->
-    <section class="courses-section" id="courses">
+    <section class="courses-section compact-curriculum-section" id="courses">
       <div class="section-container">
         
-        <div class="section-header text-center fade-in-element">
-          <span class="section-tag">Structured Learning Programs</span>
-          <h2 class="section-title">Comprehensive Physics Courses</h2>
+        <div class="section-header text-center compact-header fade-in-element">
+          <span class="section-tag">Academic Curriculum</span>
+          <h2 class="section-title">Physics Concepts by Grade</h2>
           <p class="section-subtitle">
-            Targeted curricula tailored for conceptual depth, school board mastery, and national competitive exam preparation.
+            Hover over any class to preview core concepts and analytical topics covered in depth.
           </p>
         </div>
 
-        <div class="courses-grid">
+        <div class="compact-classes-grid">
           
-          <!-- Course 1: Class 9-10 -->
-          <div class="course-card fade-in-element">
-            <div class="course-header">
-              <div class="course-tag">Foundation</div>
-              <h3 class="course-title">[Class 9-10] Physics</h3>
-              <p class="course-desc">Build an unshakeable science foundation early to transition smoothly into higher secondary physics.</p>
+          <!-- Class 9-10 -->
+          <div class="compact-class-card fade-in-element" tabindex="0">
+            <div class="compact-card-top">
+              <span class="compact-grade-badge">[Class 9-10]</span>
+              <h3 class="compact-grade-title">Foundation Physics</h3>
+              <span class="hover-hint-tag">Hover for concepts</span>
             </div>
-            
-            <div class="course-body">
-              <div class="course-timing">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-                <span><strong>Timing:</strong> [Mon, Wed, Fri | 4:30 PM - 6:00 PM]</span>
-              </div>
-              
-              <ul class="course-features">
-                <li>Kinematics, Force & Laws of Motion</li>
-                <li>Work, Energy, Gravitation & Sound</li>
-                <li>Light (Reflection/Refraction) & Electricity</li>
-                <li>Foundation drills for Olympiads & NTSE</li>
+            <div class="compact-concepts-drawer">
+              <ul class="compact-concept-list">
+                <li>Kinematics & Laws of Motion</li>
+                <li>Work, Energy, Power & Gravitation</li>
+                <li>Light, Ray Diagrams & Electricity Basics</li>
               </ul>
-            </div>
-
-            <div class="course-footer">
-              <button class="btn btn-outline-primary btn-block enrol-btn" data-course="Class 9-10 Physics">Enrol Now</button>
             </div>
           </div>
 
-          <!-- Course 2: Class 11 -->
-          <div class="course-card popular-course fade-in-element">
-            <div class="popular-ribbon">Most Essential</div>
-            <div class="course-header">
-              <div class="course-tag">Core Mechanics</div>
-              <h3 class="course-title">[Class 11] Physics</h3>
-              <p class="course-desc">Master the cornerstone of all higher physics. Deep mathematical tools, vectors, and Newtonian mechanics.</p>
+          <!-- Class 11 -->
+          <div class="compact-class-card popular-compact-card fade-in-element" tabindex="0">
+            <div class="compact-card-top">
+              <span class="compact-grade-badge highlight-badge">[Class 11]</span>
+              <h3 class="compact-grade-title">Core Mechanics</h3>
+              <span class="hover-hint-tag">Hover for concepts</span>
             </div>
-            
-            <div class="course-body">
-              <div class="course-timing">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-                <span><strong>Timing:</strong> [Tue, Thu, Sat | 5:00 PM - 6:45 PM]</span>
-              </div>
-              
-              <ul class="course-features">
-                <li>Vectors, Calculus & Kinematics 1D/2D</li>
+            <div class="compact-concepts-drawer">
+              <ul class="compact-concept-list">
+                <li>Vectors, Calculus & 1D/2D Kinematics</li>
                 <li>Newton's Laws, Friction & Work-Energy</li>
-                <li>System of Particles & Rotational Dynamics</li>
-                <li>Thermodynamics, Waves & Fluid Mechanics</li>
+                <li>Rotational Dynamics & Oscillations</li>
               </ul>
-            </div>
-
-            <div class="course-footer">
-              <button class="btn btn-primary btn-block enrol-btn" data-course="Class 11 Physics">Enrol Now</button>
             </div>
           </div>
 
-          <!-- Course 3: Class 12 -->
-          <div class="course-card fade-in-element">
-            <div class="course-header">
-              <div class="course-tag">Board & Advanced</div>
-              <h3 class="course-title">[Class 12] Physics</h3>
-              <p class="course-desc">High-scoring board strategies combined with rigorous analytical depth for modern physics and electromagnetism.</p>
+          <!-- Class 12 -->
+          <div class="compact-class-card fade-in-element" tabindex="0">
+            <div class="compact-card-top">
+              <span class="compact-grade-badge">[Class 12]</span>
+              <h3 class="compact-grade-title">Electrodynamics</h3>
+              <span class="hover-hint-tag">Hover for concepts</span>
             </div>
-            
-            <div class="course-body">
-              <div class="course-timing">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-                <span><strong>Timing:</strong> [Mon, Wed, Fri | 6:30 PM - 8:15 PM]</span>
-              </div>
-              
-              <ul class="course-features">
+            <div class="compact-concepts-drawer">
+              <ul class="compact-concept-list">
                 <li>Electrostatics, Gauss's Law & Capacitance</li>
-                <li>Current Electricity & Magnetic Effects of Current</li>
-                <li>Electromagnetic Induction & Alternating Current</li>
-                <li>Ray/Wave Optics, Dual Nature & Semiconductor Electronics</li>
+                <li>Current, Magnetism, EMI & AC Circuits</li>
+                <li>Wave Optics & Modern Physics</li>
               </ul>
-            </div>
-
-            <div class="course-footer">
-              <button class="btn btn-outline-primary btn-block enrol-btn" data-course="Class 12 Physics">Enrol Now</button>
             </div>
           </div>
 
-          <!-- Course 4: JEE/NEET -->
-          <div class="course-card fade-in-element">
-            <div class="course-header">
-              <div class="course-tag">Competitive Target</div>
-              <h3 class="course-title">[JEE / NEET] Target</h3>
-              <p class="course-desc">Intensive numerical problem-solving, multi-concept integration, and timed examination simulations.</p>
+          <!-- JEE / NEET Target -->
+          <div class="compact-class-card fade-in-element" tabindex="0">
+            <div class="compact-card-top">
+              <span class="compact-grade-badge target-badge">[JEE / NEET]</span>
+              <h3 class="compact-grade-title">Competitive Target</h3>
+              <span class="hover-hint-tag">Hover for concepts</span>
             </div>
-            
-            <div class="course-body">
-              <div class="course-timing">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-                </svg>
-                <span><strong>Timing:</strong> [Weekend Intensive | Sat-Sun 9:00 AM - 12:30 PM]</span>
-              </div>
-              
-              <ul class="course-features">
-                <li>Advanced multi-concept problem drills</li>
-                <li>PYQ (Previous Years Questions) deep dissection</li>
-                <li>Time-management & accuracy improvement strategies</li>
-                <li>Comprehensive full-syllabus mock test series</li>
+            <div class="compact-concepts-drawer">
+              <ul class="compact-concept-list">
+                <li>Multi-Concept Problem Integration</li>
+                <li>Speed & Accuracy Numerical Drills</li>
+                <li>PYQ Decoders & Timed Mock Testing</li>
               </ul>
-            </div>
-
-            <div class="course-footer">
-              <button class="btn btn-outline-primary btn-block enrol-btn" data-course="JEE / NEET Target Batch">Enrol Now</button>
             </div>
           </div>
 

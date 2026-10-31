@@ -163,46 +163,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ------------------------------------------------------------
-     5. COURSE "ENROL NOW" BUTTONS PRE-FILL CONTACT FORM
+     5. COMPACT CURRICULUM HOVER & TOUCH INTERACTION
      ------------------------------------------------------------ */
-  const enrolButtons = document.querySelectorAll('.enrol-btn');
+  const compactCards = document.querySelectorAll('.compact-class-card');
   const studentClassSelect = document.getElementById('studentClass');
-  const studentNameInput = document.getElementById('studentName');
 
-  enrolButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const courseName = btn.getAttribute('data-course');
-      
-      // Scroll to contact form
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
+  compactCards.forEach(card => {
+    // Touch tap toggle for mobile
+    card.addEventListener('click', () => {
+      const isAlreadyExpanded = card.classList.contains('is-expanded');
+      compactCards.forEach(c => c.classList.remove('is-expanded'));
+      if (!isAlreadyExpanded) {
+        card.classList.add('is-expanded');
       }
 
-      // Pre-select matching course if available
+      // Pre-select matching class in contact form
+      const badgeText = card.querySelector('.compact-grade-badge')?.textContent || '';
       if (studentClassSelect) {
         for (let i = 0; i < studentClassSelect.options.length; i++) {
           const opt = studentClassSelect.options[i];
-          if (courseName.includes('Class 9-10') && opt.value === 'Class 9-10') {
+          if (badgeText.includes('9-10') && opt.value === 'Class 9-10') {
             studentClassSelect.selectedIndex = i;
             break;
-          } else if (courseName.includes('Class 11') && opt.value === 'Class 11') {
+          } else if (badgeText.includes('11') && opt.value === 'Class 11') {
             studentClassSelect.selectedIndex = i;
             break;
-          } else if (courseName.includes('Class 12') && opt.value === 'Class 12') {
+          } else if (badgeText.includes('12') && opt.value === 'Class 12') {
             studentClassSelect.selectedIndex = i;
             break;
-          } else if (courseName.includes('JEE') && opt.value === 'JEE / NEET') {
+          } else if (badgeText.includes('JEE') && opt.value === 'JEE / NEET') {
             studentClassSelect.selectedIndex = i;
             break;
           }
         }
       }
-
-      // Focus name input after brief delay
-      setTimeout(() => {
-        if (studentNameInput) studentNameInput.focus();
-      }, 600);
     });
   });
 

@@ -514,7 +514,7 @@ h1, h2, h3, h4, h5, h6 {
    ------------------------------------------------------------ */
 .hero-section {
   position: relative;
-  background: radial-gradient(circle at 80% 20%, #153663 0%, var(--navy) 60%, var(--navy-dark) 100%);
+  background: radial-gradient(circle at 75% 20%, #12284c 0%, #0b1f3a 55%, #061224 100%);
   color: var(--white);
   padding-top: 50px;
   padding-bottom: 70px;
@@ -529,9 +529,159 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
   pointer-events: none;
+}
+
+/* ============================================================
+   SUBTLE & SOBER PHYSICS AMBIENT BACKGROUND ANIMATIONS
+   (Projectile, Pendulum, Harmonic Wave, Optics)
+   ============================================================ */
+.physics-ambient-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.85; /* Sober master contrast control */
+}
+
+.physics-svg-bg {
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+}
+
+/* 1. Projectile Motion (Subtle parabolic throw with ball) */
+.projectile-trajectory {
+  fill: none;
+  stroke: rgba(255, 183, 3, 0.22);
+  stroke-width: 1.5;
+  stroke-dasharray: 6 6;
+  stroke-linecap: round;
+}
+
+.projectile-ball {
+  fill: var(--amber);
+  opacity: 0.65;
+  filter: drop-shadow(0 0 6px rgba(255, 183, 3, 0.5));
+  offset-path: path("M 40,620 Q 320,180 620,620");
+  animation: projectileFly 6.5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+}
+
+@keyframes projectileFly {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  10% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+/* 2. Pendulum Harmonic Oscillation */
+.ambient-pendulum-group {
+  transform-origin: 0px 0px;
+  animation: pendulumSway 4.2s ease-in-out infinite alternate;
+}
+
+.pendulum-string {
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-width: 1.5;
+}
+
+.pendulum-bob {
+  fill: rgba(11, 107, 203, 0.5);
+  stroke: rgba(255, 183, 3, 0.35);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 4px rgba(11, 107, 203, 0.3));
+}
+
+.pendulum-arc {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+@keyframes pendulumSway {
+  0% { transform: rotate(-24deg); }
+  100% { transform: rotate(24deg); }
+}
+
+/* 3. Harmonic Wave */
+.harmonic-wave {
+  fill: none;
+  stroke: rgba(11, 107, 203, 0.22);
+  stroke-width: 1.5;
+  stroke-dasharray: 8 8;
+  animation: waveTravel 22s linear infinite;
+}
+
+@keyframes waveTravel {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 200; }
+}
+
+/* 4. Optics / Snell's Law */
+.optics-boundary {
+  stroke: rgba(255, 255, 255, 0.12);
+  stroke-width: 1;
+}
+
+.optics-normal {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.optics-ray-in {
+  stroke: rgba(255, 183, 3, 0.28);
+  stroke-width: 1.5;
+}
+
+.optics-ray-out {
+  stroke: rgba(100, 181, 246, 0.3);
+  stroke-width: 1.5;
+}
+
+.photon-pulse {
+  fill: var(--amber);
+  opacity: 0.65;
+  offset-path: path("M -50,-45 L 0,0 L 30,50");
+  animation: photonTravel 3.5s linear infinite;
+}
+
+@keyframes photonTravel {
+  0% { offset-distance: 0%; opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+/* Faint Formula Annotations */
+.faint-formula-text {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  fill: rgba(255, 255, 255, 0.18);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  user-select: none;
 }
 
 .hero-container {
@@ -1038,123 +1188,161 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------------------------------------------------------------
-   8. COURSES SECTION (NO FEES SHOWN)
+   8. COMPACT CURRICULUM SECTION (HOVER CONCEPT EXPLORER)
    ------------------------------------------------------------ */
-.courses-section {
-  padding: 85px 0;
+.compact-curriculum-section {
+  padding: 50px 0 55px;
   background-color: var(--slate-100);
 }
 
-.courses-grid {
+.compact-header {
+  margin-bottom: 28px;
+}
+
+.compact-classes-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.course-card {
+.compact-class-card {
   background-color: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 32px 26px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: var(--shadow-card);
+  border-radius: var(--radius-md);
   border: 1px solid var(--slate-200);
+  box-shadow: var(--shadow-sm);
+  padding: 18px 20px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
   position: relative;
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  outline: none;
 }
 
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+.compact-class-card:hover,
+.compact-class-card:focus-visible,
+.compact-class-card.is-expanded {
+  border-color: var(--blue);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  background: linear-gradient(to bottom, #ffffff, #fcfdff);
 }
 
-.popular-course {
-  border: 2px solid var(--blue);
-  box-shadow: 0 12px 36px var(--blue-glow);
+.popular-compact-card {
+  border-left: 3px solid var(--amber);
 }
 
-.popular-ribbon {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background-color: var(--amber);
-  color: var(--navy);
+.compact-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.compact-grade-badge {
   font-family: var(--font-heading);
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  padding: 4px 12px;
+  color: var(--blue);
+  background-color: var(--blue-light);
+  padding: 4px 10px;
   border-radius: var(--radius-full);
 }
 
-.course-header {
-  margin-bottom: 18px;
-}
-
-.course-tag {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--blue);
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-}
-
-.course-title {
-  font-size: 1.45rem;
+.compact-grade-badge.highlight-badge {
   color: var(--navy);
-  margin-bottom: 10px;
+  background-color: var(--amber-light);
+  border: 1px solid rgba(255, 183, 3, 0.4);
 }
 
-.course-desc {
-  font-size: 0.92rem;
-  color: var(--slate-600);
-  line-height: 1.6;
+.compact-grade-badge.target-badge {
+  color: #c2410c;
+  background-color: #ffedd5;
 }
 
-.course-body {
+.compact-grade-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0;
   flex-grow: 1;
-  margin-bottom: 24px;
 }
 
-.course-timing {
+.hover-hint-tag {
+  font-size: 0.75rem;
+  color: var(--slate-400);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color var(--transition-fast);
+}
+
+.hover-hint-tag::after {
+  content: "↓";
+  font-size: 0.85rem;
+  transition: transform var(--transition-fast);
+}
+
+.compact-class-card:hover .hover-hint-tag,
+.compact-class-card:focus-visible .hover-hint-tag,
+.compact-class-card.is-expanded .hover-hint-tag {
+  color: var(--blue);
+}
+
+.compact-class-card:hover .hover-hint-tag::after,
+.compact-class-card:focus-visible .hover-hint-tag::after,
+.compact-class-card.is-expanded .hover-hint-tag::after {
+  transform: translateY(2px);
+}
+
+/* Concepts Drawer (Sleek expansion on hover) */
+.compact-concepts-drawer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin-top 0.3s ease;
+  margin-top: 0;
+  border-top: 1px solid transparent;
+}
+
+.compact-class-card:hover .compact-concepts-drawer,
+.compact-class-card:focus-visible .compact-concepts-drawer,
+.compact-class-card.is-expanded .compact-concepts-drawer {
+  max-height: 140px;
+  opacity: 1;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top-color: var(--slate-200);
+}
+
+.compact-concept-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.compact-concept-list li {
+  font-size: 0.86rem;
+  color: var(--slate-700);
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--slate-50);
-  border: 1px solid var(--slate-200);
-  padding: 10px 14px;
-  border-radius: var(--radius-sm);
-  font-size: 0.88rem;
-  color: var(--navy);
-  margin-bottom: 20px;
+  line-height: 1.35;
 }
 
-.course-features {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.course-features li {
-  font-size: 0.9rem;
-  color: var(--slate-700);
-  position: relative;
-  padding-left: 22px;
-}
-
-.course-features li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  top: 0;
+.compact-concept-list li::before {
+  content: "•";
   color: var(--blue);
   font-weight: 800;
-}
-
-.course-footer {
-  margin-top: auto;
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 /* ------------------------------------------------------------
@@ -2262,7 +2450,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .courses-grid {
+  .compact-classes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -2363,8 +2551,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 480px;
   }
 
-  /* Courses Desktop (4 columns) */
-  .courses-grid {
+  /* Courses / Curriculum Desktop (4 columns) */
+  .compact-classes-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
