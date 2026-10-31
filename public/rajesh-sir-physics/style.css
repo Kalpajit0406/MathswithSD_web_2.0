@@ -284,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------------------------------------------------------------
-   4. STICKY NAVBAR
+   4. STICKY NAVBAR (LIGHT CRISP THEME)
    ------------------------------------------------------------ */
 .site-header {
   position: sticky;
@@ -292,17 +292,17 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(11, 31, 58, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   transition: background-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .site-header.is-scrolled {
-  background-color: rgba(6, 18, 36, 0.98);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
 }
 
 .nav-container {
@@ -341,12 +341,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--navy);
   letter-spacing: -0.3px;
 }
 
 .logo-accent {
-  color: var(--amber);
+  color: var(--blue);
 }
 
 /* Desktop Nav Menu */
@@ -364,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
   font-size: 0.93rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.82);
+  color: #334155;
   padding: 6px 0;
   position: relative;
 }
@@ -376,13 +376,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: var(--amber);
+  background-color: var(--blue);
   transition: width var(--transition-fast);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--white);
+  color: var(--blue);
 }
 
 .nav-link.active::after,
@@ -397,11 +397,11 @@ h1, h2, h3, h4, h5, h6 {
   gap: 6px;
   font-size: 0.88rem;
   font-weight: 600;
-  color: #ff8585;
-  background-color: rgba(255, 0, 0, 0.12);
+  color: #dc2626;
+  background-color: #fef2f2;
   padding: 6px 12px;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 0, 0, 0.25);
+  border: 1px solid #fecaca;
   transition: all var(--transition-fast);
 }
 
@@ -440,7 +440,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   width: 24px;
   height: 2.5px;
-  background-color: var(--white);
+  background-color: var(--navy);
   border-radius: 2px;
   transition: all var(--transition-fast);
 }
@@ -461,9 +461,9 @@ h1, h2, h3, h4, h5, h6 {
   top: var(--nav-height);
   left: 0;
   width: 100%;
-  background-color: var(--navy-dark);
+  background-color: #ffffff;
   border-bottom: 2px solid var(--blue);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   max-height: 0;
   overflow: hidden;
   transition: max-height var(--transition-base), opacity var(--transition-base);
@@ -486,20 +486,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.88);
+  color: var(--navy);
   display: block;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid #f1f5f9;
 }
 
 .mobile-nav-link.active,
 .mobile-nav-link:hover {
-  color: var(--amber);
+  color: var(--blue);
   padding-left: 6px;
 }
 
 .mobile-yt-link {
-  color: #ff6b6b !important;
+  color: #dc2626 !important;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -510,14 +510,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ------------------------------------------------------------
-   5. HERO SECTION
+   5. HERO SECTION (LUMINOUS LIGHT PHYSICS THEME)
    ------------------------------------------------------------ */
 .hero-section {
   position: relative;
-  background: radial-gradient(circle at 75% 20%, #12284c 0%, #0b1f3a 55%, #061224 100%);
-  color: var(--white);
-  padding-top: 50px;
-  padding-bottom: 70px;
+  background: radial-gradient(circle at 80% 15%, #e0edff 0%, #edf5fc 40%, #f8fafc 100%);
+  color: var(--slate-800);
+  padding-top: 55px;
+  padding-bottom: 75px;
   overflow: hidden;
 }
 
@@ -529,14 +529,14 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(11, 107, 203, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 107, 203, 0.04) 1px, transparent 1px);
   pointer-events: none;
 }
 
 /* ============================================================
-   SUBTLE & SOBER PHYSICS AMBIENT BACKGROUND ANIMATIONS
-   (Projectile, Pendulum, Harmonic Wave, Optics)
+   LIVELY PHYSICS AMBIENT BACKGROUND ANIMATIONS
+   (Projectile Throw, Parabolic Bounce, Pendulum, Wave, Optics)
    ============================================================ */
 .physics-ambient-canvas {
   position: absolute;
@@ -547,7 +547,6 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none;
   overflow: hidden;
   z-index: 1;
-  opacity: 0.85; /* Sober master contrast control */
 }
 
 .physics-svg-bg {
@@ -556,130 +555,172 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 550px;
 }
 
-/* 1. Projectile Motion (Subtle parabolic throw with ball) */
+/* 1. Primary Projectile Motion (Active Parabolic Throw) */
 .projectile-trajectory {
   fill: none;
-  stroke: rgba(255, 183, 3, 0.22);
-  stroke-width: 1.5;
+  stroke: rgba(11, 107, 203, 0.45);
+  stroke-width: 2;
   stroke-dasharray: 6 6;
   stroke-linecap: round;
 }
 
-.projectile-ball {
-  fill: var(--amber);
-  opacity: 0.65;
-  filter: drop-shadow(0 0 6px rgba(255, 183, 3, 0.5));
-  offset-path: path("M 40,620 Q 320,180 620,620");
-  animation: projectileFly 6.5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+.projectile-ball.ball-primary {
+  fill: #ffb703;
+  stroke: #d97706;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 8px rgba(255, 183, 3, 0.85));
+  offset-path: path("M 30,640 Q 320,150 620,640");
+  animation: projectileThrowActive 3.8s cubic-bezier(0.2, 0.1, 0.25, 1) infinite;
 }
 
-@keyframes projectileFly {
+@keyframes projectileThrowActive {
   0% {
     offset-distance: 0%;
     opacity: 0;
     transform: scale(0.6);
   }
-  10% {
-    opacity: 0.75;
+  6% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  50% {
     transform: scale(1);
   }
-  90% {
-    opacity: 0.75;
+  88% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  98%, 100% {
+    offset-distance: 100%;
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+/* 2. Secondary Bouncing Projectile */
+.bounce-path {
+  stroke: rgba(255, 183, 3, 0.45);
+  stroke-width: 1.5;
+}
+
+.projectile-ball.ball-bounce {
+  fill: #0b6bcb;
+  stroke: #0958a8;
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 6px rgba(11, 107, 203, 0.8));
+  offset-path: path("M 620,640 Q 750,420 880,640");
+  animation: projectileBounceActive 3.8s cubic-bezier(0.2, 0.1, 0.25, 1) infinite;
+  animation-delay: 2.7s;
+}
+
+@keyframes projectileBounceActive {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  12% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  85% {
+    opacity: 1;
     transform: scale(1);
   }
   100% {
     offset-distance: 100%;
     opacity: 0;
-    transform: scale(0.6);
+    transform: scale(0.5);
   }
 }
 
-/* 2. Pendulum Harmonic Oscillation */
+/* 3. Pendulum Harmonic Oscillation (Visibly Active) */
 .ambient-pendulum-group {
   transform-origin: 0px 0px;
-  animation: pendulumSway 4.2s ease-in-out infinite alternate;
+  animation: pendulumSwayActive 2.8s ease-in-out infinite alternate;
 }
 
 .pendulum-string {
-  stroke: rgba(255, 255, 255, 0.14);
+  stroke: rgba(11, 31, 58, 0.35);
   stroke-width: 1.5;
 }
 
 .pendulum-bob {
-  fill: rgba(11, 107, 203, 0.5);
-  stroke: rgba(255, 183, 3, 0.35);
-  stroke-width: 1.5;
-  filter: drop-shadow(0 0 4px rgba(11, 107, 203, 0.3));
+  fill: #0b6bcb;
+  stroke: #ffb703;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px rgba(11, 107, 203, 0.45));
 }
 
 .pendulum-arc {
   fill: none;
-  stroke: rgba(255, 255, 255, 0.08);
+  stroke: rgba(11, 107, 203, 0.15);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+@keyframes pendulumSwayActive {
+  0% { transform: rotate(-32deg); }
+  100% { transform: rotate(32deg); }
+}
+
+/* 4. Traveling Harmonic Wave */
+.harmonic-wave {
+  fill: none;
+  stroke: rgba(11, 107, 203, 0.35);
+  stroke-width: 2;
+  stroke-dasharray: 10 10;
+  animation: waveTravelFast 12s linear infinite;
+}
+
+@keyframes waveTravelFast {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 240; }
+}
+
+/* 5. Optics / Snell's Law Refraction */
+.optics-boundary {
+  stroke: rgba(11, 31, 58, 0.25);
+  stroke-width: 1.5;
+}
+
+.optics-normal {
+  stroke: rgba(11, 31, 58, 0.18);
   stroke-width: 1;
   stroke-dasharray: 4 4;
 }
 
-@keyframes pendulumSway {
-  0% { transform: rotate(-24deg); }
-  100% { transform: rotate(24deg); }
-}
-
-/* 3. Harmonic Wave */
-.harmonic-wave {
-  fill: none;
-  stroke: rgba(11, 107, 203, 0.22);
-  stroke-width: 1.5;
-  stroke-dasharray: 8 8;
-  animation: waveTravel 22s linear infinite;
-}
-
-@keyframes waveTravel {
-  0% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: 200; }
-}
-
-/* 4. Optics / Snell's Law */
-.optics-boundary {
-  stroke: rgba(255, 255, 255, 0.12);
-  stroke-width: 1;
-}
-
-.optics-normal {
-  stroke: rgba(255, 255, 255, 0.08);
-  stroke-width: 1;
-  stroke-dasharray: 3 3;
-}
-
 .optics-ray-in {
-  stroke: rgba(255, 183, 3, 0.28);
-  stroke-width: 1.5;
+  stroke: #d97706;
+  stroke-width: 2;
 }
 
 .optics-ray-out {
-  stroke: rgba(100, 181, 246, 0.3);
-  stroke-width: 1.5;
+  stroke: #0b6bcb;
+  stroke-width: 2;
 }
 
 .photon-pulse {
-  fill: var(--amber);
-  opacity: 0.65;
+  fill: #ffb703;
+  stroke: #d97706;
+  stroke-width: 1;
   offset-path: path("M -50,-45 L 0,0 L 30,50");
-  animation: photonTravel 3.5s linear infinite;
+  animation: photonTravelFast 2.2s linear infinite;
 }
 
-@keyframes photonTravel {
+@keyframes photonTravelFast {
   0% { offset-distance: 0%; opacity: 0; }
-  10% { opacity: 0.7; }
-  90% { opacity: 0.7; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
   100% { offset-distance: 100%; opacity: 0; }
 }
 
-/* Faint Formula Annotations */
+/* Faint Formula Annotations in Light Mode */
 .faint-formula-text {
   font-family: var(--font-heading);
-  font-size: 11px;
-  fill: rgba(255, 255, 255, 0.18);
-  font-weight: 500;
+  font-size: 11.5px;
+  fill: rgba(11, 31, 58, 0.45);
+  font-weight: 600;
   letter-spacing: 0.5px;
   user-select: none;
 }
@@ -874,20 +915,20 @@ h1, h2, h3, h4, h5, h6 {
   100% { transform: rotate(360deg); }
 }
 
-/* Floating Physics Formulas */
+/* Floating Physics Formulas (Hero) */
 .floating-formula {
   position: absolute;
-  background-color: rgba(11, 31, 58, 0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1.5px solid rgba(255, 183, 3, 0.4);
-  color: var(--amber);
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(11, 107, 203, 0.3);
+  color: var(--navy);
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 0.95rem;
   padding: 6px 14px;
   border-radius: var(--radius-full);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 24px rgba(11, 31, 58, 0.12);
   z-index: 4;
   pointer-events: none;
   animation: floatFormula 5s ease-in-out infinite alternate;
@@ -896,25 +937,33 @@ h1, h2, h3, h4, h5, h6 {
 .formula-emc {
   top: 15px;
   left: 10px;
+  border-color: rgba(255, 183, 3, 0.6);
+  color: #b45309;
+  background-color: rgba(255, 251, 235, 0.95);
   animation-delay: 0s;
 }
 .formula-fma {
   top: 40px;
   right: 10px;
-  border-color: rgba(11, 107, 203, 0.5);
-  color: #90caf9;
+  border-color: rgba(11, 107, 203, 0.4);
+  color: var(--blue-dark);
+  background-color: rgba(240, 247, 255, 0.95);
   animation-delay: 1.2s;
 }
 .formula-vir {
   bottom: 30px;
   left: 15px;
-  border-color: rgba(255, 255, 255, 0.3);
-  color: #ffffff;
+  border-color: rgba(13, 148, 136, 0.4);
+  color: #0f766e;
+  background-color: rgba(240, 253, 250, 0.95);
   animation-delay: 2.5s;
 }
 .formula-lambda {
   bottom: 50px;
   right: 15px;
+  border-color: rgba(147, 51, 234, 0.4);
+  color: #7e22ce;
+  background-color: rgba(250, 245, 255, 0.95);
   animation-delay: 3.5s;
 }
 
@@ -1045,6 +1094,116 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.95rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.75);
+}
+
+/* ------------------------------------------------------------
+   DECORATIVE FLOATING SECTION FORMULAS & WATERMARKS
+   ------------------------------------------------------------ */
+.about-section,
+.compact-curriculum-section,
+.features-section,
+.youtube-section,
+.resources-section,
+.testimonials-section,
+.faq-section,
+.contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-formula-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.f-pill {
+  position: absolute;
+  display: inline-block;
+  font-family: 'Cambria Math', 'KaTeX_Math', 'Times New Roman', Georgia, serif;
+  font-size: 0.96rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.6px;
+  color: rgba(11, 107, 203, 0.52);
+  background-color: rgba(255, 255, 255, 0.76);
+  border: 1px dashed rgba(11, 107, 203, 0.3);
+  border-radius: var(--radius-full);
+  padding: 5px 14px;
+  box-shadow: 0 4px 15px rgba(11, 31, 58, 0.04);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  user-select: none;
+  white-space: nowrap;
+}
+
+@keyframes floatFormulaSubtle {
+  0% {
+    transform: translateY(0px) rotate(-1.5deg);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(-14px) rotate(2deg);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(0px) rotate(-1.5deg);
+    opacity: 0.55;
+  }
+}
+
+/* Position mapping for floating background formulas */
+.f-pos-1  { top: 10%; left: 4%;  animation: floatFormulaSubtle 7.5s ease-in-out infinite 0s; }
+.f-pos-2  { top: 22%; right: 4%; animation: floatFormulaSubtle 9.0s ease-in-out infinite 1.2s; }
+.f-pos-3  { bottom: 18%; left: 6%; animation: floatFormulaSubtle 8.2s ease-in-out infinite 2.1s; }
+.f-pos-4  { bottom: 8%; right: 5%; animation: floatFormulaSubtle 10.4s ease-in-out infinite 0.7s; }
+
+.f-pos-5  { top: 12%; left: 3%; animation: floatFormulaSubtle 8.5s ease-in-out infinite 0.4s; }
+.f-pos-6  { top: 20%; right: 5%; animation: floatFormulaSubtle 9.8s ease-in-out infinite 1.6s; }
+.f-pos-7  { bottom: 14%; left: 5%; animation: floatFormulaSubtle 7.9s ease-in-out infinite 2.5s; }
+.f-pos-8  { bottom: 10%; right: 4%; animation: floatFormulaSubtle 11.0s ease-in-out infinite 1.0s; }
+
+.f-pos-9  { top: 8%; left: 5%; animation: floatFormulaSubtle 8.0s ease-in-out infinite 0.2s; }
+.f-pos-10 { top: 18%; right: 4%; animation: floatFormulaSubtle 8.8s ease-in-out infinite 2.2s; }
+.f-pos-11 { bottom: 16%; left: 4%; animation: floatFormulaSubtle 9.5s ease-in-out infinite 1.4s; }
+.f-pos-12 { bottom: 8%; right: 6%; animation: floatFormulaSubtle 7.8s ease-in-out infinite 3.0s; }
+
+.f-pos-13 { top: 12%; left: 4%; animation: floatFormulaSubtle 8.4s ease-in-out infinite 0.8s; color: rgba(220, 38, 38, 0.52); border-color: rgba(220, 38, 38, 0.28); background-color: rgba(254, 242, 242, 0.8); }
+.f-pos-14 { top: 22%; right: 5%; animation: floatFormulaSubtle 9.2s ease-in-out infinite 1.9s; color: rgba(220, 38, 38, 0.52); border-color: rgba(220, 38, 38, 0.28); background-color: rgba(254, 242, 242, 0.8); }
+.f-pos-15 { bottom: 12%; left: 6%; animation: floatFormulaSubtle 7.6s ease-in-out infinite 2.3s; color: rgba(220, 38, 38, 0.52); border-color: rgba(220, 38, 38, 0.28); background-color: rgba(254, 242, 242, 0.8); }
+
+.f-pos-16 { top: 10%; left: 4%; animation: floatFormulaSubtle 8.6s ease-in-out infinite 0.6s; }
+.f-pos-17 { top: 22%; right: 5%; animation: floatFormulaSubtle 9.4s ease-in-out infinite 2.4s; }
+.f-pos-18 { bottom: 14%; right: 6%; animation: floatFormulaSubtle 10.0s ease-in-out infinite 1.1s; }
+
+.f-pos-19 { top: 14%; left: 5%; animation: floatFormulaSubtle 8.1s ease-in-out infinite 1.3s; }
+.f-pos-20 { bottom: 16%; right: 5%; animation: floatFormulaSubtle 9.6s ease-in-out infinite 0.5s; }
+
+.f-pos-21 { top: 12%; left: 4%; animation: floatFormulaSubtle 7.8s ease-in-out infinite 2.0s; }
+.f-pos-22 { bottom: 14%; right: 5%; animation: floatFormulaSubtle 8.9s ease-in-out infinite 1.5s; }
+
+.f-pos-23 { top: 10%; left: 4%; animation: floatFormulaSubtle 9.1s ease-in-out infinite 0.9s; }
+.f-pos-24 { bottom: 12%; right: 5%; animation: floatFormulaSubtle 8.3s ease-in-out infinite 2.2s; }
+
+@media (max-width: 768px) {
+  .f-pill {
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    opacity: 0.5;
+  }
+  .f-pos-2, .f-pos-4, .f-pos-6, .f-pos-8, .f-pos-10, .f-pos-12, .f-pos-14, .f-pos-17, .f-pos-20, .f-pos-22, .f-pos-24 {
+    display: none;
+  }
 }
 
 /* ------------------------------------------------------------
@@ -1409,25 +1568,27 @@ h1, h2, h3, h4, h5, h6 {
    ------------------------------------------------------------ */
 .youtube-section {
   padding: 85px 0;
-  background: radial-gradient(circle at 50% 10%, #163664 0%, var(--navy) 70%, var(--navy-dark) 100%);
-  color: var(--white);
+  background: linear-gradient(180deg, #f8fafc 0%, #edf5fc 50%, #f1f7fc 100%);
+  color: var(--slate-800);
+  position: relative;
+  overflow: hidden;
 }
 
 .youtube-section .section-title {
-  color: var(--white);
+  color: var(--navy);
 }
 
 .youtube-section .section-subtitle {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--slate-600);
 }
 
 .yt-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(255, 0, 0, 0.16);
-  border: 1px solid rgba(255, 0, 0, 0.35);
-  color: #ff6b6b;
+  background-color: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #dc2626;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1445,19 +1606,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .yt-video-card {
-  background-color: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 20px rgba(11, 31, 58, 0.06);
   transition: all var(--transition-base);
 }
 
 .yt-video-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 0, 0, 0.6);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 0, 0, 0.45);
+  box-shadow: 0 16px 36px rgba(11, 31, 58, 0.12);
 }
 
 .yt-thumbnail-wrapper {
@@ -1499,7 +1661,7 @@ h1, h2, h3, h4, h5, h6 {
 .yt-thumb-formula {
   font-family: var(--font-heading);
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .yt-play-btn {
@@ -1515,7 +1677,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   padding-left: 4px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform var(--transition-base), background-color var(--transition-base);
 }
 
@@ -1543,7 +1705,7 @@ h1, h2, h3, h4, h5, h6 {
 .yt-tag {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--amber);
+  color: var(--blue);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   display: block;
@@ -1552,14 +1714,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .yt-video-title {
   font-size: 1.05rem;
-  color: var(--white);
+  color: var(--navy);
+  font-weight: 700;
   line-height: 1.45;
   margin-bottom: 8px;
 }
 
 .yt-video-meta {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--slate-600);
 }
 
 .yt-cta-center {
@@ -1571,7 +1734,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .yt-subtext {
   font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--slate-600);
 }
 
 /* ------------------------------------------------------------

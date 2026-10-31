@@ -70,7 +70,8 @@
       </nav>
 
       <!-- Header CTA & Mobile Hamburger -->
-      <div class="nav-actions">`r`n        <a href="/" class="btn btn-secondary btn-sm" style="border-color: rgba(255,255,255,0.25); font-size: 0.82rem; padding: 7px 14px;" title="Back to Scholars Hub">← Scholars Hub</a>
+      <div class="nav-actions">
+        <a href="/" class="btn btn-secondary btn-sm" style="border-color: rgba(11,31,58,0.2); color: var(--navy); background-color: rgba(255,255,255,0.9); font-size: 0.82rem; padding: 7px 14px;" title="Back to Scholars Hub">← Scholars Hub</a>
         <a href="#contact" class="btn btn-demo open-demo-modal" role="button">Book Free Demo</a>
         
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
@@ -112,41 +113,50 @@
     <section class="hero-section" id="hero">
       <div class="hero-bg-grid" aria-hidden="true"></div>
       
-      <!-- Subtle & Sober Physics Ambient Canvas (Projectile, Pendulum, Wave, Optics) -->
+      <!-- Lively, Elegant Physics Background Animations (Projectile Throw, Bounce, Pendulum, Wave, Optics) -->
       <div class="physics-ambient-canvas" aria-hidden="true">
         <svg class="physics-svg-bg" viewBox="0 0 1440 700" preserveAspectRatio="none">
-          <!-- 1. Projectile Motion Trajectory & Animated Ball -->
+          <!-- 1. Primary Projectile Motion: Parabolic Throw & Animated Ball -->
           <g class="ambient-projectile-group">
-            <path id="projectileTrajectory" class="projectile-trajectory" d="M 40,620 Q 320,180 620,620" />
-            <circle class="projectile-ball" r="5.5" />
-            <line x1="320" y1="385" x2="320" y2="400" stroke="rgba(255,183,3,0.18)" stroke-width="1" stroke-dasharray="2 2"/>
-            <text x="325" y="375" class="faint-formula-text">H_max = u²sin²θ/2g</text>
-            <text x="60" y="590" class="faint-formula-text">v₀, θ = 45°</text>
-            <text x="560" y="590" class="faint-formula-text">R = u²sin(2θ)/g</text>
+            <path id="projectileTrajectory1" class="projectile-trajectory" d="M 30,640 Q 320,150 620,640" />
+            <circle class="projectile-ball ball-primary" r="7" />
+            <!-- Motion Trail / Launch Arrow -->
+            <line x1="30" y1="640" x2="85" y2="570" class="launch-arrow" stroke="rgba(11,107,203,0.35)" stroke-width="2" marker-end="url(#arrowhead)"/>
+            <line x1="320" y1="395" x2="320" y2="400" stroke="rgba(255,183,3,0.35)" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <text x="325" y="380" class="faint-formula-text">H_max = u²·sin²θ / 2g</text>
+            <text x="50" y="605" class="faint-formula-text">v₀ (θ = 53°)</text>
+            <text x="540" y="620" class="faint-formula-text">R = u²·sin(2θ) / g</text>
           </g>
 
-          <!-- 2. Pendulum Harmonic Oscillation -->
+          <!-- 2. Secondary Bouncing Projectile -->
+          <g class="ambient-projectile-bounce">
+            <path id="projectileTrajectory2" class="projectile-trajectory bounce-path" d="M 620,640 Q 750,420 880,640" />
+            <circle class="projectile-ball ball-bounce" r="5" />
+            <text x="730" y="470" class="faint-formula-text">e·v₀</text>
+          </g>
+
+          <!-- 3. Pendulum Harmonic Oscillation -->
           <g class="ambient-pendulum-group" transform="translate(1320, 45)">
             <line x1="0" y1="0" x2="0" y2="175" class="pendulum-string" />
-            <circle cx="0" cy="175" r="8.5" class="pendulum-bob" />
-            <path d="M -50,165 A 175 175 0 0 0 50,165" class="pendulum-arc" />
-            <text x="-45" y="205" class="faint-formula-text">T = 2π√(L/g)</text>
+            <circle cx="0" cy="175" r="9.5" class="pendulum-bob" />
+            <path d="M -55,160 A 175 175 0 0 0 55,160" class="pendulum-arc" />
+            <text x="-45" y="210" class="faint-formula-text">T = 2π√(L/g)</text>
           </g>
 
-          <!-- 3. Harmonic Wave -->
+          <!-- 4. Harmonic Wave Motion -->
           <g class="ambient-wave-group">
-            <path class="harmonic-wave" d="M 0,340 C 200,300 300,380 500,340 C 700,300 800,380 1000,340 C 1200,300 1300,380 1440,340" />
-            <text x="1080" y="325" class="faint-formula-text">v = f·λ</text>
+            <path class="harmonic-wave" d="M 0,330 C 200,280 300,380 500,330 C 700,280 800,380 1000,330 C 1200,280 1300,380 1440,330" />
+            <text x="1080" y="315" class="faint-formula-text">v = f·λ</text>
           </g>
 
-          <!-- 4. Refraction / Snell's Law -->
-          <g class="ambient-optics-group" transform="translate(140, 160)">
+          <!-- 5. Optics / Snell's Law Refraction -->
+          <g class="ambient-optics-group" transform="translate(130, 160)">
             <line x1="-80" y1="0" x2="100" y2="0" class="optics-boundary" />
             <line x1="0" y1="-50" x2="0" y2="60" class="optics-normal" />
             <line x1="-50" y1="-45" x2="0" y2="0" class="optics-ray-in" />
             <line x1="0" y1="0" x2="30" y2="50" class="optics-ray-out" />
-            <circle class="photon-pulse" r="2.5" />
-            <text x="-75" y="-50" class="faint-formula-text">n₁ sin θ₁ = n₂ sin θ₂</text>
+            <circle class="photon-pulse" r="3" />
+            <text x="-75" y="-50" class="faint-formula-text">n₁·sinθ₁ = n₂·sinθ₂</text>
           </g>
         </svg>
       </div>
@@ -317,6 +327,13 @@
          ABOUT RAJESH SIR
          ============================================================ -->
     <section class="about-section" id="about">
+      <!-- Decorative Background Formulas -->
+      <div class="section-formula-bg" aria-hidden="true">
+        <span class="f-pill f-pos-1">F⃗ = m·a⃗</span>
+        <span class="f-pill f-pos-2">τ = I·α</span>
+        <span class="f-pill f-pos-3">L⃗ = r⃗ × p⃗</span>
+        <span class="f-pill f-pos-4">p = m·v</span>
+      </div>
       <div class="section-container">
         
         <div class="about-grid">
@@ -409,6 +426,13 @@
          COURSES / CURRICULUM SECTION (COMPACT HOVER EXPLORER)
          ============================================================ -->
     <section class="courses-section compact-curriculum-section" id="courses">
+      <!-- Decorative Background Formulas -->
+      <div class="section-formula-bg" aria-hidden="true">
+        <span class="f-pill f-pos-5">K = ½mv²</span>
+        <span class="f-pill f-pos-6">E⃗ = -∇V</span>
+        <span class="f-pill f-pos-7">B = μ₀I/2πr</span>
+        <span class="f-pill f-pos-8">v² = u² + 2as</span>
+      </div>
       <div class="section-container">
         
         <div class="section-header text-center compact-header fade-in-element">
@@ -495,6 +519,13 @@
          WHY CHOOSE US (6 ICON CARDS)
          ============================================================ -->
     <section class="why-us-section" id="why-us">
+      <!-- Decorative Background Formulas -->
+      <div class="section-formula-bg" aria-hidden="true">
+        <span class="f-pill f-pos-9">PV = nRT</span>
+        <span class="f-pill f-pos-10">ΔS ≥ 0</span>
+        <span class="f-pill f-pos-11">λ = h/p</span>
+        <span class="f-pill f-pos-12">f = 1/2π √(g/L)</span>
+      </div>
       <div class="section-container">
         
         <div class="section-header text-center fade-in-element">
@@ -595,6 +626,12 @@
          YOUTUBE SECTION
          ============================================================ -->
     <section class="youtube-section" id="youtube">
+      <!-- Decorative Background Formulas -->
+      <div class="section-formula-bg" aria-hidden="true">
+        <span class="f-pill f-pos-13">c = 1/√(μ₀ε₀)</span>
+        <span class="f-pill f-pos-14">E = h·ν</span>
+        <span class="f-pill f-pos-15">Φ_B = B⃗·A⃗</span>
+      </div>
       <div class="section-container">
         
         <div class="section-header text-center fade-in-element">
@@ -697,6 +734,12 @@
          FREE RESOURCES SECTION (FORMULA SHEETS & NOTES)
          ============================================================ -->
     <section class="resources-section" id="resources">
+      <!-- Decorative Background Formulas -->
+      <div class="section-formula-bg" aria-hidden="true">
+        <span class="f-pill f-pos-16">∮ B⃗·dl⃗ = μ₀I</span>
+        <span class="f-pill f-pos-17">X_C = 1/ωC</span>
+        <span class="f-pill f-pos-18">V_rms = V₀/√2</span>
+      </div>
       <div class="section-container">
         
         <div class="section-header text-center fade-in-element">
@@ -800,6 +843,11 @@
          TESTIMONIALS SLIDER (4 REVIEWS, NO TOPPERS/RESULTS)
          ============================================================ -->
     <section class="testimonials-section" id="testimonials">
+      <!-- Decorative Background Formulas -->
+      <div class="section-formula-bg" aria-hidden="true">
+        <span class="f-pill f-pos-19">Q = mcΔT</span>
+        <span class="f-pill f-pos-20">a_c = v²/r</span>
+      </div>
       <div class="section-container">
         
         <div class="section-header text-center fade-in-element">
@@ -914,6 +962,11 @@
          FAQ ACCORDION (6 QUESTIONS)
          ============================================================ -->
     <section class="faq-section" id="faq">
+      <!-- Decorative Background Formulas -->
+      <div class="section-formula-bg" aria-hidden="true">
+        <span class="f-pill f-pos-21">Δx · Δp ≥ ℏ/2</span>
+        <span class="f-pill f-pos-22">η = 1 - T₂/T₁</span>
+      </div>
       <div class="section-container">
         
         <div class="section-header text-center fade-in-element">
@@ -1002,6 +1055,11 @@
          CONTACT SECTION (FORM, WHATSAPP, PHONE, ADDRESS, TIMINGS, MAP)
          ============================================================ -->
     <section class="contact-section" id="contact">
+      <!-- Decorative Background Formulas -->
+      <div class="section-formula-bg" aria-hidden="true">
+        <span class="f-pill f-pos-23">ℰ = -L·(di/dt)</span>
+        <span class="f-pill f-pos-24">Z = √(R² + (X_L-X_C)²)</span>
+      </div>
       <div class="section-container">
         
         <div class="section-header text-center fade-in-element">
