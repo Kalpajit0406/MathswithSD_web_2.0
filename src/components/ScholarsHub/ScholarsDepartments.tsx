@@ -20,7 +20,7 @@ export function ScholarsDepartments() {
             Our Subject Departments
           </h2>
           <p className="text-base sm:text-lg text-[#555b67] font-body">
-            Meet the multidisciplinary academic faculty. Explore subject curricula, interactive visualizers, faculty specializations, and admission portals.
+            Meet the academic faculty. Explore subject curricula, interactive visualizers, faculty specializations, and admission portals.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export function ScholarsDepartments() {
             Looking for additional subjects or specialized test series?
           </h4>
           <p className="text-sm text-[#555b67] font-body max-w-2xl mx-auto">
-            Scholars Hub is expanding its academic faculties. The Mathematics website is fully operational with live admissions, and additional science &amp; technology subjects are launching soon.
+            Scholars Hub provides premier academic faculties in Mathematics, Physics, and Computer Science with live interactive curricula and dedicated coaching portals.
           </p>
         </div>
 

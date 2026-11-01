@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>Arpan Sir Computer Science | Programming, DSA & Web at Scholars Hub</title>
+  <meta name="description" content="Master Computer Science with Arpan Sir. Hands-on coding, interactive data structure visualizers, small batches, and personal mentorship for Class 11-12, B.Tech, BCA, and programming enthusiasts.">
+  <meta name="keywords" content="Arpan Sir Computer Science, Coding Coaching, Class 11 CS, Class 12 CS, Python, C++, Data Structures, Web Development, Scholars Hub">
+  <meta name="author" content="Arpan Sir Computer Science">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Arpan Sir Computer Science | Computer Science Made Simple">
+  <meta property="og:description" content="Build your computer science skills one line of code at a time with interactive visualizations and rigorous software foundations.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/arpan-sir-placeholder.svg">
+
+  <!-- Google Fonts: Poppins (Headings), Inter (Body) & Fira Code (Monospace) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon (SVG inline with terminal code brackets) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='65' fill='%2306b6d4' font-family='monospace' font-weight='bold' font-size='48' text-anchor='middle'>&lt;/&gt;</text></svg>">
+</head>
+<body>
+
+  <!-- ============================================================
+       STICKY NAVBAR
+       ============================================================ -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Arpan Sir Computer Science Homepage">
+        <span class="logo-symbol">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--cyan);">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </span>
+        <span class="logo-text">Arpan Sir <span class="logo-accent">CS</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Arpan Sir</a></li>
+          <li><a href="#visual-lab" class="nav-link">Visual Lab</a></li>
+          <li><a href="#courses" class="nav-link">Courses</a></li>
+          <li><a href="#playground" class="nav-link">Playground</a></li>
+          <li><a href="#resources" class="nav-link">Resources</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header CTA & Mobile Hamburger -->
+      <div class="nav-actions">
+        <a href="/" class="btn btn-secondary btn-sm" title="Back to Scholars Hub Institution">← Scholars Hub</a>
+        <a href="#contact" class="btn btn-primary btn-sm open-demo-modal" role="button">Book Free Demo</a>
+        
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link active">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Arpan Sir</a></li>
+        <li><a href="#visual-lab" class="mobile-nav-link">Interactive Visual Lab</a></li>
+        <li><a href="#courses" class="mobile-nav-link">Courses &amp; Pathways</a></li>
+        <li><a href="#playground" class="mobile-nav-link">Coding Playground</a></li>
+        <li><a href="#resources" class="mobile-nav-link">Learning Resources</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact &amp; Admissions</a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <a href="#contact" class="btn btn-primary btn-block open-demo-modal">Book Free Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         HERO SECTION — ENTER THE WORLD OF CODE
+         ============================================================ -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+
+      <!-- Ambient CS Network Canvas: Animated Data Nodes & Transmission -->
+      <div class="cs-ambient-canvas" aria-hidden="true">
+        <svg class="cs-svg-bg" viewBox="0 0 1440 700" preserveAspectRatio="none">
+          <!-- Subtle Network Lines and Traveling Data Packets -->
+          <g stroke="rgba(37, 99, 235, 0.18)" stroke-width="1.2" fill="none">
+            <path d="M 50,200 L 250,140 L 480,260 L 620,180 L 850,290 L 1100,160 L 1380,240" />
+            <path d="M 120,500 L 320,440 L 520,560 L 800,480 L 1050,580 L 1350,490" stroke-dasharray="6 6"/>
+            <path d="M 250,140 L 320,440" stroke="rgba(6, 182, 212, 0.15)"/>
+            <path d="M 620,180 L 520,560" stroke="rgba(124, 58, 237, 0.15)"/>
+            <path d="M 850,290 L 800,480" stroke="rgba(37, 99, 235, 0.15)"/>
+          </g>
+
+          <!-- Nodes -->
+          <circle cx="250" cy="140" r="4" fill="var(--blue)" opacity="0.4"/>
+          <circle cx="480" cy="260" r="5" fill="var(--cyan)" opacity="0.4"/>
+          <circle cx="620" cy="180" r="4" fill="var(--violet)" opacity="0.4"/>
+          <circle cx="850" cy="290" r="5" fill="var(--blue)" opacity="0.4"/>
+          <circle cx="1100" cy="160" r="4" fill="var(--cyan)" opacity="0.4"/>
+          <circle cx="320" cy="440" r="4" fill="var(--violet)" opacity="0.4"/>
+          <circle cx="520" cy="560" r="5" fill="var(--blue)" opacity="0.4"/>
+          <circle cx="800" cy="480" r="4" fill="var(--cyan)" opacity="0.4"/>
+
+          <!-- Subtle Binary Column Streams -->
+          <text x="70" y="300" class="binary-column">01001000 01100101 01101100 01101100 01101111</text>
+          <text x="1160" y="450" class="binary-column">01010111 01101111 01110010 01101100 01100100</text>
+        </svg>
+      </div>
+
+      <!-- Subtle Ambient Floating Code Snippets (Carefully Balanced & Non-Overlapping) -->
+      <div class="hero-code-layer" aria-hidden="true">
+        <div class="floating-code-snippet fcs-python">
+<span class="kw">def</span> <span class="fn">solve</span>(arr):
+    <span class="kw">return</span> sorted(arr)</div>
+
+        <div class="floating-code-snippet fcs-js">
+<span class="kw">const</span> future = <span class="str">"yours"</span>;
+console.<span class="fn">log</span>(future);</div>
+
+        <div class="floating-code-snippet fcs-cpp">
+<span class="kw">for</span> (<span class="kw">int</span> i = 0; i &lt; n; i++) {
+    cout &lt;&lt; i;
+}</div>
+
+        <div class="floating-code-snippet fcs-html">
+&lt;<span class="kw">h1</span>&gt;Hello, Coder!&lt;/<span class="kw">h1</span>&gt;</div>
+      </div>
+
+      <div class="section-container hero-container">
+        <!-- Left Side: Copy and Primary CTAs -->
+        <div class="hero-content fade-in-element">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>EXPLORE COMPUTER SCIENCE</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Computer Science Made Simple with <span class="text-highlight">Arpan Sir</span>
+          </h1>
+
+          <p class="hero-subtext">
+            From programming fundamentals to data structures, algorithms, web development, and artificial intelligence, build your computer science skills one line of code at a time.
+          </p>
+
+          <div class="hero-btn-group">
+            <a href="#courses" class="btn btn-primary">Explore Courses</a>
+            <a href="#about" class="btn btn-secondary">Meet Arpan Sir</a>
+          </div>
+
+          <div class="hero-trust-strip">
+            <div class="trust-item">
+              <span class="trust-icon">⚡</span>
+              <span>School to College Learning</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">💻</span>
+              <span>Programming Fundamentals</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">🚀</span>
+              <span>Practical Coding Skills</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Teacher Card & Miniature Code Window -->
+        <div class="hero-visual fade-in-element">
+          <div class="cs-stage">
+            
+            <!-- Teacher Cutout Image Container with Safe Fallback -->
+            <div class="photo-wrapper">
+              <img 
+                src="assets/arpan-sir-placeholder.svg" 
+                alt="Arpan Sir - Computer Science Faculty at Scholars Hub" 
+                class="teacher-cutout-img"
+                id="heroTeacherImg"
+                onerror="this.style.display='none'; document.getElementById('heroFallbackBox').style.display='flex';"
+              >
+
+              <!-- Fallback Box (in case SVG is disabled/missing) -->
+              <div class="photo-placeholder-box" id="heroFallbackBox">
+                <svg viewBox="0 0 100 100" width="80" height="80" fill="currentColor">
+                  <circle cx="50" cy="35" r="22" opacity="0.9"/>
+                  <path d="M18 85 C18 62 32 55 50 55 C68 55 82 62 82 85 Z" opacity="0.9"/>
+                </svg>
+                <div class="fallback-badge">Arpan Sir • Computer Science</div>
+                <span class="fallback-sub">Scholars Hub Faculty</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         STATISTICS SECTION (ANIMATED COUNTERS)
+         ============================================================ -->
+    <section class="stats-section" id="stats" aria-label="Academic Achievements">
+      <div class="section-container">
+        <div class="stats-grid">
+          
+          <!-- Stat 1: Languages -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-counter" data-target="12">0</span><span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">Programming Languages &amp; Stacks</p>
+          </div>
+
+          <!-- Stat 2: Visual Labs -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-counter" data-target="6">0</span>
+            </div>
+            <p class="stat-label">Interactive Learning Labs</p>
+          </div>
+
+          <!-- Stat 3: Pathways -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+              </svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-counter" data-target="3">0</span>
+            </div>
+            <p class="stat-label">Comprehensive Learning Paths</p>
+          </div>
+
+          <!-- Stat 4: Topics -->
+          <div class="stat-card">
+            <div class="stat-icon-wrap">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <div class="stat-number-wrap">
+              <span class="stat-counter" data-target="40">0</span><span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">Computer Science Topics &amp; DSA</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         ABOUT ARPAN SIR SECTION
+         ============================================================ -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="about-grid">
+          
+          <!-- Left: Portrait & Department Tag -->
+          <div class="about-portrait-card fade-in-element">
+            <img 
+              src="assets/arpan-sir-placeholder.svg" 
+              alt="Arpan Sir - Educator in Computer Science" 
+              class="about-portrait-img"
+            >
+            <div class="about-badge-card">
+              <div class="about-badge-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <div class="about-badge-text">
+                <h5>Scholars Hub Faculty</h5>
+                <p>Computer Science &amp; Programming Mentor</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Educational Philosophy & Pillars -->
+          <div class="about-content fade-in-element">
+            <div class="section-badge">
+              <span class="badge-icon"></span>
+              <span>MEET ARPAN SIR</span>
+            </div>
+
+            <h2 class="section-title">
+              Pedagogy Rooted in <span class="text-gradient">Computational Thinking</span>
+            </h2>
+
+            <p class="about-lead">
+              "Computer science is not about rote memorizing syntax or copying algorithms. It is the art of breaking down real-world complexity into elegant, unambiguous logic that computers can execute."
+            </p>
+
+            <p>
+              Under Arpan Sir's guidance, students transition from passive code consumers to active software problem solvers. Whether you are mastering Class 11-12 syllabus (CBSE/ISC), navigating college-level engineering coursework (B.Tech, BCA, MCA), or preparing for software coding interviews, our classes provide systematic conceptual clarity and hands-on laboratory practice.
+            </p>
+
+            <div class="teaching-pillars-grid">
+              <div class="pillar-item">
+                <span class="pillar-bullet">01</span>
+                <div class="pillar-text">
+                  <h6>First Principles</h6>
+                  <p>Understanding memory, execution stacks, and how code runs on real silicon.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-bullet">02</span>
+                <div class="pillar-text">
+                  <h6>Visual Logic</h6>
+                  <p>Transforming complex pointers, trees, and recursions into visual diagrams.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-bullet">03</span>
+                <div class="pillar-text">
+                  <h6>Clean Code Architecture</h6>
+                  <p>Writing maintainable, idiomatic, and edge-case resilient programs.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <span class="pillar-bullet">04</span>
+                <div class="pillar-text">
+                  <h6>Small Batch Focus</h6>
+                  <p>Personal doubt clearing, one-on-one code reviews, and structured milestones.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-btn-group" style="margin-bottom: 0;">
+              <a href="#courses" class="btn btn-primary">View Course Batches</a>
+              <a href="#contact" class="btn btn-secondary open-demo-modal">Enquire for Admission</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         DATA STRUCTURES & ALGORITHMS — INTERACTIVE VISUAL LAB
+         (MAJOR HIGHLIGHT - SECTION 6)
+         ============================================================ -->
+    <section class="visual-lab-section" id="visual-lab">
+      <div class="section-container">
+        
+        <div class="section-head fade-in-element">
+          <div class="section-badge">
+            <span class="badge-icon"></span>
+            <span>INTERACTIVE VISUAL LAB</span>
+          </div>
+          <h2 class="section-title">
+            See Computer Science <span class="text-gradient">in Action</span>
+          </h2>
+          <p class="section-subtitle">
+            Understand the logic behind the code through interactive visualizations. Click elements, step through operations, and see data structures evolve in real time.
+          </p>
+        </div>
+
+        <!-- Tab Selectors for 6 Modules -->
+        <div class="lab-tabs-container fade-in-element">
+          <button class="lab-tab-btn is-active" data-tab="array">
+            <span class="lab-tab-icon">[ ]</span> Arrays
+          </button>
+          <button class="lab-tab-btn" data-tab="linkedlist">
+            <span class="lab-tab-icon">➔</span> Linked Lists
+          </button>
+          <button class="lab-tab-btn" data-tab="stack">
+            <span class="lab-tab-icon">⇪</span> Stack (LIFO)
+          </button>
+          <button class="lab-tab-btn" data-tab="queue">
+            <span class="lab-tab-icon">⇄</span> Queue (FIFO)
+          </button>
+          <button class="lab-tab-btn" data-tab="tree">
+            <span class="lab-tab-icon">▲</span> Binary Tree
+          </button>
+          <button class="lab-tab-btn" data-tab="sort">
+            <span class="lab-tab-icon">📊</span> Sorting Visualizer
+          </button>
+        </div>
+
+        <!-- Interactive Stage Container -->
+        <div class="lab-stage-container fade-in-element">
+          
+          <!-- MODULE 1: ARRAYS -->
+          <div id="moduleArray" class="lab-module-pane">
+            <div class="lab-stage-header">
+              <div class="lab-title-group">
+                <h4>Linear Array Inspection &amp; Operations</h4>
+                <p>Contiguous block of indexed memory cells with O(1) random access.</p>
+              </div>
+              <span class="lab-complexity-pill">Access: O(1) | Search: O(n)</span>
+            </div>
+
+            <div class="lab-canvas-area">
+              <div class="array-container" id="arrayContainer">
+                <!-- Dynamically populated cells -->
+              </div>
+            </div>
+
+            <div class="lab-controls-bar">
+              <div class="lab-action-group">
+                <input type="number" id="arrayIndexInput" class="lab-input" placeholder="Index" min="0" max="7" value="2">
+                <button class="lab-btn lab-btn-primary" id="btnAccessArray">Access Index</button>
+                <button class="lab-btn" id="btnInsertArray">+ Insert at End</button>
+                <button class="lab-btn" id="btnDeleteArray">- Delete Last</button>
+                <button class="lab-btn" id="btnSearchArray">Linear Search</button>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">Tip: Click any cell to inspect its memory address.</span>
+            </div>
+
+            <div class="lab-explanation-box">
+              <span class="lab-explanation-icon">ℹ</span>
+              <span id="arrayExplText">Click an element or select an operation above to inspect how arrays work.</span>
+            </div>
+          </div>
+
+          <!-- MODULE 2: LINKED LIST -->
+          <div id="moduleLinkedList" class="lab-module-pane" style="display: none;">
+            <div class="lab-stage-header">
+              <div class="lab-title-group">
+                <h4>Singly Linked List Chain</h4>
+                <p>Nodes distributed dynamically on the heap connected via memory pointers.</p>
+              </div>
+              <span class="lab-complexity-pill">Insert: O(1) | Traversal: O(n)</span>
+            </div>
+
+            <div class="lab-canvas-area">
+              <div class="ll-container" id="llContainer">
+                <!-- Dynamically rendered linked list nodes -->
+              </div>
+            </div>
+
+            <div class="lab-controls-bar">
+              <div class="lab-action-group">
+                <button class="lab-btn lab-btn-primary" id="btnTraverseLL">Traverse Pointer Chain</button>
+                <button class="lab-btn" id="btnAppendLL">+ Append Node</button>
+                <button class="lab-btn" id="btnDeleteLL">- Delete Tail Node</button>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">Each node stores a [Data | Next Pointer].</span>
+            </div>
+
+            <div class="lab-explanation-box">
+              <span class="lab-explanation-icon">ℹ</span>
+              <span id="llExplText">Click 'Traverse Pointer Chain' to animate step-by-step traversal from the head node.</span>
+            </div>
+          </div>
+
+          <!-- MODULE 3: STACK -->
+          <div id="moduleStack" class="lab-module-pane" style="display: none;">
+            <div class="lab-stage-header">
+              <div class="lab-title-group">
+                <h4>Stack (Last-In, First-Out — LIFO)</h4>
+                <p>Restricted access linear structure used in function call stacks and undo engines.</p>
+              </div>
+              <span class="lab-complexity-pill">Push: O(1) | Pop: O(1)</span>
+            </div>
+
+            <div class="lab-canvas-area">
+              <div class="stack-outer">
+                <div class="stack-bucket" id="stackBucket">
+                  <!-- Stack items drop in vertically -->
+                </div>
+                <div class="stack-pointer-indicator">
+                  <span id="stackTopLabel">TOP ➔ 40</span>
+                  <small style="color: var(--text-muted);">Elements enter &amp; exit strictly from the top.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="lab-controls-bar">
+              <div class="lab-action-group">
+                <button class="lab-btn lab-btn-primary" id="btnPushStack">push(x)</button>
+                <button class="lab-btn" id="btnPopStack">pop()</button>
+                <button class="lab-btn" id="btnPeekStack">peek()</button>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">Follows LIFO principle.</span>
+            </div>
+
+            <div class="lab-explanation-box">
+              <span class="lab-explanation-icon">ℹ</span>
+              <span id="stackExplText">Use push() to drop a new element into the stack or pop() to remove the top element.</span>
+            </div>
+          </div>
+
+          <!-- MODULE 4: QUEUE -->
+          <div id="moduleQueue" class="lab-module-pane" style="display: none;">
+            <div class="lab-stage-header">
+              <div class="lab-title-group">
+                <h4>Queue (First-In, First-Out — FIFO)</h4>
+                <p>Fair pipeline ordering used in task schedulers, asynchronous buffers, and printers.</p>
+              </div>
+              <span class="lab-complexity-pill">Enqueue: O(1) | Dequeue: O(1)</span>
+            </div>
+
+            <div class="lab-canvas-area">
+              <div class="queue-pipeline">
+                <span class="queue-label-tag tag-front">FRONT (Exit)</span>
+                <div class="queue-channel" id="queueChannel">
+                  <!-- Queue items -->
+                </div>
+                <span class="queue-label-tag tag-rear">REAR (Entry)</span>
+              </div>
+            </div>
+
+            <div class="lab-controls-bar">
+              <div class="lab-action-group">
+                <button class="lab-btn lab-btn-primary" id="btnEnqueue">enqueue(x)</button>
+                <button class="lab-btn" id="btnDequeue">dequeue()</button>
+                <button class="lab-btn" id="btnFrontQueue">front()</button>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">Enqueue at Rear, Dequeue from Front.</span>
+            </div>
+
+            <div class="lab-explanation-box">
+              <span class="lab-explanation-icon">ℹ</span>
+              <span id="queueExplText">First element added is the first one removed. Try enqueue and dequeue above!</span>
+            </div>
+          </div>
+
+          <!-- MODULE 5: BINARY TREE -->
+          <div id="moduleTree" class="lab-module-pane" style="display: none;">
+            <div class="lab-stage-header">
+              <div class="lab-title-group">
+                <h4>Binary Search Tree &amp; Traversals</h4>
+                <p>Hierarchical tree structure with Left &lt; Root &lt; Right property.</p>
+              </div>
+              <span class="lab-complexity-pill">Height: O(log n) | Search: O(log n)</span>
+            </div>
+
+            <div class="lab-canvas-area" style="flex-direction: column;">
+              <svg class="tree-visual-canvas" viewBox="0 0 500 210">
+                <!-- Branch lines -->
+                <line x1="250" y1="35" x2="140" y2="95" stroke="#94a3b8" stroke-width="2"/>
+                <line x1="250" y1="35" x2="360" y2="95" stroke="#94a3b8" stroke-width="2"/>
+                
+                <line x1="140" y1="95" x2="80" y2="165" stroke="#cbd5e1" stroke-width="2"/>
+                <line x1="140" y1="95" x2="200" y2="165" stroke="#cbd5e1" stroke-width="2"/>
+                
+                <line x1="360" y1="95" x2="300" y2="165" stroke="#cbd5e1" stroke-width="2"/>
+                <line x1="360" y1="95" x2="420" y2="165" stroke="#cbd5e1" stroke-width="2"/>
+
+                <!-- Level 0 (Root) -->
+                <circle cx="250" cy="35" r="22" fill="#2563eb" class="tree-node-circle" data-node-val="20"/>
+                <text x="250" y="42" fill="#fff" font-family="'Fira Code', monospace" font-size="14" font-weight="700" text-anchor="middle" pointer-events="none">20</text>
+
+                <!-- Level 1 -->
+                <circle cx="140" cy="95" r="20" fill="#0284c7" class="tree-node-circle" data-node-val="10"/>
+                <text x="140" y="101" fill="#fff" font-family="'Fira Code', monospace" font-size="13" font-weight="700" text-anchor="middle" pointer-events="none">10</text>
+
+                <circle cx="360" cy="95" r="20" fill="#0284c7" class="tree-node-circle" data-node-val="30"/>
+                <text x="360" y="101" fill="#fff" font-family="'Fira Code', monospace" font-size="13" font-weight="700" text-anchor="middle" pointer-events="none">30</text>
+
+                <!-- Level 2 -->
+                <circle cx="80" cy="165" r="18" fill="#475569" class="tree-node-circle" data-node-val="5"/>
+                <text x="80" y="171" fill="#fff" font-family="'Fira Code', monospace" font-size="12" font-weight="700" text-anchor="middle" pointer-events="none">5</text>
+
+                <circle cx="200" cy="165" r="18" fill="#475569" class="tree-node-circle" data-node-val="15"/>
+                <text x="200" y="171" fill="#fff" font-family="'Fira Code', monospace" font-size="12" font-weight="700" text-anchor="middle" pointer-events="none">15</text>
+
+                <circle cx="300" cy="165" r="18" fill="#475569" class="tree-node-circle" data-node-val="25"/>
+                <text x="300" y="171" fill="#fff" font-family="'Fira Code', monospace" font-size="12" font-weight="700" text-anchor="middle" pointer-events="none">25</text>
+
+                <circle cx="420" cy="165" r="18" fill="#475569" class="tree-node-circle" data-node-val="35"/>
+                <text x="420" y="171" fill="#fff" font-family="'Fira Code', monospace" font-size="12" font-weight="700" text-anchor="middle" pointer-events="none">35</text>
+              </svg>
+
+              <div class="tree-traversal-results" id="treeTraversalResult">
+                Select a traversal button below to watch the animated sequence.
+              </div>
+            </div>
+
+            <div class="lab-controls-bar">
+              <div class="lab-action-group">
+                <button class="lab-btn lab-btn-primary" id="btnInorder">Inorder (Sorted)</button>
+                <button class="lab-btn" id="btnPreorder">Preorder (Root First)</button>
+                <button class="lab-btn" id="btnPostorder">Postorder (Bottom-Up)</button>
+              </div>
+              <span style="font-size: 0.78rem; color: var(--text-muted);">Click any node circle to inspect left/right subtrees.</span>
+            </div>
+
+            <div class="lab-explanation-box">
+              <span class="lab-explanation-icon">ℹ</span>
+              <span id="treeExplText">Binary Search Trees guarantee that all values in the left subtree are smaller than root, and right subtree are larger.</span>
+            </div>
+          </div>
+
+          <!-- MODULE 6: SORTING VISUALIZER -->
+          <div id="moduleSort" class="lab-module-pane" style="display: none;">
+            <div class="lab-stage-header">
+              <div class="lab-title-group">
+                <h4>Sorting Visualizer (Real Step Execution)</h4>
+                <p>Observe comparisons and element swaps frame by frame.</p>
+              </div>
+              <span class="lab-complexity-pill">Worst: O(n²) | Best: O(n)</span>
+            </div>
+
+            <div class="lab-canvas-area">
+              <div class="sort-bars-stage" id="sortBarsStage">
+                <!-- Dynamically rendered sorting bars -->
+              </div>
+            </div>
+
+            <div class="lab-controls-bar">
+              <div class="lab-action-group">
+                <select id="sortAlgoSelect" class="lab-input" style="width: 140px;">
+                  <option value="bubble">Bubble Sort</option>
+                  <option value="selection">Selection Sort</option>
+                </select>
+                <button class="lab-btn lab-btn-primary" id="btnStartSort">▶ Start Sort</button>
+                <button class="lab-btn" id="btnResetSort">Reset</button>
+                <button class="lab-btn" id="btnRandomizeSort">Randomize</button>
+              </div>
+              <div style="display: flex; gap: 12px; font-size: 0.75rem; color: var(--text-muted); align-items: center;">
+                <span><strong style="color: #f59e0b;">Amber</strong> = Compare</span>
+                <span><strong style="color: #ef4444;">Red</strong> = Swap</span>
+                <span><strong style="color: #10b981;">Green</strong> = Sorted</span>
+              </div>
+            </div>
+
+            <div class="lab-explanation-box">
+              <span class="lab-explanation-icon">ℹ</span>
+              <span id="sortExplText">Select an algorithm and click 'Start Sort' to observe real-time comparisons and swaps.</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         COURSES AND LEARNING PATHS (SECTION 8)
+         ============================================================ -->
+    <section class="courses-section" id="courses">
+      <div class="section-container">
+        
+        <div class="section-head fade-in-element">
+          <div class="section-badge">
+            <span class="badge-icon"></span>
+            <span>ACADEMIC CURRICULUM</span>
+          </div>
+          <h2 class="section-title">
+            Explore Your <span class="text-gradient">Computer Science Journey</span>
+          </h2>
+          <p class="section-subtitle">
+            From school-level computing to university studies and professional programming skills.
+          </p>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="courses-filter-bar fade-in-element">
+          <div class="courses-tabs-group">
+            <button class="course-filter-btn is-active" data-filter="all">All Courses</button>
+            <button class="course-filter-btn" data-filter="school">School Computer Science</button>
+            <button class="course-filter-btn" data-filter="college">College &amp; University</button>
+            <button class="course-filter-btn" data-filter="skills">Programming &amp; Skills</button>
+          </div>
+
+          <div class="course-search-box">
+            <svg class="search-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="text" id="courseSearchInput" class="course-search-input" placeholder="Search courses (e.g. Python, DSA, Class 12)...">
+          </div>
+        </div>
+
+        <!-- Course Cards Grid -->
+        <div class="courses-grid" id="coursesGrid">
+          
+          <!-- COURSE 1: CLASS 11 CS -->
+          <div class="course-card fade-in-element" data-category="school">
+            <div class="course-card-top">
+              <div class="course-card-badge-wrap">
+                <span class="course-tech-icon" aria-hidden="true">💻</span>
+                <span class="course-level-badge level-beginner">Beginner</span>
+              </div>
+              <span class="course-track-label">CBSE / ISC / State</span>
+            </div>
+            <h3 class="course-title">Class 11 Computer Science</h3>
+            <p class="course-desc">
+              Strong computational foundation covering computer systems architecture, number systems, boolean logic, and rigorous Python/C++ fundamentals.
+            </p>
+            <div class="course-topics-list">
+              <span class="course-topic-pill">Python Basics</span>
+              <span class="course-topic-pill">Number Systems</span>
+              <span class="course-topic-pill">Boolean Algebra</span>
+              <span class="course-topic-pill">Loops &amp; Functions</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-enroll-hint">Admissions Open 2026-27</span>
+              <button class="btn btn-secondary btn-sm open-course-details" data-course-title="Class 11 Computer Science">
+                Explore Course <span class="btn-arrow" aria-hidden="true">➔</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- COURSE 2: CLASS 12 CS -->
+          <div class="course-card fade-in-element" data-category="school">
+            <div class="course-card-top">
+              <div class="course-card-badge-wrap">
+                <span class="course-tech-icon" aria-hidden="true">⚡</span>
+                <span class="course-level-badge level-intermediate">Board Target</span>
+              </div>
+              <span class="course-track-label">Class 12 Boards</span>
+            </div>
+            <h3 class="course-title">Class 12 Computer Science</h3>
+            <p class="course-desc">
+              Board-oriented mastery in data file handling (text, binary, CSV), linear data structures (Stack &amp; Queue), SQL relational databases, and computer networking.
+            </p>
+            <div class="course-topics-list">
+              <span class="course-topic-pill">File Handling</span>
+              <span class="course-topic-pill">Stacks in Python</span>
+              <span class="course-topic-pill">SQL &amp; DBMS</span>
+              <span class="course-topic-pill">Computer Networks</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-enroll-hint">Full Syllabus &amp; Practical Lab</span>
+              <button class="btn btn-secondary btn-sm open-course-details" data-course-title="Class 12 Computer Science">
+                Explore Course <span class="btn-arrow" aria-hidden="true">➔</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- COURSE 3: B.TECH CSE -->
+          <div class="course-card fade-in-element" data-category="college">
+            <div class="course-card-top">
+              <div class="course-card-badge-wrap">
+                <span class="course-tech-icon" aria-hidden="true">⚙️</span>
+                <span class="course-level-badge level-advanced">University Track</span>
+              </div>
+              <span class="course-track-label">Engineering Degree</span>
+            </div>
+            <h3 class="course-title">B.Tech Computer Science (Core Support)</h3>
+            <p class="course-desc">
+              University curriculum alignment for Data Structures &amp; Algorithms, Object-Oriented Programming, Operating Systems, Database Systems, and Discrete Math.
+            </p>
+            <div class="course-topics-list">
+              <span class="course-topic-pill">Advanced DSA</span>
+              <span class="course-topic-pill">C++ / Java OOP</span>
+              <span class="course-topic-pill">OS Concepts</span>
+              <span class="course-topic-pill">DBMS &amp; Normalization</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-enroll-hint">Semester Exam &amp; Lab Support</span>
+              <button class="btn btn-secondary btn-sm open-course-details" data-course-title="B.Tech Computer Science (Core Support)">
+                Explore Course <span class="btn-arrow" aria-hidden="true">➔</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- COURSE 4: B.TECH AI & ML -->
+          <div class="course-card fade-in-element" data-category="college">
+            <div class="course-card-top">
+              <div class="course-card-badge-wrap">
+                <span class="course-tech-icon" aria-hidden="true">🧠</span>
+                <span class="course-level-badge level-advanced">Modern Pathway</span>
+              </div>
+              <span class="course-track-label">Specialization</span>
+            </div>
+            <h3 class="course-title">B.Tech AI &amp; Machine Learning</h3>
+            <p class="course-desc">
+              Mathematical foundations (Linear Algebra, Calculus, Probability) coupled with practical Python scientific computing, neural network architectures, and model building.
+            </p>
+            <div class="course-topics-list">
+              <span class="course-topic-pill">Python / NumPy</span>
+              <span class="course-topic-pill">Math for ML</span>
+              <span class="course-topic-pill">Supervised Models</span>
+              <span class="course-topic-pill">Neural Networks</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-enroll-hint">Conceptual &amp; Applied</span>
+              <button class="btn btn-secondary btn-sm open-course-details" data-course-title="B.Tech AI &amp; Machine Learning">
+                Explore Course <span class="btn-arrow" aria-hidden="true">➔</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- COURSE 5: BCA & MCA -->
+          <div class="course-card fade-in-element" data-category="college">
+            <div class="course-card-top">
+              <div class="course-card-badge-wrap">
+                <span class="course-tech-icon" aria-hidden="true">☕</span>
+                <span class="course-level-badge level-intermediate">Degree Pathway</span>
+              </div>
+              <span class="course-track-label">BCA / MCA Degrees</span>
+            </div>
+            <h3 class="course-title">BCA &amp; MCA Degree Mentorship</h3>
+            <p class="course-desc">
+              Comprehensive guidance across C, C++, Java, Web Technologies, Software Engineering methodologies, and final-year capstone project implementation.
+            </p>
+            <div class="course-topics-list">
+              <span class="course-topic-pill">Core Java</span>
+              <span class="course-topic-pill">Web Tech</span>
+              <span class="course-topic-pill">Software Engg</span>
+              <span class="course-topic-pill">Capstone Guidance</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-enroll-hint">Curriculum &amp; Projects</span>
+              <button class="btn btn-secondary btn-sm open-course-details" data-course-title="BCA &amp; MCA Degree Mentorship">
+                Explore Course <span class="btn-arrow" aria-hidden="true">➔</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- COURSE 6: PYTHON MASTERY -->
+          <div class="course-card fade-in-element" data-category="skills">
+            <div class="course-card-top">
+              <div class="course-card-badge-wrap">
+                <span class="course-tech-icon" aria-hidden="true">🐍</span>
+                <span class="course-level-badge level-beginner">Skill Track</span>
+              </div>
+              <span class="course-track-label">All Levels</span>
+            </div>
+            <h3 class="course-title">Python Programming &amp; Problem Solving</h3>
+            <p class="course-desc">
+              Zero to hero in Python. Master idiomatic clean syntax, functional constructs, OOP design patterns, file processing, and algorithmic problem-solving.
+            </p>
+            <div class="course-topics-list">
+              <span class="course-topic-pill">Syntax Mastery</span>
+              <span class="course-topic-pill">OOP Patterns</span>
+              <span class="course-topic-pill">List Comprehensions</span>
+              <span class="course-topic-pill">Automation Scripts</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-enroll-hint">12-Week Intensive</span>
+              <button class="btn btn-secondary btn-sm open-course-details" data-course-title="Python Programming &amp; Problem Solving">
+                Explore Course <span class="btn-arrow" aria-hidden="true">➔</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- COURSE 7: C++ & DSA -->
+          <div class="course-card fade-in-element" data-category="skills">
+            <div class="course-card-top">
+              <div class="course-card-badge-wrap">
+                <span class="course-tech-icon" aria-hidden="true">⚡</span>
+                <span class="course-level-badge level-advanced">Rigorous Track</span>
+              </div>
+              <span class="course-track-label">Competitive / Systems</span>
+            </div>
+            <h3 class="course-title">C &amp; C++ Masterclass with DSA</h3>
+            <p class="course-desc">
+              Uncompromising deep dive into memory management, pointers, the Standard Template Library (STL), and implementation of all classic data structures.
+            </p>
+            <div class="course-topics-list">
+              <span class="course-topic-pill">Pointers &amp; Heap</span>
+              <span class="course-topic-pill">STL Collections</span>
+              <span class="course-topic-pill">Recursion / Trees</span>
+              <span class="course-topic-pill">Complexity Analysis</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-enroll-hint">16-Week Foundation</span>
+              <button class="btn btn-secondary btn-sm open-course-details" data-course-title="C &amp; C++ Masterclass with DSA">
+                Explore Course <span class="btn-arrow" aria-hidden="true">➔</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- COURSE 8: FULL-STACK WEB -->
+          <div class="course-card fade-in-element" data-category="skills">
+            <div class="course-card-top">
+              <div class="course-card-badge-wrap">
+                <span class="course-tech-icon" aria-hidden="true">🌐</span>
+                <span class="course-level-badge level-intermediate">Developer Track</span>
+              </div>
+              <span class="course-track-label">Practical Web</span>
+            </div>
+            <h3 class="course-title">Full-Stack Web Development Foundations</h3>
+            <p class="course-desc">
+              Modern frontend and client-server architectures using Semantic HTML5, CSS3 Grid/Flexbox, ES6+ JavaScript, REST APIs, and Git version control.
+            </p>
+            <div class="course-topics-list">
+              <span class="course-topic-pill">HTML5 &amp; CSS3</span>
+              <span class="course-topic-pill">JavaScript ES6+</span>
+              <span class="course-topic-pill">REST APIs</span>
+              <span class="course-topic-pill">Git / GitHub</span>
+            </div>
+            <div class="course-card-footer">
+              <span class="course-enroll-hint">Project-Driven</span>
+              <button class="btn btn-secondary btn-sm open-course-details" data-course-title="Full-Stack Web Development Foundations">
+                Explore Course <span class="btn-arrow" aria-hidden="true">➔</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CODING PLAYGROUND ("WRITE. RUN. LEARN." - SECTION 10)
+         ============================================================ -->
+    <section class="playground-section" id="playground">
+      <div class="section-container">
+        
+        <div class="section-head fade-in-element">
+          <div class="section-badge">
+            <span class="badge-icon"></span>
+            <span>DEVELOPER WORKSPACE</span>
+          </div>
+          <h2 class="section-title">
+            Write. Run. <span class="text-gradient">Learn.</span>
+          </h2>
+          <p class="section-subtitle">
+            Test your ideas instantly in a live interactive sandboxed playground. Edit the HTML, CSS, and JS tabs below and click 'Run Preview' to observe the real output.
+          </p>
+        </div>
+
+        <!-- Playground Window -->
+        <div class="playground-window fade-in-element">
+          
+          <div class="playground-topbar">
+            <div class="playground-tabs">
+              <button class="playground-tab is-active" data-tab="html">
+                <span class="tab-dot tab-dot-html" aria-hidden="true"></span>index.html
+              </button>
+              <button class="playground-tab" data-tab="css">
+                <span class="tab-dot tab-dot-css" aria-hidden="true"></span>style.css
+              </button>
+              <button class="playground-tab" data-tab="js">
+                <span class="tab-dot tab-dot-js" aria-hidden="true"></span>script.js
+              </button>
+            </div>
+            <div class="playground-actions">
+              <button class="playground-btn-reset" id="btnResetPlayground" title="Reset Code">↺ Reset</button>
+              <button class="playground-btn-run" id="btnRunPlayground">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+                Run Preview
+              </button>
+            </div>
+          </div>
+
+          <div class="playground-split">
+            <!-- Left: Editable Code Window -->
+            <div class="playground-editor-pane">
+              <textarea 
+                id="codeTextarea" 
+                class="code-textarea" 
+                spellcheck="false" 
+                aria-label="Code Editor Input"
+              ></textarea>
+            </div>
+
+            <!-- Right: Sandboxed Live Preview Monitor -->
+            <div class="playground-preview-pane">
+              <div class="preview-bar">
+                <span>Output Screen (Sandbox)</span>
+                <span style="color: var(--emerald);">● Live</span>
+              </div>
+              <iframe 
+                id="playgroundIframe" 
+                class="preview-iframe" 
+                sandbox="allow-scripts" 
+                title="Interactive Playground Sandboxed Output"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         WHY LEARN WITH ARPAN SIR? (SECTION 11)
+         ============================================================ -->
+    <section class="why-section" id="why-us">
+      <div class="section-container">
+        
+        <div class="section-head fade-in-element">
+          <div class="section-badge">
+            <span class="badge-icon"></span>
+            <span>PEDAGOGICAL EXCELLENCE</span>
+          </div>
+          <h2 class="section-title">
+            Why Learn with <span class="text-gradient">Arpan Sir?</span>
+          </h2>
+          <p class="section-subtitle">
+            A structured, student-first teaching methodology designed to build long-term problem-solving stamina.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          
+          <div class="why-card fade-in-element">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+            </div>
+            <h4>Strong First Principles</h4>
+            <p>Every concept is explained from the ground up: how variables allocate RAM, how CPU registers execute opcodes, and why algorithm efficiency matters.</p>
+          </div>
+
+          <div class="why-card fade-in-element">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                <line x1="8" y1="21" x2="16" y2="21"/>
+                <line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h4>Visual Algorithmic Teaching</h4>
+            <p>Abstract pointers, recursion trees, and dynamic programming matrices are demystified through live diagrammatic walkthroughs and interactive animations.</p>
+          </div>
+
+          <div class="why-card fade-in-element">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <h4>Structured Problem Solving</h4>
+            <p>Learn to break down complex interview and examination questions into formal input/output specs, edge cases, pseudo-code, and optimized implementations.</p>
+          </div>
+
+          <div class="why-card fade-in-element">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"/>
+                <line x1="12" y1="19" x2="20" y2="19"/>
+              </svg>
+            </div>
+            <h4>Practical Coding Drills</h4>
+            <p>Theory is accompanied by mandatory hands-on programming labs, debugging sessions, code refactoring exercises, and Git version control practices.</p>
+          </div>
+
+          <div class="why-card fade-in-element">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h4>Small Batches &amp; Code Reviews</h4>
+            <p>Limited batch capacity ensures Arpan Sir reviews your personal code submissions line-by-line, addressing stylistic flaws, memory leaks, and logic gaps.</p>
+          </div>
+
+          <div class="why-card fade-in-element">
+            <div class="why-icon-box">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z"/>
+              </svg>
+            </div>
+            <h4>Bridge to Modern Tech</h4>
+            <p>Connect school and college curricula to real engineering horizons: REST APIs, Relational DBs, Artificial Intelligence, and Modern Developer Tooling.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         COMPUTER SCIENCE CONCEPTS BY LEVEL (SECTION 12)
+         ============================================================ -->
+    <section class="concepts-section" id="concepts">
+      <div class="section-container">
+        
+        <div class="section-head fade-in-element">
+          <div class="section-badge">
+            <span class="badge-icon"></span>
+            <span>LEARNING ROADMAP</span>
+          </div>
+          <h2 class="section-title">
+            Computer Science <span class="text-gradient">Concepts by Level</span>
+          </h2>
+          <p class="section-subtitle">
+            A clear, structured learning roadmap designed to guide students from raw beginners to confident software architects.
+          </p>
+        </div>
+
+        <div class="levels-grid">
+          
+          <!-- LEVEL 1: FOUNDATION -->
+          <div class="level-card fade-in-element">
+            <div class="level-header">
+              <span class="level-tag">LEVEL 01</span>
+              <h4>FOUNDATION</h4>
+            </div>
+            <div class="level-topics-checklist">
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Computer Architecture</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Number Systems &amp; Binary Math</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Logic Gates &amp; Boolean Algebra</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Algorithms &amp; Flowcharts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- LEVEL 2: PROGRAMMING -->
+          <div class="level-card fade-in-element">
+            <div class="level-header">
+              <span class="level-tag">LEVEL 02</span>
+              <h4>PROGRAMMING</h4>
+            </div>
+            <div class="level-topics-checklist">
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Variables, Types &amp; Memory</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Branching &amp; Iterative Loops</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Modular Functions &amp; Scope</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Object-Oriented Design (OOP)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- LEVEL 3: DATA STRUCTURES -->
+          <div class="level-card fade-in-element">
+            <div class="level-header">
+              <span class="level-tag">LEVEL 03</span>
+              <h4>DATA STRUCTURES</h4>
+            </div>
+            <div class="level-topics-checklist">
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Arrays &amp; Linked Lists</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Stacks &amp; Queues (LIFO / FIFO)</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Binary Search Trees</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Sorting &amp; Searching Efficiency</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- LEVEL 4: ADVANCED TECHNOLOGY -->
+          <div class="level-card fade-in-element">
+            <div class="level-header">
+              <span class="level-tag">LEVEL 04</span>
+              <h4>ADVANCED TECH</h4>
+            </div>
+            <div class="level-topics-checklist">
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Relational Databases &amp; SQL</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Web Architecture &amp; REST APIs</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Machine Learning Fundamentals</span>
+              </div>
+              <div class="topic-check-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Software Development Lifecycle</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         LEARNING RESOURCES (SECTION 13)
+         ============================================================ -->
+    <section class="resources-section" id="resources">
+      <div class="section-container">
+        
+        <div class="section-head fade-in-element">
+          <div class="section-badge">
+            <span class="badge-icon"></span>
+            <span>ACADEMIC COMPANIONS</span>
+          </div>
+          <h2 class="section-title">
+            Curated <span class="text-gradient">Learning Resources</span>
+          </h2>
+          <p class="section-subtitle">
+            Complement your classroom lectures with curated cheat sheets, practice sheets, and algorithmic guides.
+          </p>
+        </div>
+
+        <div class="resources-grid">
+          
+          <!-- RES 1 -->
+          <div class="resource-card fade-in-element">
+            <div>
+              <div class="resource-meta">
+                <span>PDF Format</span>
+                <span>•</span>
+                <span>Class 11 &amp; 12</span>
+              </div>
+              <h4>Python Quick Syntax Handbook</h4>
+              <p>Concise revision sheet of Python data types, slice notation, dictionary comprehensions, and built-in functions.</p>
+            </div>
+            <button class="btn-download" data-file="Python-Quick-Syntax-Handbook.pdf">
+              <span>↓</span> Download PDF
+            </button>
+          </div>
+
+          <!-- RES 2 -->
+          <div class="resource-card fade-in-element">
+            <div>
+              <div class="resource-meta">
+                <span>Problem Set</span>
+                <span>•</span>
+                <span>Coding Drills</span>
+              </div>
+              <h4>50 Must-Solve DSA Problems</h4>
+              <p>Hand-picked array, string, linked list, and stack practice problems categorized by beginner to intermediate difficulty.</p>
+            </div>
+            <button class="btn-download" data-file="50-Must-Solve-DSA-Problems.pdf">
+              <span>↓</span> Download PDF
+            </button>
+          </div>
+
+          <!-- RES 3 -->
+          <div class="resource-card fade-in-element">
+            <div>
+              <div class="resource-meta">
+                <span>Wall Poster</span>
+                <span>•</span>
+                <span>All Levels</span>
+              </div>
+              <h4>Big-O Algorithm Complexity Poster</h4>
+              <p>Visual time &amp; space complexity cheat sheet comparing Sorting, Searching, Trees, and Graph traversals.</p>
+            </div>
+            <button class="btn-download" data-file="Big-O-Complexity-Wall-Poster.pdf">
+              <span>↓</span> Download PDF
+            </button>
+          </div>
+
+          <!-- RES 4 -->
+          <div class="resource-card fade-in-element">
+            <div>
+              <div class="resource-meta">
+                <span>Handbook</span>
+                <span>•</span>
+                <span>C++ / College</span>
+              </div>
+              <h4>C++ Standard Template Library (STL)</h4>
+              <p>Comprehensive guide to vectors, sets, maps, iterators, priority queues, and common competitive programming paradigms.</p>
+            </div>
+            <button class="btn-download" data-file="CPP-STL-Quick-Reference.pdf">
+              <span>↓</span> Download PDF
+            </button>
+          </div>
+
+          <!-- RES 5 -->
+          <div class="resource-card fade-in-element">
+            <div>
+              <div class="resource-meta">
+                <span>Database Sheet</span>
+                <span>•</span>
+                <span>Board &amp; Degree</span>
+              </div>
+              <h4>SQL Queries &amp; Relational Schema Guide</h4>
+              <p>DDL/DML reference, table joins, aggregate queries, group by conditions, and 2NF/3NF database normalization.</p>
+            </div>
+            <button class="btn-download" data-file="SQL-Queries-Schema-Guide.pdf">
+              <span>↓</span> Download PDF
+            </button>
+          </div>
+
+          <!-- RES 6 -->
+          <div class="resource-card fade-in-element">
+            <div>
+              <div class="resource-meta">
+                <span>Exam Prep</span>
+                <span>•</span>
+                <span>Boards 2026-27</span>
+              </div>
+              <h4>Class 12 Board Sample Papers &amp; Solutions</h4>
+              <p>Past 5 years solved CBSE/ISC computer science board examination papers with step-by-step marking scheme breakdowns.</p>
+            </div>
+            <button class="btn-download" data-file="Class12-CS-Sample-Papers.pdf">
+              <span>↓</span> Download PDF
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         FAQ SECTION (SECTION 14)
+         ============================================================ -->
+    <section class="faq-section" id="faq">
+      <div class="section-container">
+        
+        <div class="section-head fade-in-element">
+          <div class="section-badge">
+            <span class="badge-icon"></span>
+            <span>FREQUENT QUESTIONS</span>
+          </div>
+          <h2 class="section-title">
+            Frequently Asked <span class="text-gradient">Questions</span>
+          </h2>
+          <p class="section-subtitle">
+            Straightforward answers to the most common questions from students and parents.
+          </p>
+        </div>
+
+        <div class="faq-accordion fade-in-element">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is computer science suitable for beginners with no prior coding experience?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Yes, absolutely. Arpan Sir's introductory courses are structured assuming zero previous background in programming. We start from basic computational reasoning, number systems, and simple variable manipulations before progressively advancing to data structures and object-oriented principles.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Which programming language should I learn first?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                For beginners in Class 11 and school curricula, <strong>Python</strong> is recommended because its clean, English-like syntax lets you focus on computational logic rather than verbose boilerplate. For college engineering students and competitive programmers wanting deeper memory understanding, <strong>C / C++</strong> provides unparalleled insights into pointers, stack frames, and hardware execution.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What should Class 11 and Class 12 students focus on?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Class 11 students must build unshakable foundations in boolean logic, flow of control, iterative loops, and basic Python data types. Class 12 students should concentrate heavily on file handling (text, binary, CSV), linear data structures (Stack implementations), SQL queries, and networking protocols, which carry the maximum weightage in board theory and practical exams.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What are data structures and algorithms, and why do they matter?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Data structures are specialized formats for organizing and storing data in computer memory (like arrays, linked lists, stacks, trees). Algorithms are step-by-step procedures that process that data. Together, they dictate whether software runs in milliseconds or hours as dataset sizes grow. Mastery of DSA is the core qualification evaluated in top engineering companies and university examinations.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the difference between B.Tech CSE and BCA?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <strong>B.Tech Computer Science</strong> is a 4-year engineering degree with a heavy focus on mathematical rigor, computer hardware architecture, compiler design, and operating systems internals. <strong>BCA</strong> (Bachelor of Computer Applications) is typically a 3-year degree oriented towards practical software applications, web development, database management, and business computing. Arpan Sir provides curriculum coaching tailored to both pathways.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How can I start learning web development?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Start by mastering the fundamental triad: Semantic <strong>HTML5</strong> for document structure, modern <strong>CSS3</strong> (Flexbox &amp; Grid) for responsive layouts, and modern <strong>JavaScript (ES6+)</strong> for interactive user behavior. Once comfortable with DOM manipulation and asynchronous API calls, you can smoothly transition into frontend component libraries and backend server architectures.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the relationship between AI, machine learning, and data science?</span>
+              <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                Think of them as concentric and overlapping disciplines. <strong>Artificial Intelligence (AI)</strong> is the broad umbrella of enabling machines to mimic human intelligence. <strong>Machine Learning (ML)</strong> is a subset of AI where systems learn statistical patterns from data rather than being explicitly rule-programmed. <strong>Data Science</strong> is an interdisciplinary field that extracts actionable insights from data using ML, statistical analysis, and database engineering.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+         CONTACT SECTION (SECTION 15)
+         ============================================================ -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        
+        <div class="contact-grid">
+          
+          <!-- Left: Teacher Info & Direct Channels -->
+          <div class="contact-info-card fade-in-element">
+            <div class="section-badge" style="background-color: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: var(--cyan);">
+              <span class="badge-icon"></span>
+              <span>GET IN TOUCH</span>
+            </div>
+
+            <h3>Connect with Arpan Sir</h3>
+            <p>
+              Have questions regarding course batches, syllabus coverage, or batch timings? Send an enquiry or message directly on WhatsApp to speak with our academic coordinator.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-row">
+                <div class="contact-icon-circle">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div class="contact-row-text">
+                  <h6>Scholars Hub Classroom Center</h6>
+                  <p>Kolkata Learning Hub &amp; Online Live Batches</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <div class="contact-icon-circle">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </div>
+                <div class="contact-row-text">
+                  <h6>Admissions Helpline</h6>
+                  <p>WhatsApp Available • Mon - Sat (10 AM - 7 PM)</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <div class="contact-icon-circle">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="22,6 12,13 2,6"/>
+                    <path d="M22 6v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </div>
+                <div class="contact-row-text">
+                  <h6>Academic Correspondence</h6>
+                  <p>arpansir.cs@scholarshub.edu.in</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct Action -->
+            <a 
+              href="https://wa.me/919876543210?text=Hi%20Arpan%20Sir,%20I%20would%20like%20to%20know%20more%20about%20your%20Computer%20Science%20batches%20at%20Scholars%20Hub." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn btn-primary btn-block"
+              style="background: #25d366; color: #fff; box-shadow: 0 4px 14px rgba(37,211,102,0.35);"
+            >
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+              </svg>
+              Chat on WhatsApp Directly
+            </a>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="form-wrapper fade-in-element">
+            <h4 style="font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 6px;">Batch Enquiry &amp; Registration</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px;">
+              Fill in your details to schedule a call with Arpan Sir's academic coordinator.
+            </p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="studentName" class="form-label">Student / Parent Name <span class="required">*</span></label>
+                <input type="text" id="studentName" name="studentName" class="form-input" placeholder="e.g. Rahul Sen" required>
+                <span class="field-error" id="nameError">Please enter your name</span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="studentEmail" class="form-label">Email Address</label>
+                <input type="email" id="studentEmail" name="studentEmail" class="form-input" placeholder="e.g. rahul@example.com">
+              </div>
+
+              <!-- Target Course/Class -->
+              <div class="form-group">
+                <label for="studentClass" class="form-label">Course / Academic Track <span class="required">*</span></label>
+                <select id="studentClass" name="studentClass" class="form-select" required>
+                  <option value="" disabled selected>Select course or program...</option>
+                  <option value="Class 11 Computer Science">[Class 11] Computer Science Board Batch</option>
+                  <option value="Class 12 Computer Science">[Class 12] Computer Science Board Batch</option>
+                  <option value="B.Tech Computer Science">[College] B.Tech CSE / IT Coursework</option>
+                  <option value="B.Tech AI & ML">[College] B.Tech AI &amp; Machine Learning</option>
+                  <option value="BCA & MCA Mentorship">[College] BCA &amp; MCA Program Support</option>
+                  <option value="Python Programming">[Skill] Python Programming &amp; Logic</option>
+                  <option value="C++ & DSA Masterclass">[Skill] C++ &amp; Data Structures</option>
+                  <option value="Full-Stack Web">[Skill] Full-Stack Web Development</option>
+                  <option value="Free Demo Class Session">Complimentary Free Demo Class Session</option>
+                </select>
+                <span class="field-error" id="classError">Please select a course track</span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group">
+                <label for="studentPhone" class="form-label">WhatsApp / Contact Number <span class="required">*</span></label>
+                <input type="tel" id="studentPhone" name="studentPhone" class="form-input" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
+                <span class="field-error" id="phoneError">Please enter a valid 10-digit mobile number</span>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="studentMessage" class="form-label">Message / Specific Learning Goals</label>
+                <textarea id="studentMessage" name="studentMessage" class="form-textarea" rows="3" placeholder="Tell us about the student's current school/college syllabus or specific doubts..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-block" id="submitFormBtn">
+                <span>Submit Enquiry</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </button>
+
+              <!-- Feedback Alert Container -->
+              <div class="form-feedback" id="formFeedback" role="alert" aria-live="polite"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       SITE FOOTER (SECTION 16)
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="section-container">
+      
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand & Department Bio -->
+        <div class="footer-col brand-col">
+          <a href="#hero" class="brand-logo footer-logo">
+            <span class="logo-symbol">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--cyan);">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </span>
+            <span class="logo-text">Arpan Sir <span class="logo-accent">CS</span></span>
+          </a>
+          <p class="footer-bio">
+            Department of Computer Science at Scholars Hub. Empowering students with foundational computational logic, clean code habits, and rigorous software problem-solving.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Arpan Sir</a></li>
+            <li><a href="#visual-lab">DSA Visual Lab</a></li>
+            <li><a href="#courses">Courses &amp; Pathways</a></li>
+            <li><a href="#playground">Coding Playground</a></li>
+            <li><a href="#resources">Learning Resources</a></li>
+            <li><a href="#contact">Contact &amp; Admissions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Academic Batches -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Batches</h4>
+          <ul class="footer-links-list">
+            <li><a href="#courses">Class 11 Computer Science</a></li>
+            <li><a href="#courses">Class 12 Board Target</a></li>
+            <li><a href="#courses">B.Tech CSE Core Coursework</a></li>
+            <li><a href="#courses">Python &amp; Problem Solving</a></li>
+            <li><a href="#courses">C++ &amp; Data Structures</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Community & Social Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Connect</h4>
+          <p class="footer-bio" style="margin-bottom: 16px;">
+            Follow Scholars Hub across developer and academic channels:
+          </p>
+          <div class="social-links-row">
+            <!-- YouTube -->
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="YouTube Channel">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <!-- WhatsApp -->
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> <strong>Arpan Sir Computer Science</strong>. Scholars Hub Educational Portal. All rights reserved.
+        </p>
+        <a href="#hero" class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON (BOTTOM RIGHT)
+       ============================================================ -->
+  <aside class="floating-whatsapp-container" aria-label="Quick WhatsApp Contact">
+    <a 
+      href="https://wa.me/919876543210?text=Hi%20Arpan%20Sir,%20I%20would%20like%20to%20enquire%20about%20your%20Computer%20Science%20and%20Coding%20batches." 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="floating-whatsapp-btn" 
+      aria-label="Chat with Arpan Sir on WhatsApp"
+    >
+      <span class="wa-pulse-ring"></span>
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+      </svg>
+    </a>
+  </aside>
+
+
+  <!-- ============================================================
+       FREE DEMO CLASS MODAL
+       ============================================================ -->
+  <div class="modal-backdrop" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeDemoModalBtn" aria-label="Close demo booking modal">&times;</button>
+      
+      <div style="margin-bottom: 20px;">
+        <span class="section-badge" style="margin-bottom: 8px;">COMPLIMENTARY SESSION</span>
+        <h3 id="demoModalTitle" style="font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 4px;">Reserve Your Free Demo Class</h3>
+        <p style="font-size: 0.86rem; color: var(--text-muted);">Experience Arpan Sir's intuitive visual computer science methodology before enrolling.</p>
+      </div>
+
+      <form id="demoModalForm" novalidate style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="form-group">
+          <label for="demoName" class="form-label">Student Name</label>
+          <input type="text" id="demoName" class="form-input" placeholder="Enter student name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="demoClass" class="form-label">Grade / Program Track</label>
+          <select id="demoClass" class="form-select" required>
+            <option value="" disabled selected>Select program...</option>
+            <option value="Class 11 Computer Science">Class 11 Computer Science</option>
+            <option value="Class 12 Computer Science">Class 12 Computer Science</option>
+            <option value="College Degree / Engineering">B.Tech / BCA Degree Coursework</option>
+            <option value="Programming & DSA Skills">Programming &amp; Data Structures Bootcamp</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="demoPhone" class="form-label">WhatsApp Contact Number</label>
+          <input type="tel" id="demoPhone" class="form-input" placeholder="10-digit number" pattern="[0-9]{10}" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Confirm Demo Slot</button>
+        <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 4px;">
+          No obligation. Our coordinator will contact you to finalize the session timing.
+        </p>
+      </form>
+      <div class="form-feedback" id="modalFeedback"></div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       COURSE DETAILS MODAL
+       ============================================================ -->
+  <div class="modal-backdrop" id="courseModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="courseModalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeCourseModalBtn" aria-label="Close course details modal">&times;</button>
+      
+      <div style="margin-bottom: 16px;">
+        <h3 id="courseModalTitle" style="font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 8px;">Course Syllabus</h3>
+      </div>
+
+      <div id="courseModalBody" style="max-height: 55vh; overflow-y: auto; padding-right: 6px;">
+        <!-- Dynamic syllabus content injected by script.js -->
+      </div>
+
+      <div style="margin-top: 24px; display: flex; gap: 12px;">
+        <button class="btn btn-primary btn-block" id="courseModalEnquireBtn">Enquire for this Course</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ============================================================
+       TOAST NOTIFICATION CONTAINER
+       ============================================================ -->
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

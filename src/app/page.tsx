@@ -47,7 +47,7 @@ export default function ScholarsHubMainPage() {
       {/* 03 — INSTITUTION ABOUT & VISION */}
       <ScholarsAbout />
 
-      {/* 04 — SUBJECT SELECTION GRID (Mathematics, Physics, Chemistry, Biology, CS) */}
+      {/* 04 — SUBJECT SELECTION GRID (Mathematics, Physics, Computer Science) */}
       <ScholarsDepartments />
 
       {/* 05 — INSTITUTION FOOTER */}
@@ -58,4 +58,3 @@ export default function ScholarsHubMainPage() {
     </main>
   );
 }
-

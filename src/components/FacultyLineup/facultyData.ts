@@ -25,6 +25,10 @@ export interface SubjectFaculty {
     scaleClass: string;
   };
   tooltipAlign: "left" | "center" | "right";
+  subjectIcon?: string;
+  subject?: string;
+  qualification?: string;
+  bio?: string;
 }
 
 export const FACULTY_MEMBERS: SubjectFaculty[] = [
@@ -32,6 +36,10 @@ export const FACULTY_MEMBERS: SubjectFaculty[] = [
     id: "physics",
     name: "Physics (Rajesh Sir)",
     label: "Physics",
+    subject: "Physics",
+    subjectIcon: "⚡",
+    qualification: "Senior Physics Faculty • 12+ Yrs Exp",
+    bio: "Visual physics intuition, deep numerical problem solving, and rigorous preparation for CBSE/ISC, JEE & NEET aspirants.",
     route: "/physics",
     isLive: true,
     statusText: "Live Department",
@@ -55,49 +63,20 @@ export const FACULTY_MEMBERS: SubjectFaculty[] = [
     silhouette: {
       type: "physics",
       gender: "male",
-      heightClass: "h-[290px] sm:h-[320px] md:h-[350px]",
+      heightClass: "h-[300px] sm:h-[335px] md:h-[370px]",
       zIndex: 10,
-      scaleClass: "scale-[0.94] origin-bottom",
+      scaleClass: "scale-[0.96] origin-bottom",
     },
     tooltipAlign: "left", // opens inward towards center-right
   },
   {
-    id: "chemistry",
-    name: "Chemistry",
-    label: "Chemistry",
-    route: "/chemistry",
-    isLive: false,
-    statusText: "Faculty Expansion",
-    specialty: "Organic Mechanisms, Physical Numericals & Lab Logic",
-    bullets: [
-      "Reaction Mechanisms & Synthesis Logic",
-      "Physical Chemistry Numerical Mastery",
-      "Inorganic Trends & NCERT Breakdown",
-      "Competitive JEE & Board Prep",
-    ],
-    palette: {
-      pastelBg: "#ecfdf5",       // pale mint
-      pastelBorder: "#6ee7b7",   // emerald-300
-      titleColor: "#047857",     // emerald-700
-      textColor: "#022c22",      // emerald-950
-      pillBg: "bg-emerald-100/90 text-emerald-900 border-emerald-300",
-      tintColor: "#a7f3d0",      // emerald-200
-      glowColor: "rgba(52, 211, 153, 0.45)",
-      badgeBg: "bg-emerald-200 text-emerald-900",
-    },
-    silhouette: {
-      type: "chemistry",
-      gender: "male",
-      heightClass: "h-[305px] sm:h-[335px] md:h-[365px]",
-      zIndex: 20,
-      scaleClass: "scale-[0.98] origin-bottom",
-    },
-    tooltipAlign: "center",
-  },
-  {
     id: "mathematics",
-    name: "Mathematics",
+    name: "Mathematics (Soumen Sir)",
     label: "Mathematics",
+    subject: "Mathematics",
+    subjectIcon: "📐",
+    qualification: "Academic Lead • 15+ Yrs Exp",
+    bio: "Specializing in Calculus, Higher Algebra, and 3D visual mathematics for Board exams, JEE Main & Advanced.",
     route: "/maths",
     isLive: true,
     statusText: "● Live Website & Coaching",
@@ -128,51 +107,22 @@ export const FACULTY_MEMBERS: SubjectFaculty[] = [
     tooltipAlign: "center",
   },
   {
-    id: "biology",
-    name: "Biology",
-    label: "Biology",
-    route: "/biology",
-    isLive: false,
-    statusText: "Faculty Expansion",
-    specialty: "Human Physiology, Botany & NEET Specialization",
-    bullets: [
-      "High-Yield Diagrammatic Breakdown",
-      "Human Physiology & Genetics Depth",
-      "NEET UG Entrance Target Program",
-      "Mnemonics & Visual Recall Systems",
-    ],
-    palette: {
-      pastelBg: "#fff1f2",       // pale pink/peach
-      pastelBorder: "#fda4af",   // rose-300
-      titleColor: "#be123c",     // rose-700
-      textColor: "#4c0519",      // rose-950
-      pillBg: "bg-rose-100/90 text-rose-900 border-rose-300",
-      tintColor: "#fecdd3",      // rose-200
-      glowColor: "rgba(251, 113, 133, 0.45)",
-      badgeBg: "bg-rose-200 text-rose-900",
-    },
-    silhouette: {
-      type: "biology",
-      gender: "male",
-      heightClass: "h-[305px] sm:h-[335px] md:h-[365px]",
-      zIndex: 20,
-      scaleClass: "scale-[0.98] origin-bottom",
-    },
-    tooltipAlign: "center",
-  },
-  {
     id: "computer-science",
-    name: "Computer Science",
+    name: "Computer Science (Arpan Sir)",
     label: "Computer Science",
+    subject: "Computer Science",
+    subjectIcon: "💻",
+    qualification: "Senior CS Faculty • Coding Mentor",
+    bio: "Hands-on coding, algorithms, DSA visualizer, and competitive programming for Class 11-12 (CBSE/ISC) & B.Tech / BCA.",
     route: "/computer-science",
-    isLive: false,
-    statusText: "Faculty Expansion",
-    specialty: "Data Structures, Algorithmic Thinking & Coding",
+    isLive: true,
+    statusText: "Live Department",
+    specialty: "Computer Science Made Simple with Arpan Sir — Coding & DSA",
     bullets: [
-      "Data Structures & Algorithmic Design",
-      "Python, Java & C++ Programming",
-      "Computational Logic & Problem Solving",
-      "Modern Software Foundations",
+      "Programming Fundamentals (Python, C++, Java)",
+      "Interactive DSA Visual Labs & Algorithmic Logic",
+      "School (11-12) & College (B.Tech, BCA, MCA) Paths",
+      "Hands-on Code Reviews & Personal Mentorship",
     ],
     palette: {
       pastelBg: "#f0f9ff",       // pale sky blue
@@ -187,9 +137,9 @@ export const FACULTY_MEMBERS: SubjectFaculty[] = [
     silhouette: {
       type: "cs",
       gender: "male",
-      heightClass: "h-[290px] sm:h-[320px] md:h-[350px]",
+      heightClass: "h-[300px] sm:h-[335px] md:h-[370px]",
       zIndex: 10,
-      scaleClass: "scale-[0.94] origin-bottom",
+      scaleClass: "scale-[0.96] origin-bottom",
     },
     tooltipAlign: "right", // opens inward towards center-left
   },

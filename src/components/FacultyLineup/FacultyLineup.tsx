@@ -54,7 +54,7 @@ export function FacultyLineup() {
   const currentHighlightId = hoveredId || activeId;
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto px-2 sm:px-6">
+    <div className="relative w-full max-w-5xl mx-auto px-2 sm:px-6">
       
       {/* Visual Instruction Badge for Desktop / Mobile */}
       <div className="text-center mb-6">
@@ -76,7 +76,7 @@ export function FacultyLineup() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-64 bg-radial from-amber-100/40 via-slate-100/20 to-transparent blur-3xl pointer-events-none" />
 
         <div className="w-full">
-          <div className="flex items-end justify-center -space-x-8 md:-space-x-12 lg:-space-x-14">
+          <div className="flex items-end justify-center -space-x-6 md:-space-x-8 lg:-space-x-10">
             {FACULTY_MEMBERS.map((faculty) => {
               const isHovered = hoveredId === faculty.id;
               const isActive = activeId === faculty.id;
@@ -117,13 +117,13 @@ export function FacultyLineup() {
         </div>
 
         {/* Podium Base Shadow Bar */}
-        <div className="w-4/5 max-w-4xl mx-auto h-3 bg-gradient-to-r from-transparent via-[#dfd6c5] to-transparent rounded-full blur-xs opacity-60 mt-2 pointer-events-none" />
+        <div className="w-3/5 max-w-2xl mx-auto h-3 bg-gradient-to-r from-transparent via-[#dfd6c5] to-transparent rounded-full blur-xs opacity-60 mt-2 pointer-events-none" />
       </div>
 
       {/* Mobile-Native Stacked Department Cards (Clean, 1-tap touch navigation) */}
       <div className="md:hidden space-y-4 pt-4">
         {FACULTY_MEMBERS.map((faculty) => {
-          const isLive = faculty.id === "maths";
+          const isLive = faculty.isLive;
           return (
             <div
               key={faculty.id}
@@ -136,12 +136,12 @@ export function FacultyLineup() {
               <div className="flex items-start justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-[#f7f3ec] border border-[#ede7dc] flex items-center justify-center font-display text-2xl">
-                    {faculty.subjectIcon}
+                    {faculty.subjectIcon || "📚"}
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
                       <h3 className="font-display font-bold text-base text-[#1e2022]">
-                        {faculty.subject}
+                        {faculty.subject || faculty.label}
                       </h3>
                       {isLive ? (
                         <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-bold">
@@ -154,14 +154,14 @@ export function FacultyLineup() {
                       )}
                     </div>
                     <div className="text-xs text-[#555b67] font-body mt-0.5">
-                      Faculty: <strong className="text-[#1e2022]">{faculty.name}</strong> • {faculty.qualification}
+                      Faculty: <strong className="text-[#1e2022]">{faculty.name}</strong> • {faculty.qualification || "Faculty Specialist"}
                     </div>
                   </div>
                 </div>
               </div>
 
               <p className="text-xs text-[#555b67] font-body mt-3 leading-relaxed">
-                {faculty.bio}
+                {faculty.bio || faculty.specialty}
               </p>
 
               <div className="mt-4 pt-3 border-t border-[#ede7dc] flex items-center justify-between gap-2">

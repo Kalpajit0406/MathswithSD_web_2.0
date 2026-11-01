@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="csGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f" />
+      <stop offset="45%" stop-color="#0f2b48" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <!-- Tech Accent Gradients -->
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    
+    <linearGradient id="violetElectric" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    
+    <filter id="glowCyan" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" rx="32" fill="url(#csGrad)" />
+  
+  <!-- Subtle Circuit / Matrix Grid -->
+  <g stroke="#06b6d4" stroke-width="1" opacity="0.15">
+    <line x1="60" y1="0" x2="60" y2="700" stroke-dasharray="4 6"/>
+    <line x1="180" y1="0" x2="180" y2="700" stroke-dasharray="4 6"/>
+    <line x1="300" y1="0" x2="300" y2="700" stroke-dasharray="4 6"/>
+    <line x1="420" y1="0" x2="420" y2="700" stroke-dasharray="4 6"/>
+    <line x1="540" y1="0" x2="540" y2="700" stroke-dasharray="4 6"/>
+    <line x1="0" y1="120" x2="600" y2="120" stroke-dasharray="4 6"/>
+    <line x1="0" y1="260" x2="600" y2="260" stroke-dasharray="4 6"/>
+    <line x1="0" y1="420" x2="600" y2="420" stroke-dasharray="4 6"/>
+    <line x1="0" y1="560" x2="600" y2="560" stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- Outer Dash Border -->
+  <rect x="16" y="16" width="568" height="668" rx="24" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="10 8" opacity="0.4" />
+
+  <!-- Digital Halo & Concentric Algorithmic Rings -->
+  <circle cx="300" cy="230" r="160" fill="none" stroke="#06b6d4" stroke-width="1.5" opacity="0.25" stroke-dasharray="8 6"/>
+  <circle cx="300" cy="230" r="190" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Connected Data Nodes -->
+  <g opacity="0.35">
+    <circle cx="100" cy="180" r="5" fill="#06b6d4" />
+    <line x1="100" y1="180" x2="160" y2="220" stroke="#06b6d4" stroke-width="1.5" />
+    <circle cx="160" cy="220" r="4" fill="#2563eb" />
+    
+    <circle cx="500" cy="180" r="5" fill="#7c3aed" />
+    <line x1="500" y1="180" x2="440" y2="230" stroke="#7c3aed" stroke-width="1.5" />
+    <circle cx="440" cy="230" r="4" fill="#06b6d4" />
+
+    <circle cx="120" cy="460" r="4" fill="#06b6d4" />
+    <line x1="120" y1="460" x2="180" y2="430" stroke="#06b6d4" stroke-width="1.5" />
+    <circle cx="180" cy="430" r="3" fill="#2563eb" />
+  </g>
+
+  <!-- Floating Coding Elements in Background (Clean & Well-spaced) -->
+  <g font-family="'Courier New', monospace" font-size="14" font-weight="700">
+    <text x="40" y="115" fill="#06b6d4" opacity="0.65">// Algo Visualizer</text>
+    <text x="390" y="115" fill="#a78bfa" opacity="0.55">// System Arch</text>
+    <text x="45" y="555" fill="#38bdf8" opacity="0.8">&lt;BinaryTree /&gt;</text>
+  </g>
+
+  <!-- Teacher Silhouette Cutout (Arpan Sir) -->
+  <g filter="url(#shadow)">
+    <!-- Head / Face -->
+    <ellipse cx="300" cy="195" rx="66" ry="76" fill="#f8fafc" />
+    
+    <!-- Modern Tech Hairstyle -->
+    <path d="M232 180 C232 120 368 120 368 180 C358 145 330 135 300 135 C265 135 242 148 232 180 Z" fill="#0f172a" />
+    
+    <!-- Smart Glasses (Cyan Accent) -->
+    <rect x="254" y="190" width="36" height="26" rx="6" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+    <rect x="310" y="190" width="36" height="26" rx="6" fill="none" stroke="#2563eb" stroke-width="3.5"/>
+    <line x1="290" y1="202" x2="310" y2="202" stroke="#2563eb" stroke-width="3.5"/>
+    <path d="M254 196 L238 190" stroke="#2563eb" stroke-width="2.5"/>
+    <path d="M346 196 L362 190" stroke="#2563eb" stroke-width="2.5"/>
+    <line x1="262" y1="198" x2="282" y2="208" stroke="#06b6d4" stroke-width="1.5" opacity="0.8"/>
+    
+    <!-- Kind, Focused Smile -->
+    <path d="M284 238 Q300 250 316 238" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Neck -->
+    <rect x="281" y="266" width="38" height="36" fill="#e2e8f0" />
+    
+    <!-- Tech Smart Blazer & Shirt -->
+    <path d="M256 298 L300 342 L344 298 L318 298 L300 316 L282 298 Z" fill="#ffffff" />
+    <!-- Electric Blue Smart Tie/Pill -->
+    <polygon points="295,316 305,316 308,396 300,412 292,396" fill="url(#cyanBlue)" />
+
+    <!-- Shoulders / Blazer -->
+    <path d="M185 480 C185 345 238 300 300 300 C362 300 415 345 415 480 L428 540 L172 540 Z" fill="#0f172a" />
+    
+    <!-- Modern Tech Blazer Lapel Accents -->
+    <path d="M242 312 L284 410 L268 480" stroke="#2563eb" stroke-width="3.5" fill="none"/>
+    <path d="M358 312 L316 410 L332 480" stroke="#7c3aed" stroke-width="3.5" fill="none"/>
+  </g>
+
+  <!-- Laptop / Code Horizon Glow at Bottom -->
+  <g transform="translate(190, 480)">
+    <!-- Keyboard Base -->
+    <path d="M 20 50 L 200 50 L 215 65 L 5 65 Z" fill="#1e293b" stroke="#06b6d4" stroke-width="1.5"/>
+    <line x1="85" y1="57" x2="135" y2="57" stroke="#06b6d4" stroke-width="2" opacity="0.8"/>
+    <!-- Screen Glow Light -->
+    <polygon points="25,50 195,50 240,-10 -20,-10" fill="url(#violetElectric)" opacity="0.12"/>
+  </g>
+
+  <!-- Name & Subject Badge Banner (Centered & Prominent) -->
+  <g transform="translate(130, 595)">
+    <rect width="340" height="56" rx="28" fill="#0f172a" stroke="#06b6d4" stroke-width="2.5" filter="url(#glowCyan)"/>
+    <circle cx="28" cy="28" r="8" fill="#10b981" />
+    <text x="180" y="35" fill="#ffffff" font-family="'Inter', sans-serif" font-weight="700" font-size="20" text-anchor="middle">
+      Arpan Sir <tspan fill="#38bdf8">• Computer Science</tspan>
+    </text>
+  </g>
+</svg>

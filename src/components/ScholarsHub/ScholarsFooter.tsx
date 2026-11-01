@@ -22,7 +22,7 @@ export function ScholarsFooter() {
             </span>
           </div>
           <p className="text-sm text-stone-300 font-body leading-relaxed max-w-md">
-            Scholars Hub is a premier academic institution committed to conceptual rigor, visual learning, and competitive exam excellence in Mathematics, Physics, Chemistry, Biology, and Computer Science.
+            Scholars Hub is a premier academic institution committed to conceptual rigor, visual learning, and competitive exam excellence in Mathematics, Physics, and Computer Science.
           </p>
           <div className="text-xs text-stone-400 font-mono">
             Location: Kolkata, West Bengal, India • In-Person &amp; Live Hybrid Batches
@@ -48,21 +48,9 @@ export function ScholarsFooter() {
               </Link>
             </li>
             <li>
-              <Link href="/chemistry" className="text-stone-400 hover:text-white transition-colors flex items-center gap-2">
-                <span>Chemistry Department</span>
-                <span className="text-[10px] text-stone-400">Waitlist</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/biology" className="text-stone-400 hover:text-white transition-colors flex items-center gap-2">
-                <span>Biology Department</span>
-                <span className="text-[10px] text-stone-400">Waitlist</span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/computer-science" className="text-stone-400 hover:text-white transition-colors flex items-center gap-2">
-                <span>Computer Science</span>
-                <span className="text-[10px] text-stone-400">Waitlist</span>
+              <Link href="/computer-science" className="text-white hover:text-amber-300 font-bold flex items-center gap-2 transition-colors">
+                <span>Computer Science (Arpan Sir)</span>
+                <span className="px-2 py-0.5 rounded-full bg-emerald-600 text-[10px] text-white font-bold">Live</span>
               </Link>
             </li>
           </ul>
